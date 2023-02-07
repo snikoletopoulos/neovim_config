@@ -3,7 +3,7 @@ local config = {
     clipboard = "",
     plugins = {
         treesitter = {
-            ensure_installed = { "tsx", "typescript", "javascript", "python", "lua", "astro", "bash", "css", "dockerfile", "dot", "graphql", "html", "jsdoc", "json", "jsonc", "markdown", "prisma", "regex", "yaml" }
+            ensure_installed = { "astro", "bash", "css", "dockerfile", "dot", "graphql", "html", "javascript", "jsdoc", "json", "jsonc", "lua", "markdown", "prisma", "python", "regex", "tsx", "typescript", "yaml" }
         },
         ["mason-lspconfig"] = {
             ensure_installed = { "astro", "bashls", "cssls", "cssmodules_ls", "dockerls", "dotls", "emmet_ls", "graphql", "html", "jsonls", "sumneko_lua", "marksman", "prismals", "pyright", "tailwindcss", "tsserver", "yamlls" },
