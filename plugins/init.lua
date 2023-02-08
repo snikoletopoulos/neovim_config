@@ -8,5 +8,6 @@ return {
     ["mbbill/undotree"] = {},
     ["wellle/targets.vim"] = {},
     ["tpope/vim-surround"] = {},
-    ["folke/tokyonight.nvim"] = {}
+    ["folke/tokyonight.nvim"] = {},
+    ["windwp/nvim-ts-autotag"] = { config = function() require('nvim-ts-autotag').setup() end }
 }
