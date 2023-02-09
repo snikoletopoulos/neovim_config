@@ -1,13 +1,30 @@
 return {
+    -- Themes
+    ["folke/tokyonight.nvim"] = {},
+    ["rakr/vim-one"] = {},
+    ["sonph/onehalf"] = { rtp = "vim" },
+    ["catppuccin/nvim"] = { as = "catppuccin" },
+    --
+
+    -- Autocomplete
     ["github/copilot.vim"] = {},
+    ["axelvc/template-string.nvim"] = {},
+    -- ["windwp/nvim-ts-autotag"] = { config = function() require('nvim-ts-autotag').setup() end },
+    --
+
+    -- Motion
     ["bkad/CamelCaseMotion"] = {},
-    ["pocco81/auto-save.nvim"] = { config = function() require("auto-save").setup({ debounce_delay = 1000, }) end },
-    ["folke/trouble.nvim"] = { requires = "nvim-tree/nvim-web-devicons" },
-    ["styled-components/vim-styled-components"] = {},
-    ["hail2u/vim-css3-syntax"] = {},
-    ["mbbill/undotree"] = {},
     ["wellle/targets.vim"] = {},
     ["tpope/vim-surround"] = {},
-    ["folke/tokyonight.nvim"] = {},
-    ["windwp/nvim-ts-autotag"] = { config = function() require('nvim-ts-autotag').setup() end }
+    --
+
+    -- Editor behaviour
+    ["pocco81/auto-save.nvim"] = { config = function() require("auto-save").setup({ debounce_delay = 1000, }) end },
+    ["styled-components/vim-styled-components"] = {},
+    ["hail2u/vim-css3-syntax"] = {},
+    --
+
+    -- UI
+    ["folke/trouble.nvim"] = { requires = "nvim-tree/nvim-web-devicons" },
+    ["mbbill/undotree"] = {},
 }
