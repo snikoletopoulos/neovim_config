@@ -9,7 +9,6 @@ return {
     -- Autocomplete
     ["github/copilot.vim"] = {},
     ["axelvc/template-string.nvim"] = {},
-    -- ["windwp/nvim-ts-autotag"] = { config = function() require('nvim-ts-autotag').setup() end },
     --
 
     -- Motion
