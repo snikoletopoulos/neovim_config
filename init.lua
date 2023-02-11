@@ -1,6 +1,5 @@
--- local ts_utils = require("nvim-treesitter.ts_utils")
-
-local config = {
+return {
+    -- TODO: remove system clipboard
     clipboard = false,
     plugins = {
         -- TODO
@@ -76,5 +75,3 @@ local config = {
         }
     },
 }
-
-return config
