@@ -18,7 +18,11 @@ return {
     --
 
     -- Editor behaviour
-    ["pocco81/auto-save.nvim"] = { config = function() require("auto-save").setup({ debounce_delay = 1000, }) end },
+    ["pocco81/auto-save.nvim"] = { config = function()
+        require("auto-save").setup(astronvim.user_plugin_opts(
+            "plugins.auto-save", {}))
+    end
+    },
     ["styled-components/vim-styled-components"] = {},
     ["hail2u/vim-css3-syntax"] = {},
     --
