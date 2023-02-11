@@ -25,6 +25,10 @@ return {
     },
     ["styled-components/vim-styled-components"] = {},
     ["hail2u/vim-css3-syntax"] = {},
+    ["folke/todo-comments.nvim"] = {
+        requires = "nvim-lua/plenary.nvim",
+        config = function() require("todo-comments").setup(astronvim.user_plugin_opts("plugins.todo-comments", {})) end
+    },
     --
 
     -- UI
