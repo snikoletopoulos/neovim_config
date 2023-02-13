@@ -6,13 +6,10 @@ return function(config)
       null_ls.builtins.code_actions.eslint_d,
       null_ls.builtins.code_actions.shellcheck,
 
-      null_ls.builtins.completion.luasnip,
-      null_ls.builtins.completion.spell,
-
       -- Diagnostics
       null_ls.builtins.diagnostics.cspell,
       null_ls.builtins.diagnostics.dotenv_linter,
-      null_ls.builtins.diagnostics.eslint_d,
+      -- null_ls.builtins.diagnostics.eslint_d,
       null_ls.builtins.diagnostics.jsonlint,
       null_ls.builtins.diagnostics.luacheck,
       null_ls.builtins.diagnostics.markdownlint,
@@ -25,7 +22,6 @@ return function(config)
 
       -- Formatting
       null_ls.builtins.formatting.black,
-      null_ls.builtins.formatting.eslint_d,
       null_ls.builtins.formatting.json_tool,
       null_ls.builtins.formatting.markdownlint,
       null_ls.builtins.formatting.nginx_beautifier,
