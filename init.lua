@@ -3,12 +3,6 @@ return {
     clipboard = false,
     plugins = {
         -- TODO
-        -- ["mason-nvim-dap"] = {
-        -- ensure_installed = { "python" },
-        -- },
-        -- TODO
-        -- ["mason-null-ls"] = {
-        -- ensure_installed = { "prettier", "stylua" },
         -- },
         -- TODO
         cmp = {
@@ -61,17 +55,6 @@ return {
         },
         opt = {
             swapfile = false,
-        }
-    },
-    lsp = {
-        formatting = {
-            format_on_save = false,
-            filter = function(client)
-                if client.name == "sumneko_lua" then
-                    return true
-                end
-                return client.name == "null-ls"
-            end
         }
     },
 }
