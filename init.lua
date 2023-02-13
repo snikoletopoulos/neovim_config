@@ -1,6 +1,4 @@
 return {
-    -- TODO: remove system clipboard
-    clipboard = false,
     plugins = {
         -- TODO
         -- cmp = {
@@ -44,6 +42,7 @@ return {
             loaded_perl_provider = 0,
         },
         opt = {
+            clipboard = "",
             swapfile = false,
         }
     },
