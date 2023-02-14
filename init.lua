@@ -44,6 +44,9 @@ return {
         opt = {
             clipboard = "",
             swapfile = false,
+            foldmethod = "expr",
+            foldexpr = "nvim_treesitter#foldexpr()",
+            foldlevel = 99,
         }
     },
 }
