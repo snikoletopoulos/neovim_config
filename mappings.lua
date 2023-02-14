@@ -19,6 +19,7 @@ return {
 
         ["<leader>fr"] = { ":%s/\\<<C-r><h-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace word in file" },
         ["<leader>Q"] = { "<cmd>qa<CR>", desc = "Close all buffers" },
+        ["gh"] = {"<cmd>lua vim.diagnostic.open_float({border = ‘rounded’, source = ‘always’})<CR>"},
 
         -- Reset default
         ["<leader>w"] = false,
