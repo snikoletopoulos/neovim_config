@@ -1,8 +1,4 @@
--- TODO
--- missing
--- jsonlint
--- pydocstyle
--- beautysh
 return {
-    ensure_installed = { "prettierd", "luacheck", "markdownlint", "black", "mypy", "pylint", "shellcheck", "sql_formatter", "yamlfmt" },
+    ensure_installed = { "beautysh", "cspell", "prettierd", "luacheck", "markdownlint", "black", "jsonlint", "eslint_d", "mypy", "pydocstyle", "pylint", "shellcheck", "sql_formatter", "yamlfmt", "yamllint" },
+    automatic_installation = true,
 }
