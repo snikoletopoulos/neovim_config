@@ -44,4 +44,9 @@ return {
     -- UI
     ["folke/trouble.nvim"] = { requires = "nvim-tree/nvim-web-devicons" },
     ["mbbill/undotree"] = {},
+    ["j-hui/fidget.nvim"] = {
+        config = function()
+            require "fidget".setup(astronvim.user_plugin_opts("plugins.fidget", {}))
+        end
+    },
 }
