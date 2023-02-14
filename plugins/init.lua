@@ -29,6 +29,16 @@ return {
         requires = "nvim-lua/plenary.nvim",
         config = function() require("todo-comments").setup(astronvim.user_plugin_opts("plugins.todo-comments", {})) end
     },
+    ["anuvyklack/fold-preview.nvim"] = {
+        requires = 'anuvyklack/keymap-amend.nvim',
+        config = function()
+            require('fold-preview').setup(astronvim.user_plugin_opts("plugins.fold-preview", {}))
+        end
+    },
+    ["anuvyklack/pretty-fold.nvim"] = { config = function()
+        require('pretty-fold').setup()
+    end
+    },
     --
 
     -- UI
