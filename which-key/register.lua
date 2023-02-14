@@ -18,4 +18,14 @@ return {
             r = "Selection"
         }
     },
+    x = {
+        iw = "Inner word",
+        ib = "Inner previous word",
+        ie = "Inner end of word",
+    },
+    o = {
+        iw = "Inner word",
+        ib = "Inner previous word",
+        ie = "Inner end of word",
+    }
 }
