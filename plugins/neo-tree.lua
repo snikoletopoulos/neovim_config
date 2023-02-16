@@ -1,5 +1,5 @@
 return {
-    window = {
-        width = 40
-    }
+  window = {
+    width = 40
+  }
 }

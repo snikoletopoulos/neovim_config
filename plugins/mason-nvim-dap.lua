@@ -1,3 +1,3 @@
 return {
-    ensure_installed = { "python", "node2", "chrome", "bash", },
+  ensure_installed = { "python", "node2", "chrome", "bash", },
 }
