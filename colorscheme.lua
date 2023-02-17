@@ -3,6 +3,8 @@ local favorites = {
   onehalf = "onehalfdark",
   catppuccin_mocha = "catppuccin-mocha",
   catppuccin_macchiato = "catppuccin-macchiato",
+  nyoom = "nyoom",
+  sonokai = "sonokai", -- add g:sonokai_style = "andromeda"
 }
 
-return favorites.tokyonight
+return favorites.sonokai

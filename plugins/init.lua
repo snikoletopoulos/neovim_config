@@ -4,6 +4,8 @@ return {
   ["rakr/vim-one"] = {},
   ["sonph/onehalf"] = { rtp = "vim" },
   ["catppuccin/nvim"] = { as = "catppuccin" },
+  ["nyoom-engineering/nyoom.nvim"] = {},
+  ["sainnhe/sonokai"] = {},
   --
 
   -- Autocomplete
