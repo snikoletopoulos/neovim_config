@@ -19,7 +19,7 @@ return {
   ["tpope/vim-surround"] = {},
   --
 
-  -- Editor behaviour
+  -- Editor behavior
   ["pocco81/auto-save.nvim"] = { config = function()
     require("auto-save").setup(astronvim.user_plugin_opts(
       "plugins.auto-save", {}))
