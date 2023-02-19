@@ -1,5 +1,4 @@
 return function(config)
-  -- set the fg/bg of the statusline
   config[1] = {
     hl = { fg = "fg", bg = "bg" },
     astronvim.status.component.mode({ mode_text = { padding = { left = 1, right = 1 } } }),
