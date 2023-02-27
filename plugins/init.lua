@@ -11,6 +11,7 @@ return {
   -- Autocomplete
   ["github/copilot.vim"] = {},
   ["axelvc/template-string.nvim"] = {},
+  ["marilari88/twoslash-queries.nvim"] = {},
   --
 
   -- Motion
