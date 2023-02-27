@@ -15,6 +15,7 @@ return {
     -- UI
     ["<leader>uu"] = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", desc = "Toggle undotree" },
     ["<leader>ut"] = { "<cmd>TroubleToggle<CR>", desc = "Toggle trouble" },
+    ["<leader>fd"] = { "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Toggle trouble for document" },
     ["<leader>ft"] = { "<cmd>TodoTelescope<CR>", desc = "Find todos" },
 
     ["<leader>fr"] = { ":%s/\\<<C-r><h-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace word in file" },
