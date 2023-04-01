@@ -1,9 +1,11 @@
 return function()
-  local normal = astronvim.get_hlgroup "Normal"
+  local get_hlgroup = require("astronvim.utils").get_hlgroup
+
+  local normal = get_hlgroup "Normal"
   local fg, bg = normal.fg, normal.bg
-  local bg_alt = astronvim.get_hlgroup("Visual").bg
-  local green = astronvim.get_hlgroup("String").fg
-  local red = astronvim.get_hlgroup("Error").fg
+  local bg_alt = get_hlgroup("Visual").bg
+  local green = get_hlgroup("String").fg
+  local red = get_hlgroup("Error").fg
 
   return {
     TelescopeBorder = { fg = bg_alt, bg = bg },
@@ -18,7 +20,6 @@ return function()
     TelescopeResultsBorder = { fg = bg, bg = bg },
     TelescopeResultsNormal = { bg = bg },
     TelescopeResultsTitle = { fg = bg, bg = bg },
-    --
     --VS code cmp
     CmpItemKindConstructor = { fg = "#f28b25" },
     CmpItemKindUnit = { fg = "#D4D4D4" },
