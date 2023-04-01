@@ -25,4 +25,13 @@ return {
       })
     end
   },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    lazy = false,
+    config = function()
+      require("treesitter-context").setup({
+        mode = "topline",
+      })
+    end
+  },
 }
