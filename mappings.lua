@@ -66,8 +66,7 @@ return {
     }
   },
   x = {
-    -- TODO move packages to P
-    -- ["<leader>p"] = { "\"_dP" },
+    ["<leader>p"] = { "\"_dP", desc = "Paste without coping" },
     iw = { name = "Inner word" },
     ib = { name = "Inner previous word" },
     ie = { name = "Inner end of word" },
