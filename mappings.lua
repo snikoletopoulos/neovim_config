@@ -33,6 +33,18 @@ return {
     ["<leader>b"] = { name = "Previous camel case word" },
     ["<leader>e"] = { name = "Next end of camel case word" },
     ["<leader>ge"] = { name = "Previous end of camel case word" },
+    -- Harpoon
+    ["<leader>h"] = "Harpoon",
+    ["<leader>hh"] = { "<cmd>Telescope harpoon marks<CR>", desc = "Toggle Harpoon" },
+    ["<leader>uh"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
+    ["<leader>ha"] = { function() require("harpoon.mark").add_file() end, desc = "Add file to Harpoon" },
+    ["[h"] = { function() require("harpoon.ui").nav_prev() end, desc = "Previous Harpoon file" },
+    ["]h"] = { function() require("harpoon.ui").nav_next() end, desc = "Next Harpoon file" },
+    ["<leader>h1"] = { function() require("harpoon.ui").nav_file(1) end, desc = "Go to Harpoon file 1" },
+    ["<leader>h2"] = { function() require("harpoon.ui").nav_file(2) end, desc = "Go to Harpoon file 2" },
+    ["<leader>h3"] = { function() require("harpoon.ui").nav_file(3) end, desc = "Go to Harpoon file 3" },
+    ["<leader>h4"] = { function() require("harpoon.ui").nav_file(4) end, desc = "Go to Harpoon file 4" },
+    ["<leader>h5"] = { function() require("harpoon.ui").nav_file(5) end, desc = "Go to Harpoon file 5" },
   },
   i = {
     ["<M-Tab>"] = { 'copilot#Accept("")', replace_keycodes = false, expr = true, desc = "Accept Copilot suggestion" },
