@@ -1,5 +1,5 @@
 local favorites = {
-  tokyonight = "tokyonight-night",
+  tokyonight = "tokyonight",
   onehalf = "onehalfdark",
   catppuccin_mocha = "catppuccin-mocha",
   catppuccin_macchiato = "catppuccin-macchiato",
@@ -7,4 +7,4 @@ local favorites = {
   sonokai = "sonokai", -- add g:sonokai_style = "andromeda"
 }
 
-return favorites.sonokai
+return favorites.tokyonight
