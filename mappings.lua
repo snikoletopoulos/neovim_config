@@ -18,9 +18,9 @@ return {
     ["<leader>Q"] = { "<cmd>qa<CR>", desc = "Close all buffers" },
     ["<leader>c"] = {
       function()
-        local bufs = vim.fn.getbufinfo { buflisted = true }
+        local bufs = vim.fn.getbufinfo({ buflisted = true })
         require("astronvim.utils.buffer").close(0)
-        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+        if require("astronvim.utils").is_available("alpha-nvim") and not bufs[2] then require("alpha").start(true) end
       end,
       desc = "Close buffer",
     },
@@ -66,7 +66,7 @@ return {
   },
   x = {
     -- TODO move packages to P
-    -- ["<leader>p"] = { "\"_dP" }
+    -- ["<leader>p"] = { "\"_dP" },
     iw = { name = "Inner word" },
     ib = { name = "Inner previous word" },
     ie = { name = "Inner end of word" },

@@ -18,8 +18,7 @@ return {
     dependencies = 'anuvyklack/keymap-amend.nvim',
     requires = 'anuvyklack/keymap-amend.nvim',
     config = function()
-      -- require('fold-preview').setup(astronvim.user_opts("plugins.fold-preview", {}))
-      require('fold-preview').setup({})
+      require('fold-preview').setup()
     end
   },
   {
@@ -67,5 +66,25 @@ return {
         },
       })
     end
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "LinArcX/telescope-command-palette.nvim",
+      "ThePrimeagen/harpoon",
+    },
+    config = function(plugin, opts)
+      if not opts.extensions then
+        opts.extensions = {}
+      end
+      opts.extensions.command_palette = astronvim.user_opts("command_palette", {})
+
+      require("plugins.configs.telescope")(plugin, opts)
+
+      local telescope = require "telescope"
+
+      telescope.load_extension("command_palette")
+      telescope.load_extension('harpoon')
+    end,
   },
 }

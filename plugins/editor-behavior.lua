@@ -34,11 +34,5 @@ return {
       })
     end
   },
-  {
-    "ThePrimeagen/harpoon",
-    lazy = false,
-    config = function()
-      require("telescope").load_extension('harpoon')
-    end
-  }
+  { "ThePrimeagen/harpoon",   lazy = false }
 }
