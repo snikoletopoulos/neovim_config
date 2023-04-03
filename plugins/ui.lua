@@ -3,7 +3,7 @@ return {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons"
   },
-  { "mbbill/undotree", lazy = false },
+  { "mbbill/undotree",                       lazy = false },
   -- ["dhruvasagar/vim-dotoo"] = {},
   {
     "j-hui/fidget.nvim",
@@ -28,6 +28,7 @@ return {
       require('pretty-fold').setup({})
     end
   },
+  { "LinArcX/telescope-command-palette.nvim" },
   {
     "folke/noice.nvim",
     lazy = false,

@@ -10,6 +10,7 @@ return {
     ["<leader>Y"] = { "\"+Y", desc = "Yank line to clipboard" },
     ["<leader>d"] = { "\"_d", desc = "Cut" },
     -- UI
+    ["<leader>P"] = { "<cmd>Telescope command_palette<CR>" },
     ["<leader>uu"] = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", desc = "Toggle undotree" },
     ["<leader>ut"] = { "<cmd>TroubleToggle<CR>", desc = "Toggle trouble" },
     ["<leader>fd"] = { "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Toggle trouble for document" },
