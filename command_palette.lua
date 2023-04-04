@@ -1,6 +1,6 @@
 return {
   { "Packages",
-    { "Mason Update",             ":MasonUpdateAll<cr>" },
+    { "Mason Update",             ":MasonUpdateAll" },
     { "Plugins Install",          ":lua require('lazy').install()" },
     { "Plugins Status",           ":lua require('lazy').home()" },
     { "Plugins Sync",             ":lua require('lazy').sync()" },
