@@ -1,17 +1,6 @@
 local maps = {
-  n = {
-    -- Just naming
-    ["<leader>w"] = { name = "Next camel case word" },
-    ["<leader>b"] = { name = "Previous camel case word" },
-    ["<leader>e"] = { name = "Next end of camel case word" },
-    -- this is a folder in which key
-    ["<leader>ge"] = { name = "Previous end of camel case word" },
-  },
-  i = {
-    -- Just naming
-    ["<S-Left>"] = { name = "Previous camel case word" },
-    ["<S-Right>"] = { name = "Next camel case word" },
-  },
+  n = {},
+  i = {},
   v = {},
   x = {},
   o = {}
@@ -73,11 +62,8 @@ maps.n["<leader>h3"] = { function() require("harpoon.ui").nav_file(3) end, desc 
 maps.n["<leader>h4"] = { function() require("harpoon.ui").nav_file(4) end, desc = "Go to Harpoon file 4" }
 maps.n["<leader>h5"] = { function() require("harpoon.ui").nav_file(5) end, desc = "Go to Harpoon file 5" }
 
--- Reset default
-maps.n["<leader>w"] = false
-
 -- Just naming
-maps.n["<leader>fa"] = { ":ASToggle<CR>", desc = "Toggle auto-save" }
+maps.n.Y = { name = "Yank line" }
 maps.v.g = { r = { name = "Selection" } }
 maps.x.iw = { name = "Inner word" }
 maps.x.ib = { name = "Inner previous word" }
@@ -85,6 +71,13 @@ maps.x.ie = { name = "Inner end of word" }
 maps.o.iw = { name = "Inner word" }
 maps.o.ib = { name = "Inner previous word" }
 maps.o.ie = { name = "Inner end of word" }
-maps.n.Y = { name = "Yank line" }
+maps.i["<S-Left>"] = { name = "Previous camel case word" }
+maps.i["<S-Right>"] = { name = "Next camel case word" }
+maps.n["<leader>w"] = { name = "Next camel case word" }
+maps.n["<leader>w"] = false
+maps.n["<leader>b"] = { name = "Previous camel case word" }
+maps.n["<leader>e"] = { name = "Next end of camel case word" }
+-- this is a folder in which key
+maps.n["<leader>ge"] = { name = "Previous end of camel case word" }
 
 return maps
