@@ -1,6 +1,5 @@
 return {
-  "styled-components/vim-styled-components",
-  "hail2u/vim-css3-syntax",
+  { "styled-components/vim-styled-components", lazy = false },
   {
     "NvChad/nvim-colorizer.lua",
     lazy = false,
