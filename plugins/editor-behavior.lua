@@ -34,5 +34,11 @@ return {
       })
     end
   },
-  { "ThePrimeagen/harpoon",   lazy = false }
+  { "ThePrimeagen/harpoon",   lazy = false },
+  {
+    "s1n7ax/nvim-window-picker",
+    opts = {
+      show_prompt = false,
+    }
+  }
 }
