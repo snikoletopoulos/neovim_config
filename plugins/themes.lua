@@ -8,4 +8,5 @@ return {
       vim.g.sonokai_style = "andromeda"
     end
   },
+  { "kvrohit/mellow.nvim" }
 }
