@@ -1,10 +1,4 @@
-local maps = {
-  n = {},
-  i = {},
-  v = {},
-  x = {},
-  o = {}
-}
+local maps = { n = {}, i = {}, v = {}, x = {}, o = {} }
 
 -- Editing
 -- maps.n["<C-d>"] = { "<C-d>zz", desc = "Move half page down" }
