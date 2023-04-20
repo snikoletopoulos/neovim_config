@@ -1,9 +1,9 @@
-return {
+local maps = {
   n = {
     ["<leader>fa"] = { ":ASToggle<CR>", desc = "Toggle auto-save" },
     -- Center cursor on movements
-    ["<C-d>"] = { "<C-d>zz", desc = "Move half page down" },
-    ["<C-u>"] = { "<C-u>zz", desc = "Move half page down" },
+    -- ["<C-d>"] = { "<C-d>zz", desc = "Move half page down" },
+    -- ["<C-u>"] = { "<C-u>zz", desc = "Move half page down" },
     ["n"] = { "nzzzv", desc = "Next result" },
     ["N"] = { "Nzzzv", desc = "Previous result" },
     ["<leader>y"] = { "\"+y", desc = "Yank to clipboard" },
@@ -67,13 +67,20 @@ return {
   },
   x = {
     ["<leader>p"] = { "\"_dP", desc = "Paste without coping" },
-    iw = { name = "Inner word" },
-    ib = { name = "Inner previous word" },
-    ie = { name = "Inner end of word" },
   },
-  o = {
-    iw = { name = "Inner word" },
-    ib = { name = "Inner previous word" },
-    ie = { name = "Inner end of word" },
-  }
+  o = {}
 }
+
+-- Reset default
+
+
+-- Just naming
+maps.n["<leader>fa"] = { ":ASToggle<CR>", desc = "Toggle auto-save" }
+maps.x.iw = { name = "Inner word" }
+maps.x.ib = { name = "Inner previous word" }
+maps.x.ie = { name = "Inner end of word" }
+maps.o.iw = { name = "Inner word" }
+maps.o.ib = { name = "Inner previous word" }
+maps.o.ie = { name = "Inner end of word" }
+
+return maps
