@@ -11,6 +11,10 @@ return {
     { "AstroNvim Version",        ":AstroVersion" },
     { "AstroNvim Changelog",      ":AstroChangelog" },
   },
+  { "Servers",
+    { "Restart tsserver", ":LspRestart tsserver" },
+    { "Restart eslint_d", ":! eslint_d restart" }
+  },
   { "File",
     { "entire selection (C-a)",  ':call feedkeys("GVgg")' },
     { "save current file (C-s)", ':w' },
@@ -20,6 +24,7 @@ return {
     { "search word (A-w)",       ":lua require('telescope.builtin').live_grep()",                  1 },
     { "git files (A-f)",         ":lua require('telescope.builtin').git_files()",                  1 },
     { "files (C-f)",             ":lua require('telescope.builtin').find_files()",                 1 },
+    { "inspect types",           ":InspectTwoslashQueries", },
   },
   { "Help",
     { "tips",            ":help tips" },
