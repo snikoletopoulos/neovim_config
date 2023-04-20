@@ -45,14 +45,6 @@ return {
         status.component.nav(),
       }
 
-      -- TODO: uncomment this on neovim 0.9
-      -- statuscolumn
-      -- opts.statuscolumn = {
-      --   status.component.foldcolumn(),
-      --   status.component.numbercolumn(),
-      --   status.component.signcolumn(),
-      -- }
-
       -- opts.winbar = {
       --   -- create custom winbar
       --   static = {
