@@ -8,11 +8,12 @@ maps.n.N = { "Nzzzv", desc = "Previous result" }
 maps.x["J"] = { ":m '>+1<CR>gv=gv", desc = "Move line(s) up" }
 maps.x["K"] = { ":m '<-2<CR>gv=gv", desc = "Move line(s) up" }
 maps.x["<leader>p"] = { "\"_dP", desc = "Paste without coping" }
-maps.i["<leader>y"] = { "\"+y", desc = "Yank to clipboard" }
+maps.n["<leader>y"] = { "\"+y", desc = "Yank to clipboard" }
 maps.x["<leader>y"] = { "\"+y", desc = "Yank to clipboard" }
-maps.i["<leader>Y"] = { "\"+Y", desc = "Yank line to clipboard" }
+maps.n["<leader>Y"] = { "\"+Y", desc = "Yank line to clipboard" }
 maps.x["<leader>d"] = { "\"_d", desc = "Cut" }
-maps.i["<leader>d"] = { "\"_d", desc = "Cut" }
+maps.n["<leader>d"] = { "\"_d", desc = "Cut" }
+maps.n["<leader>fr"] = { ":%s/\\<<C-r><h-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace word in file" } -- TODO: fix this
 
 -- Neovim behavior
 maps.n["<leader>c"] = {
@@ -32,10 +33,12 @@ maps.n["<leader>uu"] = { "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", desc =
 maps.n["<leader>ut"] = { "<cmd>TroubleToggle<CR>", desc = "Toggle trouble" }
 maps.n["<leader>fd"] = { "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Toggle trouble for document" }
 maps.n["<leader>ft"] = { "<cmd>TodoTelescope<CR>", desc = "Find todos" }
-maps.n["<leader>fr"] = { ":%s/\\<<C-r><h-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Replace word in file" } -- TODO: fix this
+maps.n["<leader>s"] = { name = " Search" }
+maps.x["<leader>s"] = { name = " Search" }
+maps.n["<leader>sr"] = { function() require("ssr").open() end, desc = "Structural search and replace" }
+maps.x["<leader>sr"] = { function() require("ssr").open() end, desc = "Structural search and replace" }
 
 -- Change default
-maps.n["<leader>e"] = false
 maps.n["<leader>ua"] = { function() require("alpha").start() end, desc = "Home screen" }
 maps.n["<leader>ue"] = { "<cmd>Neotree toggle action=show<cr>", desc = "Toggle Explorer" }
 
@@ -44,7 +47,7 @@ maps.i["<M-Tab>"] = { 'copilot#Accept("")', replace_keycodes = false, expr = tru
 maps.i["<M-\\>"] = { "<M-S>", desc = "Force Copilot suggestion" }
 
 -- Harpoon
-maps.n["<leader>h"] = { name = "Harpoon" }
+maps.n["<leader>h"] = { name = "󱡅 Harpoon" }
 maps.n["<leader>hh"] = { "<cmd>Telescope harpoon marks<CR>", desc = "Toggle Harpoon" }
 maps.n["<leader>uh"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" }
 maps.n["<leader>ha"] = { function() require("harpoon.mark").add_file() end, desc = "Add file to Harpoon" }
@@ -59,19 +62,15 @@ maps.n["<leader>h5"] = { function() require("harpoon.ui").nav_file(5) end, desc 
 -- Just naming
 maps.n.Y = { name = "Yank line" }
 maps.v.g = { r = { name = "Selection" } }
-maps.x.iw = { name = "Inner word" }
-maps.x.ib = { name = "Inner previous word" }
-maps.x.ie = { name = "Inner end of word" }
-maps.o.iw = { name = "Inner word" }
-maps.o.ib = { name = "Inner previous word" }
-maps.o.ie = { name = "Inner end of word" }
+maps.n["<leader>ge"] = { desc = "Previous end of camel case word" }
+
+-- TODO: fix which key some mappings
 maps.i["<S-Left>"] = { name = "Previous camel case word" }
 maps.i["<S-Right>"] = { name = "Next camel case word" }
+-- maps.n["<leader>b"] = { name = "Previous camel case word" }
 maps.n["<leader>w"] = { name = "Next camel case word" }
 maps.n["<leader>w"] = false
-maps.n["<leader>b"] = { name = "Previous camel case word" }
 maps.n["<leader>e"] = { name = "Next end of camel case word" }
--- this is a folder in which key
-maps.n["<leader>ge"] = { name = "Previous end of camel case word" }
+maps.n["<leader>e"] = false
 
 return maps
