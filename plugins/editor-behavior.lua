@@ -40,5 +40,6 @@ return {
     opts = {
       show_prompt = false,
     }
-  }
+  },
+  { "cshuaimin/ssr.nvim" }
 }
