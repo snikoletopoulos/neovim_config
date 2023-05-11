@@ -15,4 +15,11 @@ return {
     end
   },
   { "marilari88/twoslash-queries.nvim", lazy = false },
+  {
+    "L3MON4D3/LuaSnip",
+    config = function(plugin, opts)
+      require("plugins.configs.luasnip")(plugin, opts)
+      require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
+    end,
+  },
 }

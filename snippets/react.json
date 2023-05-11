@@ -1,0 +1,46 @@
+{
+  "react component template": {
+    "prefix": "rc",
+    "body": [
+      "export const ${1:$TM_FILENAME_BASE} = () => {",
+      "  return <div>${2}</div>",
+      "}"
+    ],
+    "description": "react component template"
+  },
+  "react component template export": {
+    "prefix": "rce",
+    "body": [
+      "const ${1:$TM_FILENAME_BASE} = () => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "react component template export"
+  },
+  "typescript react component template": {
+    "prefix": "tsrc",
+    "body": [
+      "interface Props {}",
+      "",
+      "export const ${1:$TM_FILENAME_BASE} = (props: Props) => {",
+      "  return <div>${2}</div>",
+      "}"
+    ],
+    "description": "typescript react component template"
+  },
+  "typescript react component template export": {
+    "prefix": "tsrce",
+    "body": [
+      "interface Props {}",
+      "",
+      "const ${1:$TM_FILENAME_BASE} = (props: Props) => {",
+      "  return <div>${2}</div>",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "react component template export"
+  }
+}
