@@ -2,8 +2,10 @@ local favorites = {
   tokyonight = "tokyonight",
   onehalf = "onehalfdark",
   catppuccin_macchiato = "catppuccin-macchiato",
-  sonokai = "sonokai", -- add g:sonokai_style = "andromeda"
+  sonokai = "sonokai",
   mellow = "mellow",
+  edge = "edge",
+  github = "github_dark_dimmed",
 }
 
-return favorites.mellow
+return favorites.github
