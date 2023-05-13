@@ -28,13 +28,13 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
 
-      opts.sources = cmp.config.sources {
+      opts.sources = cmp.config.sources({
         { name = "nvim_lua", priority = 1250 },
         { name = "nvim_lsp", priority = 1000 },
         { name = "luasnip",  priority = 750 },
         { name = "buffer",   priority = 500, keyword_length = 5 },
         { name = "path",     priority = 250 },
-      }
+      })
 
       opts.mapping = {
         ["<C-i>"] = cmp.mapping(function()
@@ -43,6 +43,7 @@ return {
           end
         end, { "i", "s" }),
       }
+      opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
 
       opts.formatting.fields = { "kind", "abbr", "menu" }
       opts.formatting.format = function(entry, vim_item)
@@ -59,10 +60,6 @@ return {
           col_offset = -3,
           side_padding = 0,
         },
-      }
-
-      opts.experimental = {
-        native_menu = true,
       }
 
       return opts
