@@ -36,13 +36,6 @@ return {
         { name = "path",     priority = 250 },
       })
 
-      opts.mapping = {
-        ["<C-i>"] = cmp.mapping(function()
-          if not cmp.visible() then
-            cmp.complete()
-          end
-        end, { "i", "s" }),
-      }
       opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
 
       opts.formatting.fields = { "kind", "abbr", "menu" }
