@@ -48,7 +48,8 @@ return function()
     CmpItemKindEvent = { fg = "#D4D4D4" },
     CmpItemAbbrMatch = { fg = "#18a2fe", bold = true },
     CmpItemAbbrMatchFuzzy = { fg = "#18a2fe", bold = true },
-    CmpItemMenu = { fg = "#777d86" },
+    CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
+    CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
     -- VS code tree
     AerialArrayIcon = { fg = "" },
     AerialClassIcon = { fg = "#f28b25" },
@@ -75,5 +76,6 @@ return function()
     AerialStructIcon = { fg = "#f28b25" },
     AerialTypeParameter = { fg = "#9CDCFE" },
     AerialVariableIcon = { fg = "#9CDCFE" },
+
   }
 end

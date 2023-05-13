@@ -22,4 +22,50 @@ return {
       require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } }
     end,
   },
+  { "hrsh7th/cmp-nvim-lua" },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+
+      opts.sources = cmp.config.sources {
+        { name = "nvim_lua", priority = 1250 },
+        { name = "nvim_lsp", priority = 1000 },
+        { name = "luasnip",  priority = 750 },
+        { name = "buffer",   priority = 500, keyword_length = 5 },
+        { name = "path",     priority = 250 },
+      }
+
+      opts.mapping = {
+        ["<C-i>"] = cmp.mapping(function()
+          if not cmp.visible() then
+            cmp.complete()
+          end
+        end, { "i", "s" }),
+      }
+
+      opts.formatting.fields = { "kind", "abbr", "menu" }
+      opts.formatting.format = function(entry, vim_item)
+        local kind = require("lspkind").cmp_format(astronvim.lspkind)(entry, vim_item)
+        local strings = vim.split(kind.kind, "%s", { trimempty = true })
+        kind.kind = " " .. (strings[1] or "") .. " "
+        kind.menu = (strings[2] or "") .. " " .. kind.menu
+
+        return kind
+      end
+
+      opts.window = {
+        completion = {
+          col_offset = -3,
+          side_padding = 0,
+        },
+      }
+
+      opts.experimental = {
+        native_menu = true,
+      }
+
+      return opts
+    end,
+  }
 }
