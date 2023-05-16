@@ -86,6 +86,14 @@ return {
 
       telescope.load_extension("command_palette")
       telescope.load_extension('harpoon')
+      telescope.load_extension('projects')
     end,
   },
+  {
+    "ahmedkhalf/project.nvim",
+    lazy = false,
+    config = function()
+      require("project_nvim").setup({})
+    end
+  }
 }
