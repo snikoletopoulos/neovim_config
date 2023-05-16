@@ -41,5 +41,18 @@ return {
       show_prompt = false,
     }
   },
-  { "cshuaimin/ssr.nvim" }
+  { "cshuaimin/ssr.nvim" },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+          "SmiteshP/nvim-navic",
+          "MunifTanjim/nui.nvim"
+        },
+        opts = { lsp = { auto_attach = true } }
+      }
+    },
+  },
 }
