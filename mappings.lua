@@ -25,6 +25,7 @@ maps.n["<leader>c"] = {
   desc = "Close buffer",
 }
 maps.n["<leader>Q"] = { "<cmd>qa<CR>", desc = "Close all buffers" }
+maps.n["<leader>fs"] = { function() require("nvim-navbuddy").open() end, desc = "Breadcrumb search" }
 
 -- UI
 maps.n["<leader>fa"] = { ":ASToggle<CR>", desc = "Toggle auto-save" }
