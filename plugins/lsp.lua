@@ -38,6 +38,7 @@ return {
         null_ls.builtins.code_actions.eslint_d,
         null_ls.builtins.code_actions.shellcheck,
         null_ls.builtins.code_actions.gitsigns,
+        require("typescript.extensions.null-ls.code-actions"),
 
         -- Completion
         null_ls.builtins.completion.tags,
@@ -67,5 +68,6 @@ return {
       }
       return config
     end
-  }
+  },
+  { "jose-elias-alvarez/typescript.nvim", lazy = false },
 }
