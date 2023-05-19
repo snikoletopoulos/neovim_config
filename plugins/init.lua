@@ -6,8 +6,4 @@ return {
   --     require("telescope").load_extension("refactoring")
   --   end
   -- },
-  {
-    dir = "/Users/snikoletopoulos/Developer/my-projects/ts-error-translator.nvim",
-    lazy = false
-  }
 }

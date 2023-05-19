@@ -32,7 +32,7 @@ return {
         { name = "nvim_lua", priority = 1250 },
         { name = "nvim_lsp", priority = 1000 },
         { name = "luasnip",  priority = 750 },
-        { name = "buffer",   priority = 500, keyword_length = 5 },
+        { name = "buffer",   priority = 500, keyword_length = 5, max_item_count = 5 },
         { name = "path",     priority = 250 },
       })
 

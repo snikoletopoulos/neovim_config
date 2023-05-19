@@ -1,5 +1,6 @@
 return {
   { "Servers",
+    { "Restart lua-ls",   ":LspRestart lua-ls" },
     { "Restart eslint_d", ":! eslint_d restart" },
     { "Restart tsserver", ":LspRestart tsserver" },
   },
