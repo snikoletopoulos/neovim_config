@@ -61,4 +61,34 @@ return {
       }
     },
   },
+  {
+    "nvim-neorg/neorg",
+    dependencies = { { "nvim-lua/plenary.nvim" } },
+    lazy = false,
+    build = ":Neorg sync-parsers",
+    opts = {
+      load = {
+        ["core.defaults"] = {},
+        ["core.concealer"] = {
+          config = {
+            icon_preset = "diamond"
+          }
+        },
+        ["core.dirman"] = {
+          config = {
+            workspaces = {
+              notes = "~/notes",
+            },
+            default_workspace = "notes",
+          },
+        },
+        ["core.completion"] = {
+          config = {
+            engine = "nvim-cmp",
+          }
+        },
+        ["core.integrations.nvim-cmp"] = {},
+      },
+    },
+  }
 }
