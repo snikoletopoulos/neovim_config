@@ -1,6 +1,9 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      { "<leader>ue", "<cmd>Neotree toggle action=show<cr>", desc = "Toggle Explorer" },
+    },
     opts = {
       window = {
         width = 40
@@ -24,6 +27,9 @@ return {
   {
     "pocco81/auto-save.nvim",
     lazy = false,
+    keys = {
+      { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" },
+    },
     config = function()
       require("auto-save").setup({
         debounce_delay = 1000,
@@ -40,19 +46,35 @@ return {
       })
     end
   },
-  { "ThePrimeagen/harpoon",   lazy = false },
+  {
+    "ThePrimeagen/harpoon",
+    keys = {
+      { "<leader>hh", "<cmd>Telescope harpoon marks<CR>",                       desc = "Toggle Harpoon" },
+      { "<leader>uh", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
+      { "<leader>ha", function() require("harpoon.mark").add_file() end,        desc = "Add file to Harpoon" },
+      { "[h",         function() require("harpoon.ui").nav_prev() end,          desc = "Previous Harpoon file" },
+      { "]h",         function() require("harpoon.ui").nav_next() end,          desc = "Next Harpoon file" },
+      { "<leader>h1", function() require("harpoon.ui").nav_file(1) end,         desc = "Go to Harpoon file 1" },
+      { "<leader>h2", function() require("harpoon.ui").nav_file(2) end,         desc = "Go to Harpoon file 2" },
+      { "<leader>h3", function() require("harpoon.ui").nav_file(3) end,         desc = "Go to Harpoon file 3" },
+      { "<leader>h4", function() require("harpoon.ui").nav_file(4) end,         desc = "Go to Harpoon file 4" },
+      { "<leader>h5", function() require("harpoon.ui").nav_file(5) end,         desc = "Go to Harpoon file 5" },
+    },
+  },
   {
     "s1n7ax/nvim-window-picker",
     opts = {
       show_prompt = false,
     }
   },
-  { "cshuaimin/ssr.nvim" },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
         "SmiteshP/nvim-navbuddy",
+        keys = {
+          { "<leader>fs", function() require("nvim-navbuddy").open() end, desc = "Breadcrumb search" },
+        },
         dependencies = {
           "SmiteshP/nvim-navic",
           "MunifTanjim/nui.nvim"

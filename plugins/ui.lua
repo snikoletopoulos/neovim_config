@@ -1,10 +1,18 @@
 return {
   {
     "folke/trouble.nvim",
-    dependencies = "nvim-tree/nvim-web-devicons"
+    dependencies = "nvim-tree/nvim-web-devicons",
+    keys = {
+      { "<leader>ut", "<cmd>TroubleToggle<CR>",                      desc = "Toggle trouble" },
+      { "<leader>fd", "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Toggle trouble for document" },
+    },
   },
-  { "mbbill/undotree",                       lazy = false },
-  -- ["dhruvasagar/vim-dotoo"] = {},
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader>uu", "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", desc = "Toggle undotree" },
+    },
+  },
   {
     "j-hui/fidget.nvim",
     lazy = false,
@@ -28,7 +36,18 @@ return {
       require('pretty-fold').setup({})
     end
   },
-  { "LinArcX/telescope-command-palette.nvim" },
+  {
+    "cshuaimin/ssr.nvim",
+    keys = {
+      { "<leader>sr", function() require("ssr").open() end, desc = "Structural search and replace", mode = { "n", "x" } },
+    }
+  },
+  {
+    "LinArcX/telescope-command-palette.nvim",
+    keys = {
+      { "<leader>P", "<cmd>Telescope command_palette<CR>", desc = "Command palette" },
+    },
+  },
   {
     "folke/noice.nvim",
     lazy = false,

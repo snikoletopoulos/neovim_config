@@ -15,6 +15,9 @@ return {
   {
     "folke/todo-comments.nvim",
     lazy = false,
+    keys = {
+      { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find todos" },
+    },
     requires = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup({

@@ -1,5 +1,19 @@
 return {
-  { "github/copilot.vim",               lazy = false },
+  {
+    "github/copilot.vim",
+    lazy = false,
+    keys = {
+      {
+        "<M-Tab>",
+        'copilot#Accept("")',
+        replace_keycodes = false,
+        expr = true,
+        desc = "Accept Copilot suggestion",
+        mode = "i",
+      },
+      { "<M-\\>", "<M-S>", desc = "Force Copilot suggestion", mode = "i" },
+    },
+  },
   {
     "axelvc/template-string.nvim",
     lazy = false,
