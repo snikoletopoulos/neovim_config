@@ -20,9 +20,7 @@ return {
     "karb94/neoscroll.nvim",
     lazy = false,
     config = function()
-      require("neoscroll").setup({
-        post_hook = function() vim.fn.feedkeys("M") end
-      })
+      require("neoscroll").setup({ post_hook = function() vim.fn.feedkeys("M") end })
     end
   },
   { "mg979/vim-visual-multi", lazy = false },
