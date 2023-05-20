@@ -28,7 +28,7 @@ return {
       })
     end
   },
-  { "marilari88/twoslash-queries.nvim", lazy = false },
+  { "marilari88/twoslash-queries.nvim" },
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
@@ -39,7 +39,7 @@ return {
   { "hrsh7th/cmp-nvim-lua" },
   {
     'David-Kunz/cmp-npm',
-    lazy = false,
+    ft = "json",
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('cmp-npm').setup({})
