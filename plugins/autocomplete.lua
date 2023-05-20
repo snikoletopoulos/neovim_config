@@ -24,6 +24,14 @@ return {
   },
   { "hrsh7th/cmp-nvim-lua" },
   {
+    'David-Kunz/cmp-npm',
+    lazy = false,
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('cmp-npm').setup({})
+    end
+  },
+  {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -32,9 +40,11 @@ return {
         { name = "nvim_lua", priority = 1250 },
         { name = "nvim_lsp", priority = 1000 },
         { name = "luasnip",  priority = 750 },
+        { name = 'npm',      priority = 600 },
         { name = "buffer",   priority = 500, keyword_length = 5, max_item_count = 5 },
         { name = "path",     priority = 250 },
       })
+      opts.duplicates.npm = 1
 
       opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
 
