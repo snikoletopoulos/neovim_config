@@ -4,7 +4,11 @@ return {
     opts = {
       ensure_installed = { "astro", "bash", "css", "dockerfile", "dot", "graphql", "html", "javascript", "jsdoc", "json",
         "jsonc", "lua", "markdown", "markdown_inline", "prisma", "python", "regex", "tsx", "typescript", "yaml" }
-    }
+    },
+    config = function(_, opts)
+      require("nvim-treesitter.install").compilers = { "gcc-13" }
+      require("nvim-treesitter.configs").setup(opts)
+    end
   },
   {
     "williamboman/mason-lspconfig.nvim",

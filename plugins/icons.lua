@@ -9,9 +9,10 @@ return {
         nvim_lua = "[api]",
         nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
+        neorg = "[Neorg]",
+        npm = "[NPM]",
         buffer = "[Buffer]",
         path = "[Path]",
-        npm = "[NPM]",
       }
 
       opts.symbol_map = {

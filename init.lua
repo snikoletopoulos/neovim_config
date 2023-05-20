@@ -5,6 +5,7 @@ return {
       copilot_no_tab_map = true,
       loaded_perl_provider = 0,
       sonokai_style = "andromeda",
+      maplocalleader = ",",
     },
     opt = {
       clipboard = "",
