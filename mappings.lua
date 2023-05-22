@@ -30,6 +30,7 @@ maps.n["<leader>fa"] = false -- auto-save.nvim
 maps.n["<leader>uu"] = false -- undotree.nvim
 maps.n["<leader>ft"] = false -- todo-comments.nvim
 maps.n["<leader>uh"] = false -- harpoon
+maps.n["<leader>e"] = false  -- CamelCaseMotion
 
 -- Just naming
 maps.n.Y = { name = "Yank line" }
