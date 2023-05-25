@@ -47,8 +47,4 @@ maps.v["<leader>b"] = { desc = "Next start of camel case word" }
 maps.n["<leader>ge"] = { desc = "Previous end of camel case word" }
 maps.v["<leader>ge"] = { desc = "Previous end of camel case word" }
 
--- TODO: fix which key some mappings
--- maps.i["<S-Left>"] = { name = "Previous camel case word" }
--- maps.i["<S-Right>"] = { name = "Next camel case word" }
-
 return maps
