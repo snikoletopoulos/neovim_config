@@ -58,6 +58,14 @@ return {
       opts.duplicates.npm = 1
 
       opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
+      opts.mapping["<C-p>"] = cmp.mapping(function()
+        print(cmp.visible())
+        if cmp.visible() then
+          cmp.close()
+        else
+          cmp.complete()
+        end
+      end, { "i", "c" })
 
       opts.formatting.fields = { "kind", "abbr", "menu" }
       opts.formatting.format = function(entry, vim_item)
