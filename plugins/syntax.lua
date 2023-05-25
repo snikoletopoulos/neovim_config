@@ -18,16 +18,14 @@ return {
     keys = {
       { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find todos" },
     },
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup({
-        highlight = {
-          pattern = [[.*<(KEYWORDS)\s*]]
-        },
-        search = {
-          pattern = [[\b(KEYWORDS)\b]]
-        }
-      })
-    end
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = {
+      highlight = {
+        pattern = [[.*<(KEYWORDS)\s*]]
+      },
+      search = {
+        pattern = [[\b(KEYWORDS)\b]]
+      }
+    },
   },
 }

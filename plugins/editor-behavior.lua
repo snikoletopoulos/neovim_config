@@ -30,21 +30,17 @@ return {
     keys = {
       { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" },
     },
-    config = function()
-      require("auto-save").setup({
-        debounce_delay = 1000,
-        execution_message = { message = function() return "" end }
-      })
-    end
+    opts = {
+      debounce_delay = 1000,
+      execution_message = { message = function() return "" end }
+    },
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
-    config = function()
-      require("treesitter-context").setup({
-        mode = "topline",
-      })
-    end
+    opts = {
+      mode = "topline",
+    },
   },
   {
     "ThePrimeagen/harpoon",

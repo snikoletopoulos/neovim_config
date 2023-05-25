@@ -17,16 +17,14 @@ return {
   {
     "axelvc/template-string.nvim",
     lazy = false,
-    config = function()
-      require("template-string").setup({
-        jsx_brackets = true,
-        remove_template_strings = true,
-        restore_quotes = {
-          normal = [["]],
-          jsx = [["]],
-        },
-      })
-    end
+    opts = {
+      jsx_brackets = true,
+      remove_template_strings = true,
+      restore_quotes = {
+        normal = [["]],
+        jsx = [["]],
+      },
+    },
   },
   { "marilari88/twoslash-queries.nvim" },
   {
@@ -41,9 +39,7 @@ return {
     'David-Kunz/cmp-npm',
     ft = "json",
     dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('cmp-npm').setup({})
-    end
+    opts = {},
   },
   {
     "hrsh7th/nvim-cmp",
