@@ -59,7 +59,6 @@ return {
 
       opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
       opts.mapping["<C-p>"] = cmp.mapping(function()
-        print(cmp.visible())
         if cmp.visible() then
           cmp.close()
         else
