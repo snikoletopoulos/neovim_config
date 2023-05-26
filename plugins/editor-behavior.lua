@@ -8,11 +8,67 @@ return {
       window = {
         width = 40
       },
-      sync_root_with_cwd = true,
-      respect_buf_cwd = true,
-      update_focused_file = {
-        enable = true,
-        update_root = true
+      sort_case_insensitive = true,
+      filesystem = {
+        components = {
+        renderers = {
+          directory = {
+            { "indent" },
+            { "icon" },
+            { "current_filter" },
+            {
+              "container",
+              content = {
+                { "name",        zindex = 10 },
+                { "clipboard",   zindex = 10 },
+                { "diagnostics", zindex = 20, align = "right", hide_when_expanded = true },
+                { "git_status",  zindex = 20, align = "right", hide_when_expanded = true },
+              },
+            },
+          },
+          file = {
+            { "indent" },
+            { "icon" },
+            {
+              "container",
+              content = {
+                { "name",          zindex = 10, use_git_status_colors = true },
+                { "clipboard",     zindex = 10 },
+                { "bufnr",         zindex = 10 },
+                { "modified",      zindex = 20, align = "right" },
+                { "diagnostics",   zindex = 20, align = "right" },
+                { "git_status",    zindex = 20, align = "right" },
+              },
+            },
+          }
+        }
+      },
+      event_handlers = {
+        -- TODO: Hide cursor when entering neotree
+        -- {
+        --   event = "neo_tree_buffer_enter",
+        --   handler = function()
+        --     vim.cmd 'highlight! Cursor blend=100'
+        --   end
+        -- },
+        -- {
+        --   event = "neo_tree_buffer_leave",
+        --   handler = function()
+        --     vim.cmd 'highlight! Cursor guibg=#5f87af blend=0'
+        --   end
+        -- },
+        {
+          event = "neo_tree_window_after_open",
+          handler = function()
+            vim.cmd("wincmd =")
+          end
+        },
+        {
+          event = "neo_tree_window_after_close",
+          handler = function()
+            vim.cmd("wincmd =")
+          end
+        }
       },
     }
   },
