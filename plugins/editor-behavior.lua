@@ -3,12 +3,25 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
       { "<leader>ue", "<cmd>Neotree toggle action=show<cr>", desc = "Toggle Explorer" },
+      { "<leader>ud", "<cmd>Neotree diagnostics toggle<cr>", desc = "Toggle Diagnostics" },
     },
     opts = {
-      window = {
-        width = 40
-      },
+      window = { width = 40 },
+      tabs_layout = "focus",
       sort_case_insensitive = true,
+      sources = { "filesystem", "buffers", "git_status", "diagnostics" },
+      source_selector = {
+        show_scrolled_off_parent_node = true,
+        sources = {
+          { source = "filesystem" },
+          { source = "buffers" },
+          { source = "git_status" },
+        },
+      },
+      diagnostics = {
+        auto_preview = { enabled = true },
+        window = { position = "bottom", height = 12 },
+      },
       filesystem = {
         components = {
           harpoon_index = function(config, node)
@@ -60,32 +73,16 @@ return {
       },
       event_handlers = {
         -- TODO: Hide cursor when entering neotree
-        -- {
-        --   event = "neo_tree_buffer_enter",
-        --   handler = function()
-        --     vim.cmd 'highlight! Cursor blend=100'
-        --   end
-        -- },
-        -- {
-        --   event = "neo_tree_buffer_leave",
-        --   handler = function()
-        --     vim.cmd 'highlight! Cursor guibg=#5f87af blend=0'
-        --   end
-        -- },
-        {
-          event = "neo_tree_window_after_open",
-          handler = function()
-            vim.cmd("wincmd =")
-          end
-        },
-        {
-          event = "neo_tree_window_after_close",
-          handler = function()
-            vim.cmd("wincmd =")
-          end
-        }
+        { event = "neo_tree_buffer_enter",       handler = function() vim.cmd 'highlight! Cursor blend=100' end },
+        { event = "neo_tree_buffer_leave",       handler = function() vim.cmd 'highlight! Cursor guibg=#5f87af blend=0' end },
+        { event = "neo_tree_window_after_open",  handler = function() vim.cmd("wincmd =") end },
+        { event = "neo_tree_window_after_close", handler = function() vim.cmd("wincmd =") end }
       },
     }
+  },
+  {
+    "mrbjarksen/neo-tree-diagnostics.nvim",
+    dependencies = "nvim-neo-tree/neo-tree.nvim",
   },
   {
     "karb94/neoscroll.nvim",

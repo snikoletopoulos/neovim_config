@@ -31,6 +31,7 @@ maps.n["<leader>uu"] = false -- undotree.nvim
 maps.n["<leader>ft"] = false -- todo-comments.nvim
 maps.n["<leader>uh"] = false -- harpoon
 maps.n["<leader>e"] = false  -- CamelCaseMotion
+maps.n["<leader>ud"] = false -- neo-tree-diagnostics.nvim
 
 -- Just naming
 maps.n.Y = { name = "Yank line" }
