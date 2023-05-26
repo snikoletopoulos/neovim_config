@@ -8,6 +8,7 @@ return function()
   local red = get_hlgroup("Error").fg
 
   return {
+    -- Telescope theme
     TelescopeBorder = { fg = bg_alt, bg = bg },
     TelescopeNormal = { bg = bg },
     TelescopePreviewBorder = { fg = bg, bg = bg },
@@ -76,6 +77,5 @@ return function()
     AerialStructIcon = { fg = "#f28b25" },
     AerialTypeParameter = { fg = "#9CDCFE" },
     AerialVariableIcon = { fg = "#9CDCFE" },
-
   }
 end

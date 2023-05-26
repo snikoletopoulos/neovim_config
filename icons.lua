@@ -19,7 +19,6 @@ return {
   Git = "",
   -- GitAdd = "",
   GitAdd = "",
-  -- GitBranch = "",
   GitBranch = "",
   GitChange = "",
   GitConflict = "",
