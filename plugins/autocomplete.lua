@@ -58,7 +58,7 @@ return {
       opts.duplicates.npm = 1
 
       opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
-      opts.mapping["<C-p>"] = cmp.mapping(function()
+      opts.mapping["<C-m>"] = cmp.mapping(function()
         if cmp.visible() then
           cmp.close()
         else
