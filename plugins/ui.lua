@@ -3,8 +3,8 @@ return {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     keys = {
-      { "<leader>ut", "<cmd>TroubleToggle<CR>",                      desc = "Toggle trouble" },
-      { "<leader>fd", "<cmd>TroubleToggle document_diagnostics<CR>", desc = "Toggle trouble for document" },
+      { "<leader>ut", "<cmd>TroubleToggle workspace_diagnostics<CR>", desc = "Toggle trouble" },
+      { "<leader>fd", "<cmd>TroubleToggle document_diagnostics<CR>",  desc = "Toggle trouble for document" },
     },
   },
   {
