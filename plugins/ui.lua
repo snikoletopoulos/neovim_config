@@ -39,9 +39,13 @@ return {
   },
   {
     "LinArcX/telescope-command-palette.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     keys = {
       { "<leader>P", "<cmd>Telescope command_palette<CR>", desc = "Command palette" },
     },
+    config = function()
+      require("telescope").load_extension("command_palette")
+    end
   },
   {
     "folke/noice.nvim",
@@ -82,22 +86,12 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = {
-      "LinArcX/telescope-command-palette.nvim",
-      "ThePrimeagen/harpoon",
-    },
     config = function(plugin, opts)
       if not opts.extensions then
         opts.extensions = {}
       end
       opts.extensions.command_palette = astronvim.user_opts("command_palette", {})
-
       require("plugins.configs.telescope")(plugin, opts)
-
-      local telescope = require "telescope"
-
-      telescope.load_extension("command_palette")
-      telescope.load_extension("harpoon")
     end,
   },
 }

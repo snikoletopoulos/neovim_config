@@ -112,6 +112,7 @@ return {
   },
   {
     "ThePrimeagen/harpoon",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     keys = {
       { "<leader>hh", "<cmd>Telescope harpoon marks<CR>",                       desc = "Toggle Harpoon" },
       { "<leader>uh", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
@@ -124,6 +125,9 @@ return {
       { "<leader>h4", function() require("harpoon.ui").nav_file(4) end,         desc = "Go to Harpoon file 4" },
       { "<leader>h5", function() require("harpoon.ui").nav_file(5) end,         desc = "Go to Harpoon file 5" },
     },
+    config = function()
+      require("telescope").load_extension("harpoon")
+    end
   },
   {
     "s1n7ax/nvim-window-picker",
