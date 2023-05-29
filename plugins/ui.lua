@@ -31,11 +31,13 @@ return {
     lazy = false,
     opts = {},
   },
+  -- TODO: fix this plugin
   {
     "cshuaimin/ssr.nvim",
     keys = {
       { "<leader>sr", function() require("ssr").open() end, desc = "Structural search and replace", mode = { "n", "x" } },
-    }
+    },
+    opts = {},
   },
   {
     "LinArcX/telescope-command-palette.nvim",
