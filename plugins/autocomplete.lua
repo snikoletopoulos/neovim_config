@@ -64,7 +64,7 @@ return {
         else
           cmp.complete()
         end
-      end, { "i", "c" })
+      end, { "i" })
 
       opts.formatting.fields = { "kind", "abbr", "menu" }
       opts.formatting.format = function(entry, vim_item)
