@@ -1,8 +1,6 @@
 local maps = { n = {}, i = {}, v = {}, x = {}, o = {} }
 
 -- Editing
--- maps.n["<C-d>"] = { "<C-d>zz", desc = "Move half page down" }
--- maps.n["<C-u>"] = { "<C-u>zz", desc = "Move half page down" }
 maps.n.n = { "nzzzv", desc = "Next result" }
 maps.n.N = { "Nzzzv", desc = "Previous result" }
 maps.x["J"] = { ":m '>+1<CR>gv=gv", desc = "Move line(s) up" }
