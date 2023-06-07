@@ -6,7 +6,7 @@ return {
       opts.preset = "codicons"
 
       opts.menu = {
-        nvim_lua = "[api]",
+        nvim_lua = "[NeoVim]",
         nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
         neorg = "[Neorg]",

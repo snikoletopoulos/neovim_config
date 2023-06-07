@@ -66,9 +66,9 @@ return {
         end
       end, { "i" })
 
-      opts.formatting.fields = { "kind", "abbr", "menu" }
       opts.formatting.format = function(entry, vim_item)
-        local kind = require("lspkind").cmp_format(astronvim.lspkind)(entry, vim_item)
+        local utils = require("astronvim.utils")
+        local kind = require("lspkind").cmp_format(utils.plugin_opts("lspkind.nvim"))(entry, vim_item)
         local strings = vim.split(kind.kind, "%s", { trimempty = true })
         kind.kind = " " .. (strings[1] or "")
         kind.menu = (strings[2] or "") .. " " .. kind.menu
