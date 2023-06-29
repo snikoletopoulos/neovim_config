@@ -4,9 +4,7 @@ return {
   { "catppuccin/nvim",      as = "catppuccin" },
   {
     "sainnhe/sonokai",
-    init = function()
-      vim.g.sonokai_style = "andromeda"
-    end
+    init = function() vim.g.sonokai_style = "andromeda" end,
   },
   { "kvrohit/mellow.nvim" },
   {

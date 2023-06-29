@@ -101,12 +101,10 @@ return {
   {
     "pocco81/auto-save.nvim",
     lazy = false,
-    keys = {
-      { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" },
-    },
+    keys = { { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" } },
     opts = {
       debounce_delay = 1000,
-      execution_message = { message = function() return "" end }
+      execution_message = { message = function() return "" end },
     },
   },
   {
@@ -137,9 +135,7 @@ return {
   },
   {
     "s1n7ax/nvim-window-picker",
-    opts = {
-      show_prompt = false,
-    }
+    opts = { show_prompt = false }
   },
   {
     "neovim/nvim-lspconfig",
@@ -166,9 +162,7 @@ return {
       load = {
         ["core.defaults"] = {},
         ["core.concealer"] = {
-          config = {
-            icon_preset = "diamond"
-          }
+          config = { icon_preset = "diamond" },
         },
         ["core.dirman"] = {
           config = {
