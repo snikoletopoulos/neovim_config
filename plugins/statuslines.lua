@@ -93,5 +93,27 @@ return {
 
       return opts
     end
+  },
+  {
+    "petertriho/nvim-scrollbar",
+    lazy = false,
+    opts = {
+      hide_if_all_visible = true,
+      excluded_filetypes = {
+        "cmp_docs",
+        "cmp_menu",
+        "noice",
+        "prompt",
+        "TelescopePrompt",
+        'neo-tree',
+      },
+      handlers = {
+        gitsigns = true,
+      },
+    },
+    config = function(_, opts)
+      require("scrollbar").setup(opts)
+      require("scrollbar.handlers.search").setup()
+    end
   }
 }
