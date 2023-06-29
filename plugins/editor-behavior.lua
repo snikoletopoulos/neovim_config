@@ -6,7 +6,13 @@ return {
       { "<leader>ud", "<cmd>Neotree diagnostics toggle<cr>", desc = "Toggle Diagnostics" },
     },
     opts = {
-      window = { width = 40 },
+      window = {
+        width = 40,
+        mappings = {
+          ["<C-x"] = "open_split",
+          ["<C-v>"] = "open_vsplit",
+        }
+      },
       tabs_layout = "focus",
       sort_case_insensitive = true,
       sources = { "filesystem", "buffers", "git_status", "diagnostics" },
