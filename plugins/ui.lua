@@ -16,9 +16,8 @@ return {
   {
     "j-hui/fidget.nvim",
     lazy = false,
-    config = function()
-      require("fidget").setup({})
-    end
+    tag = "legacy",
+    opts = {},
   },
   {
     "anuvyklack/fold-preview.nvim",
