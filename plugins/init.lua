@@ -1,8 +1,59 @@
 return {
-  -- {"ThePrimeagen/refactoring.nvim"
+  -- {
+  --   "ThePrimeagen/refactoring.nvim",
+  --   lazy = false,
   --   dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
-  --   config = function()
-  --     require("refactoring").setup(astronvim.user_opts("plugins.refactoring", {}))
+  --   keys = {
+  --     -- Remaps for the refactoring operations currently offered by the plugin
+  --     { "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --     { "<leader>rf", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --     { "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --     { "<leader>ri", [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --
+  --     -- Extract block doesn't need visual mode
+  --     { "<leader>rb", [[ <Cmd>lua require('refactoring').refactor('Extract Block')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --     { "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --
+  --     -- Inline variable can also pick up the identifier currently under the cursor without visual mode
+  --     { "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], "n",
+  --       {
+  --         noremap = true,
+  --         silent = true,
+  --         expr = false
+  --       } },
+  --   },
+  --   config = function(_, opts)
+  --     require("refactoring").setup(opts)
   --     require("telescope").load_extension("refactoring")
   --   end
   -- },
