@@ -168,6 +168,7 @@ return {
           config = {
             workspaces = {
               notes = "~/notes",
+              current_dir = ".",
             },
             default_workspace = "notes",
           },
