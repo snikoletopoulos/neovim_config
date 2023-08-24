@@ -91,6 +91,8 @@ return {
         },
       }
 
+      opts.tabline = {}
+
       return opts
     end
   },
