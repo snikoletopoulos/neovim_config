@@ -8,6 +8,9 @@ return {
     { "inspect types", ":InspectTwoslashQueries", },
   },
   { "Packages",
+    { "AstroNvim Version",   ":AstroVersion" },
+    { "AstroNvim Changelog", ":AstroChangelog" },
+    { "AstroNvim Update",    ":AstroUpdate" },
     { "Update Plugins and Mason", ":AstroUpdatePackages" },
     { "Mason Update",             ":MasonUpdateAll" },
     { "Open Mason",               ":Mason" },
@@ -23,9 +26,4 @@ return {
     { "reload vimrc",         ":source $MYVIMRC" },
     { "Change colorshceme",   ":lua require('telescope.builtin').colorscheme({ enable_preview = true })" },
   },
-  { "AstroNvim",
-    { "AstroNvim Version",   ":AstroVersion" },
-    { "AstroNvim Changelog", ":AstroChangelog" },
-    { "AstroNvim Update",    ":AstroUpdate" },
-  }
 }
