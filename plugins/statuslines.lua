@@ -109,11 +109,8 @@ return {
       },
       handlers = {
         gitsigns = true,
+        search = false,
       },
     },
-    config = function(_, opts)
-      require("scrollbar").setup(opts)
-      require("scrollbar.handlers.search").setup()
-    end
   }
 }
