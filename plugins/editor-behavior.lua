@@ -93,9 +93,7 @@ return {
   {
     "karb94/neoscroll.nvim",
     lazy = false,
-    config = function()
-      require("neoscroll").setup({ post_hook = function() vim.fn.feedkeys("M") end })
-    end
+    opts = { post_hook = function() vim.fn.feedkeys("M") end }
   },
   { "mg979/vim-visual-multi", lazy = false },
   {
@@ -110,9 +108,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
-    opts = {
-      mode = "topline",
-    },
+    opts = { mode = "topline" },
   },
   {
     "ThePrimeagen/harpoon",
