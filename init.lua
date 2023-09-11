@@ -6,7 +6,6 @@ return {
       loaded_perl_provider = 0,
       sonokai_style = "andromeda",
       maplocalleader = ",",
-      showtabline = 0,
     },
     opt = {
       clipboard = "",
@@ -14,6 +13,7 @@ return {
       foldmethod = "expr",
       foldexpr = "nvim_treesitter#foldexpr()",
       foldlevel = 99,
+      showtabline = 0,
       conceallevel = 2,
     },
   },
