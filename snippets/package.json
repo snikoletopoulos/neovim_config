@@ -31,6 +31,15 @@
           "typescriptreact"
         ],
         "path": "./react-native.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./hm.json"
       }
     ]
   }
