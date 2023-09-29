@@ -30,6 +30,20 @@ maps.n["<leader>e"] = false  -- CamelCaseMotion
 maps.n["<leader>w"] = false  -- CamelCaseMotion
 maps.n["<leader>ud"] = false -- neo-tree-diagnostics.nvim
 
+-- Disable Tabline mappings
+maps.n["<leader>b"] = false
+maps.n["<leader>bb"] = false
+maps.n["<leader>bd"] = false
+maps.n["<leader>b\\"] = false
+maps.n["<leader>b|"] = false
+maps.n["<leader>bl"] = false
+maps.n["<leader>br"] = false
+maps.n["<leader>bse"] = false
+maps.n["<leader>bsi"] = false
+maps.n["<leader>bsm"] = false
+maps.n["<leader>bsp"] = false
+maps.n["<leader>bsr"] = false
+
 -- Just naming
 maps.n["<leader>h"] = { name = "󱡅 Harpoon", desc = "󱡅 Harpoon" }
 
