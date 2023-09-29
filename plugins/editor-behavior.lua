@@ -200,5 +200,14 @@ return {
   --     "nvim-lua/plenary.nvim",
   --     "nvim-telescope/telescope.nvim"
   --   }
-  -- }
+  -- },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      float_opts = {
+        width = 1000,
+        height = 1000,
+      },
+    }
+  }
 }
