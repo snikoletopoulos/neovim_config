@@ -91,7 +91,7 @@ return {
         },
       }
 
-      opts.tabline = {}
+      opts.tabline = nil
 
       return opts
     end
