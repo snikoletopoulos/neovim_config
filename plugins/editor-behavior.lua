@@ -112,7 +112,7 @@ return {
   },
   {
     "ThePrimeagen/harpoon",
-    dependencies = { "nvim-telescope/telescope.nvim" },
+    dependencies = "nvim-telescope/telescope.nvim",
     keys = {
       { "<leader>hh", "<cmd>Telescope harpoon marks<CR>",                       desc = "Toggle Harpoon" },
       { "<leader>uh", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
@@ -135,18 +135,30 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
+    dependencies = "SmiteshP/nvim-navbuddy",
+  },
+  {
+    "SmiteshP/nvim-navbuddy",
+    keys = {
+      { "<leader>fs", function() require("nvim-navbuddy").open() end, desc = "Breadcrumb search" },
+    },
+    dependencies = { "SmiteshP/nvim-navic", "MunifTanjim/nui.nvim", "neovim/nvim-lspconfig" },
+    opts = { lsp = { auto_attach = true } }
+  },
+  {
+    "Wansmer/treesj",
+    opts = { use_default_keymaps = false },
+    keys = {
       {
-        "SmiteshP/nvim-navbuddy",
-        keys = {
-          { "<leader>fs", function() require("nvim-navbuddy").open() end, desc = "Breadcrumb search" },
-        },
-        dependencies = {
-          "SmiteshP/nvim-navic",
-          "MunifTanjim/nui.nvim"
-        },
-        opts = { lsp = { auto_attach = true } }
-      }
+        "<leader>m",
+        function() require("treesj").toggle() end,
+        desc = "Split/join block",
+      },
+      {
+        "<leader>M",
+        function() require('treesj').toggle({ split = { recursive = true } }) end,
+        desc = "Split/join block recursively",
+      },
     },
   },
   {
@@ -175,24 +187,6 @@ return {
           }
         },
         ["core.integrations.nvim-cmp"] = {},
-      },
-    },
-  },
-  {
-    "Wansmer/treesj",
-    opts = {
-      use_default_keymaps = false,
-    },
-    keys = {
-      {
-        "<leader>m",
-        function() require("treesj").toggle() end,
-        desc = "Split/join block",
-      },
-      {
-        "<leader>M",
-        function() require('treesj').toggle({ split = { recursive = true } }) end,
-        desc = "Split/join block recursively",
       },
     },
   },
