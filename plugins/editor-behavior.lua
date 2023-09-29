@@ -114,8 +114,8 @@ return {
     "ThePrimeagen/harpoon",
     dependencies = "nvim-telescope/telescope.nvim",
     keys = {
-      { "<leader>hh", "<cmd>Telescope harpoon marks<CR>",                       desc = "Toggle Harpoon" },
-      { "<leader>uh", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
+      { "<leader>hh", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon" },
+      { "<leader>uh", "<cmd>Telescope harpoon marks<CR>", desc = "Toggle Harpoon" },
       { "<leader>ha", function() require("harpoon.mark").add_file() end,        desc = "Add file to Harpoon" },
       { "[h",         function() require("harpoon.ui").nav_prev() end,          desc = "Previous Harpoon file" },
       { "]h",         function() require("harpoon.ui").nav_next() end,          desc = "Next Harpoon file" },
