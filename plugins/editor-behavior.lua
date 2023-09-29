@@ -92,13 +92,13 @@ return {
   },
   {
     "karb94/neoscroll.nvim",
-    lazy = false,
+    event = "VeryLazy",
     opts = { post_hook = function() vim.fn.feedkeys("M") end }
   },
   { "mg979/vim-visual-multi", lazy = false },
   {
     "pocco81/auto-save.nvim",
-    lazy = false,
+    event = "VeryLazy",
     keys = { { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" } },
     opts = {
       debounce_delay = 1000,

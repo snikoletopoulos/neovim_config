@@ -15,19 +15,20 @@ return {
   },
   {
     "j-hui/fidget.nvim",
-    lazy = false,
+    event = "VeryLazy",
+    -- NOTE: plugin is being rewritten
     tag = "legacy",
     opts = {},
   },
   {
     "anuvyklack/fold-preview.nvim",
-    lazy = false,
+    event = "VeryLazy",
     dependencies = 'anuvyklack/keymap-amend.nvim',
     opts = {},
   },
   {
     "anuvyklack/pretty-fold.nvim",
-    lazy = false,
+    event = "VeryLazy",
     opts = {},
   },
   {

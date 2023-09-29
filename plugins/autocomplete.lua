@@ -1,7 +1,7 @@
 return {
   {
     "github/copilot.vim",
-    lazy = false,
+    event = "VeryLazy",
     keys = {
       {
         "<M-Tab>",
@@ -26,7 +26,7 @@ return {
       },
     },
   },
-  { "marilari88/twoslash-queries.nvim" },
+  { "marilari88/twoslash-queries.nvim", ft = { "js", "jsx", "ts", "jsx" } },
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)

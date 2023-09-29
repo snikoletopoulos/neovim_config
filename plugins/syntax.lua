@@ -1,5 +1,5 @@
 return {
-  { "styled-components/vim-styled-components", lazy = false },
+  { "styled-components/vim-styled-components", ft = { "js", "jsx", "ts", "tsx" } },
   {
     "NvChad/nvim-colorizer.lua",
     lazy = false,
