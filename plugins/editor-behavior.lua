@@ -3,7 +3,6 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
       { "<leader>ue", "<cmd>Neotree toggle action=show<cr>", desc = "Toggle Explorer" },
-      { "<leader>ud", "<cmd>Neotree diagnostics toggle<cr>", desc = "Toggle Diagnostics" },
     },
     opts = {
       window = {
@@ -89,6 +88,7 @@ return {
   {
     "mrbjarksen/neo-tree-diagnostics.nvim",
     dependencies = "nvim-neo-tree/neo-tree.nvim",
+    keys = { { "<leader>ud", "<cmd>Neotree diagnostics toggle<cr>", desc = "Toggle Diagnostics" } },
   },
   {
     "karb94/neoscroll.nvim",
