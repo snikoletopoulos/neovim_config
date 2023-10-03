@@ -14,6 +14,7 @@ return {
       foldlevel = 99,
       showtabline = 0,
       conceallevel = 2,
+      scrolloff = 5,
     },
   },
 }
