@@ -88,4 +88,5 @@ return {
       require("plugins.configs.telescope")(plugin, opts)
     end,
   },
+  { "kevinhwang91/nvim-bqf", ft = "qf" },
 }
