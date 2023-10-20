@@ -10,13 +10,13 @@
       "interface ${1:$TM_FILENAME_BASE}Props {}",
       "",
       "export const ${1:$TM_FILENAME_BASE} = () => {",
-      "  const styles = useStyleSheet(themedStyles)",
+      "  const styles = useStyleSheet(styleSheet)",
       "",
       "  return <View>${2}</View>",
       "}",
       "",
       "const styleSheet = createStyleSheet(s => ({}))"
     ],
-    "description": "react native component template"
+    "description": "100mentors react native component template"
   }
 }
