@@ -11,7 +11,6 @@ return {
         desc = "Accept Copilot suggestion",
         mode = "i",
       },
-      { "<M-\\>", "<M-S>", desc = "Force Copilot suggestion", mode = "i" },
     },
   },
   {
