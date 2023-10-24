@@ -1,11 +1,11 @@
 return {
-  init_options = {
-    jsx = {
-      options = {
-        ["jsx.enabled"] = true,
-        ["output.selfClosingStyle"] = "xhtml",
-        ["bem.enabled"] = true,
-      },
-    },
-  },
+	init_options = {
+		jsx = {
+			options = {
+				["jsx.enabled"] = true,
+				["output.selfClosingStyle"] = "xhtml",
+				["bem.enabled"] = true,
+			},
+		},
+	},
 }
