@@ -70,6 +70,7 @@ return {
 				"pydocstyle",
 				"pylint",
 				"shellcheck",
+				"stylua",
 				"sql_formatter",
 				"yamlfmt",
 				"yamllint",
