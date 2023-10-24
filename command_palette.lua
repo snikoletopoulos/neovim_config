@@ -33,7 +33,6 @@ return {
 		},
 		{ "Vim options", ":lua require('telescope.builtin').vim_options()" },
 		{ "Check health", ":checkhealth" },
-		{ "Reload vimrc", ":source $MYVIMRC" },
 		{
 			"Change colorshceme",
 			":lua require('telescope.builtin').colorscheme({ enable_preview = true })",
