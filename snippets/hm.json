@@ -2,20 +2,24 @@
   "100mentors react native component template": {
     "prefix": "hmtsrnc",
     "body": [
-      "import { View } from 'react-native'",
+      "import { View } from 'react-native';",
       "",
-      "import { createStyleSheet } from '@app/modules/ui/styles/utils'",
-      "import { useStyleSheet } from '@app/modules/ui/styles/hooks'",
+      "import { createStyleSheet } from '@app/modules/ui/styles/utils';",
+      "import { useStyleSheet } from '@app/modules/ui/styles/hooks';",
       "",
       "interface ${1:$TM_FILENAME_BASE}Props {}",
       "",
       "export const ${1:$TM_FILENAME_BASE} = () => {",
-      "  const styles = useStyleSheet(styleSheet)",
+      "  const styles = useStyleSheet(styleSheet);",
       "",
-      "  return <View>${2}</View>",
-      "}",
+      "  return <View style={styles.container}>${2}</View>;",
+      "};",
       "",
-      "const styleSheet = createStyleSheet(s => ({}))"
+      "const styleSheet = createStyleSheet(s => ({",
+      "  container: {",
+      "    ...s.flex[1],",
+      "  },",
+      "}));"
     ],
     "description": "100mentors react native component template"
   }
