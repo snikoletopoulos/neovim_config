@@ -15,7 +15,7 @@ return {
 	},
 	{
 		"axelvc/template-string.nvim",
-		-- TODO: check lazyness
+		-- TODO: check lazy-ness
 		lazy = false,
 		opts = {
 			jsx_brackets = true,
