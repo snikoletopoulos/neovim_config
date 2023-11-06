@@ -128,6 +128,7 @@ return {
 				null_ls.builtins.formatting.nginx_beautifier,
 				null_ls.builtins.formatting.prettierd,
 				null_ls.builtins.formatting.prismaFmt,
+				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.yamlfmt,
 			}
 			return config
