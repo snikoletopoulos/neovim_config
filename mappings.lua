@@ -33,6 +33,19 @@ maps.n["<leader>uh"] = false -- harpoon
 maps.n["<leader>e"] = false -- CamelCaseMotion
 maps.n["<leader>w"] = false -- CamelCaseMotion
 maps.n["<leader>ud"] = false -- neo-tree-diagnostics.nvim
+-- Packages
+maps.n["<leader>pA"] = false
+maps.n["<leader>pa"] = false
+maps.n["<leader>pi"] = false
+maps.n["<leader>pl"] = false
+maps.n["<leader>pm"] = false
+maps.n["<leader>pM"] = false
+maps.n["<leader>ps"] = false
+maps.n["<leader>pS"] = false
+maps.n["<leader>pu"] = false
+maps.n["<leader>pU"] = false
+maps.n["<leader>pv"] = false
+--
 
 -- Disable Tabline mappings
 maps.n["<leader>b"] = false
