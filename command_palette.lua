@@ -11,7 +11,11 @@ return {
 		{ "Restart eslint_d", ":!eslint_d restart" },
 		{ "Restart tsserver", ":LspRestart tsserver" },
 	},
-	{ "File", { "Inspect types", ":InspectTwoslashQueries" } },
+	{
+		"File",
+		{ "Explain RegEx", ":Hypersonic" },
+		{ "Inspect types", ":InspectTwoslashQueries" },
+	},
 	{
 		"Packages",
 		{ "AstroNvim Version", ":AstroVersion" },
