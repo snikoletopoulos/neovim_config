@@ -29,8 +29,8 @@ return {
 	{ "marilari88/twoslash-queries.nvim", ft = { "js", "jsx", "ts", "jsx" } },
 	{
 		"L3MON4D3/LuaSnip",
-		config = function(plugin, opts)
-			require("plugins.configs.luasnip")(plugin, opts)
+		config = function(_, opts)
+			require("luasnip").setup(opts)
 			require("luasnip.loaders.from_vscode").lazy_load({
 				paths = { "./lua/user/snippets" },
 			})
