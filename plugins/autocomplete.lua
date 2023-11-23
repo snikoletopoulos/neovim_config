@@ -87,6 +87,29 @@ return {
 				return kind
 			end
 
+			opts.sorting = {
+				comparators = {
+					cmp.config.compare.offset,
+					cmp.config.compare.exact,
+					cmp.config.compare.score,
+					function(first, second)
+						local isFirstOptional = first.completion_item
+							and first.completion_item.label
+							and first.completion_item.label:sub(-1) == "?"
+						local isSecondOptional = second.completion_item
+							and second.completion_item.label
+							and second.completion_item.label:sub(-1) == "?"
+
+						return isSecondOptional and not isFirstOptional
+					end,
+					cmp.config.compare.recently_used,
+					cmp.config.compare.locality,
+					cmp.config.compare.kind,
+					cmp.config.compare.length,
+					cmp.config.compare.order,
+				},
+			}
+
 			opts.window = {
 				completion = {
 					col_offset = -3,
