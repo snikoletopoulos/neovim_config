@@ -1,11 +1,9 @@
 local favorites = {
-	tokyonight = "tokyonight",
-	onehalf = "onehalfdark",
-	catppuccin_macchiato = "catppuccin-macchiato",
+	tokyonight = "tokyonight-night",
+	one = "one",
 	sonokai = "sonokai",
-	mellow = "mellow",
 	edge = "edge",
-	github = "github_dark_dimmed",
+	github = "github_dark_colorblind",
 }
 
-return favorites.github
+return favorites.sonokai
