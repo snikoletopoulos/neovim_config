@@ -1,3 +1,6 @@
+local utils = require("astronvim.utils")
+local lspkind = require("lspkind")
+
 return {
 	{
 		"github/copilot.vim",
@@ -74,13 +77,12 @@ return {
 			end, { "i" })
 
 			opts.formatting.format = function(entry, vim_item)
-				local utils = require("astronvim.utils")
-				local kind = require("lspkind").cmp_format(
-					utils.plugin_opts("lspkind.nvim")
-				)(entry, vim_item)
+				local kind =
+					lspkind.cmp_format(utils.plugin_opts("lspkind.nvim"))(entry, vim_item)
+
 				local strings = vim.split(kind.kind, "%s", { trimempty = true })
 				kind.kind = " " .. (strings[1] or "")
-				kind.menu = (strings[2] or "") .. " " .. kind.menu
+				kind.menu = (strings[3] or "") .. " " .. kind.menu
 
 				return kind
 			end
