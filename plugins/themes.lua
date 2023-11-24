@@ -22,5 +22,5 @@ return {
 			vim.g.edge_diagnostic_line_highlight = "colored"
 		end,
 	},
-	{ "projekt0n/github-nvim-theme", lazy = false },
+	{ "projekt0n/github-nvim-theme" },
 }

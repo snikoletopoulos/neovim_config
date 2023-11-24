@@ -122,7 +122,6 @@ return {
 	},
 	{
 		"karb94/neoscroll.nvim",
-		event = "VeryLazy",
 		opts = {
 			post_hook = function()
 				vim.fn.feedkeys("M")
@@ -253,7 +252,6 @@ return {
 	},
 	{
 		"Wansmer/treesj",
-		opts = { use_default_keymaps = false },
 		keys = {
 			{
 				"<leader>m",
@@ -274,7 +272,7 @@ return {
 	{
 		"nvim-neorg/neorg",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
-		ft = "norg",
+		event = "VeryLazy",
 		build = ":Neorg sync-parsers",
 		opts = {
 			load = {

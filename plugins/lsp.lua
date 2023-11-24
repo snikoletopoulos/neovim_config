@@ -134,11 +134,9 @@ return {
 			return config
 		end,
 	},
-	{ "jose-elias-alvarez/typescript.nvim", lazy = false },
 	{
-		"tomiis4/Hypersonic.nvim",
-		event = "CmdlineEnter",
-		cmd = "Hypersonic",
+		"jose-elias-alvarez/typescript.nvim",
+		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 		opts = {},
 	},
 }

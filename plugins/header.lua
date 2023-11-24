@@ -7,7 +7,7 @@ return {
 				function()
 					require("alpha").start()
 				end,
-				desc = "Home screen",
+				desc = "Toggle home screen",
 			},
 		},
 		opts = function(_, opts)

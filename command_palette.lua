@@ -1,12 +1,12 @@
 return {
+	-- {
+	-- 	"Notes",
+	-- 	{ "Close all notes", ":Neorg return" },
+	-- 	{ "Open current directory workspace", ":Neorg workspace current_dir" },
+	-- 	{ "Open notes index", ":Neorg workspace default" },
+	-- },
 	{
-		"Notes",
-		{ "Close all notes", ":Neorg return" },
-		{ "Open current directory workspace", ":Neorg workspace current_dir" },
-		{ "Open notes index", ":Neorg workspace default" },
-	},
-	{
-		"Servers",
+		"LSP",
 		{ "Restart lua-ls", ":LspRestart lua-ls" },
 		{ "Restart eslint_d", ":!eslint_d restart" },
 		{ "Restart tsserver", ":LspRestart tsserver" },
@@ -14,6 +14,8 @@ return {
 	{
 		"File",
 		{ "Explain RegEx", ":Hypersonic" },
+		{ "Search and Replace", ":Sad", 1 },
+		{ "Search and Replace current word", ":Sad" },
 		{ "Inspect types", ":InspectTwoslashQueries" },
 	},
 	{

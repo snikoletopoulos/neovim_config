@@ -117,7 +117,7 @@ return {
 	},
 	{
 		"petertriho/nvim-scrollbar",
-		lazy = false,
+		event = "User AstroFile",
 		opts = {
 			hide_if_all_visible = true,
 			excluded_filetypes = {
