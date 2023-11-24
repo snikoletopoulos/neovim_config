@@ -35,18 +35,6 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		dependencies = { "TheGLander/indent-rainbowline.nvim" },
-		opts = function(_, opts)
-			local new_opts = opts -- require("indent-rainbowline").make_opts(opts, { color_transparency = 0.05 })
-
-			new_opts.indent = {
-				smart_indent_cap = true,
-			}
-
-			new_opts.whitespace = {
-				remove_blankline_trail = true,
-			}
-
-			return new_opts
-		end,
+		opts = {},
 	},
 }
