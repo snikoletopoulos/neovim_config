@@ -146,7 +146,12 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		lazy = false,
-		opts = { mode = "topline" },
+		opts = {
+			mode = "topline",
+			separator = "",
+			max_lines = 8,
+			trim_scope = "outer",
+		},
 	},
 	{
 		"ThePrimeagen/harpoon",
