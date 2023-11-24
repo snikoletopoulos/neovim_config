@@ -33,6 +33,16 @@ maps.n["<leader>uh"] = false -- harpoon
 maps.n["<leader>e"] = false -- CamelCaseMotion
 maps.n["<leader>w"] = false -- CamelCaseMotion
 maps.n["<leader>ud"] = false -- neo-tree-diagnostics.nvim
+maps.n["<leader>fm"] = false -- find man
+maps.n["<leader>ub"] = false -- toggle background
+maps.n["<leader>uY"] = false -- toggle LSP semantic highlighting TODO: not working
+maps.n["<leader>uy"] = false -- toggle syntax highlighting
+maps.n["<leader>up"] = false -- toggle paste mode
+maps.n["<leader>un"] = false -- change line numbering
+maps.n["<leader>ug"] = false -- toggle git signs column
+maps.n["<leader>uC"] = false -- toggle color highlight
+maps.n["<leader>uc"] = false -- toggle autocompletion
+maps.n["<leader>ui"] = false -- change indent setting
 -- Packages
 maps.n["<leader>pA"] = false
 maps.n["<leader>pa"] = false
