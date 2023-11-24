@@ -25,6 +25,9 @@ maps.n["<leader>c"] = {
 }
 maps.n["<leader>Q"] = { "<cmd>qa<CR>", desc = "Close all buffers" }
 
+-- Naming
+maps.n["<leader>h"] = { name = "󱡅 Harpoon", desc = "󱡅 Harpoon" }
+
 -- Disable AstroNvim mappings
 maps.n["<leader>fa"] = false -- auto-save.nvim
 maps.n["<leader>uu"] = false -- undotree.nvim
@@ -70,9 +73,6 @@ maps.n["<leader>bsi"] = false
 maps.n["<leader>bsm"] = false
 maps.n["<leader>bsp"] = false
 maps.n["<leader>bsr"] = false
-
--- Just naming
-maps.n["<leader>h"] = { name = "󱡅 Harpoon", desc = "󱡅 Harpoon" }
 
 -- CamelCaseMotion
 -- maps.n["<leader>w"] = { desc = "Next camel case word" }

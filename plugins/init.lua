@@ -1,3 +1,4 @@
+-- cspell:disable
 return {
 	-- {
 	--   "ThePrimeagen/refactoring.nvim",

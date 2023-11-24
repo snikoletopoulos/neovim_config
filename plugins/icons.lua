@@ -51,6 +51,7 @@ return {
 				Operator = " ",
 				TypeParameter = " ",
 			}
+
 			return opts
 		end,
 	},
