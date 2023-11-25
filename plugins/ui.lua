@@ -59,11 +59,22 @@ return {
 	},
 	{
 		"folke/noice.nvim",
-		opts = {
-			lsp = {
-				progress = { enabled = false },
-			},
-			views = {
+		opts = function(_, opts)
+			if not opts.routes then
+				opts.routes = {}
+			end
+
+			table.insert(opts.routes, {
+				filter = {
+					event = "notify",
+					find = "No information available",
+				},
+				opts = { skip = true },
+			})
+
+			opts.lsp.progress = { enabled = false }
+
+			opts.views = vim.tbl_deep_extend("force", opts.views or {}, {
 				cmdline_popup = {
 					border = {
 						style = "none",
@@ -74,11 +85,11 @@ return {
 						winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
 					},
 				},
-			},
-			presets = {
-				bottom_search = false, -- use a classic bottom cmdline for search
-			},
-		},
+			})
+
+			opts.presets.bottom_search = false
+			return opts
+		end,
 	},
 	{
 		"nvim-telescope/telescope.nvim",
