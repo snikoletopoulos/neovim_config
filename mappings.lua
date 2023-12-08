@@ -23,7 +23,6 @@ maps.n["<leader>c"] = {
 	end,
 	desc = "Close buffer",
 }
-maps.n["<leader>Q"] = { "<cmd>qa<CR>", desc = "Close all buffers" }
 
 -- Naming
 maps.n["<leader>h"] = { name = "󱡅 Harpoon", desc = "󱡅 Harpoon" }
