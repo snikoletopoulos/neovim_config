@@ -1,7 +1,7 @@
 return {
 	{
 		"styled-components/vim-styled-components",
-		ft = { "js", "jsx", "ts", "tsx" },
+		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	},
 	{
 		"NvChad/nvim-colorizer.lua",

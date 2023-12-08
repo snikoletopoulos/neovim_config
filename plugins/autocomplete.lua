@@ -29,7 +29,10 @@ return {
 			},
 		},
 	},
-	{ "marilari88/twoslash-queries.nvim", ft = { "js", "jsx", "ts", "jsx" } },
+	{
+		"marilari88/twoslash-queries.nvim",
+		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+	},
 	{
 		"L3MON4D3/LuaSnip",
 		config = function(_, opts)
