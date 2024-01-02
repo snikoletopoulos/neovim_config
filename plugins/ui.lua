@@ -102,4 +102,41 @@ return {
 		},
 	},
 	{ "kevinhwang91/nvim-bqf", ft = "qf" },
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		lazy = false,
+		opts = {
+			mode = "topline",
+			separator = "",
+			max_lines = 8,
+			trim_scope = "outer",
+		},
+		{
+			"jackMort/ChatGPT.nvim",
+			event = "VeryLazy",
+			opts = {
+				api_key_cmd = "echo $CHAT_GPT_API_KEY",
+			},
+			dependencies = {
+				"MunifTanjim/nui.nvim",
+				"nvim-lua/plenary.nvim",
+				"nvim-telescope/telescope.nvim",
+			},
+		},
+	},
+	{
+		"vuki656/package-info.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {},
+		event = "BufRead package.json",
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		opts = {
+			float_opts = {
+				width = 1000,
+				height = 1000,
+			},
+		},
+	},
 }

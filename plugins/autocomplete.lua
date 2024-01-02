@@ -27,10 +27,6 @@ return {
 		},
 	},
 	{
-		"marilari88/twoslash-queries.nvim",
-		ft = astronvim.user_opts("utils.constants").filetype.javascript,
-	},
-	{
 		"L3MON4D3/LuaSnip",
 		config = function(_, opts)
 			require("luasnip").setup(opts)
