@@ -1,7 +1,7 @@
 return {
 	{
 		"styled-components/vim-styled-components",
-		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 	},
 	{
 		"NvChad/nvim-colorizer.lua",

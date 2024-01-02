@@ -135,6 +135,6 @@ return {
 	},
 	{
 		"jose-elias-alvarez/typescript.nvim",
-		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 	},
 }

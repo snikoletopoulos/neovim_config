@@ -31,7 +31,7 @@ return {
 	},
 	{
 		"marilari88/twoslash-queries.nvim",
-		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 	},
 	{
 		"L3MON4D3/LuaSnip",
