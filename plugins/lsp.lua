@@ -136,5 +136,9 @@ return {
 	{
 		"jose-elias-alvarez/typescript.nvim",
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,
+		opts = function()
+			return { server = require("astronvim.utils.lsp").config("tsserver") }
+		end,
+	},
 	},
 }
