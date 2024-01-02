@@ -1,5 +1,3 @@
-local utils = require("astronvim.utils")
-local lspkind = require("lspkind")
 
 return {
 	{
@@ -80,6 +78,9 @@ return {
 			end, { "i" })
 
 			opts.formatting.format = function(entry, vim_item)
+				local lspkind = require("lspkind")
+				local utils = require("astronvim.utils")
+
 				local kind =
 					lspkind.cmp_format(utils.plugin_opts("lspkind.nvim"))(entry, vim_item)
 
