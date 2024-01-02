@@ -12,14 +12,6 @@ return {
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 
-	{ import = "astrocommunity.project.projectmgr-nvim" },
-	{
-		"charludo/projectmgr.nvim",
-		keys = {
-			{ "<leader>fp", "<cmd>ProjectMgr<cr>", desc = "Open ProjectMgr panel" },
-		},
-	},
-
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
 	{ import = "astrocommunity.scrolling.neoscroll-nvim" },
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
@@ -28,10 +20,4 @@ return {
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words
 	{ import = "astrocommunity.utility.noice-nvim" },
 
-	-- Testing
-	{ import = "astrocommunity.lsp.garbage-day-nvim" },
-	{
-		"zeioth/garbage-day.nvim",
-		opts = { { notifications = true } },
-	},
 }
