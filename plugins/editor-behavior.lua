@@ -35,7 +35,7 @@ return {
 			},
 			tabs_layout = "focus",
 			sort_case_insensitive = true,
-			sources = { "filesystem", "buffers", "git_status", "diagnostics" },
+			sources = { "filesystem", "buffers", "git_status" },
 			source_selector = {
 				show_scrolled_off_parent_node = true,
 				sources = {
@@ -43,10 +43,6 @@ return {
 					{ source = "buffers" },
 					{ source = "git_status" },
 				},
-			},
-			diagnostics = {
-				auto_preview = { enabled = true },
-				window = { position = "bottom", height = 12 },
 			},
 			filesystem = {
 				components = {
@@ -127,25 +123,6 @@ return {
 					end,
 				},
 			},
-		},
-	},
-	{
-		"mrbjarksen/neo-tree-diagnostics.nvim",
-		dependencies = "nvim-neo-tree/neo-tree.nvim",
-		keys = {
-			{
-				"<leader>ud",
-				"<cmd>Neotree diagnostics toggle<cr>",
-				desc = "Toggle Diagnostics",
-			},
-		},
-	},
-	{
-		"karb94/neoscroll.nvim",
-		opts = {
-			post_hook = function()
-				vim.fn.feedkeys("M")
-			end,
 		},
 	},
 	-- TODO: testing

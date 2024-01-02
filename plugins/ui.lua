@@ -2,9 +2,17 @@ return {
 	{
 		"folke/trouble.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",
+		cmd = { "TroubleToggle", "Trouble" },
+		opts = {
+			use_diagnostic_signs = true,
+			action_keys = {
+				close = { "q", "<esc>" },
+				cancel = "<c-e>",
+			},
+		},
 		keys = {
 			{
-				"<leader>ut",
+				"<leader>ud",
 				"<cmd>TroubleToggle workspace_diagnostics<CR>",
 				desc = "Toggle trouble",
 			},
