@@ -16,8 +16,7 @@ return {
 	},
 	{
 		"axelvc/template-string.nvim",
-		-- TODO: check lazy-ness
-		lazy = false,
+		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 		opts = {
 			jsx_brackets = true,
 			remove_template_strings = true,
