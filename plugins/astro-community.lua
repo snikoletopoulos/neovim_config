@@ -20,4 +20,7 @@ return {
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words
 	{ import = "astrocommunity.utility.noice-nvim" },
 
+	-- Learning good vim
+	{ import = "astrocommunity.workflow.hardtime-nvim" },
+	-- { import = "astrocommunity.workflow.bad-practices-nvim" },
 }
