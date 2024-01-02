@@ -45,6 +45,10 @@ maps.n["<leader>ug"] = false -- toggle git signs column
 maps.n["<leader>uC"] = false -- toggle color highlight
 maps.n["<leader>uc"] = false -- toggle autocompletion
 maps.n["<leader>ui"] = false -- change indent setting
+maps.n["<leader>ut"] = false -- toggle tabline
+maps.n["<leader>ul"] = false -- toggle statusline
+maps.n["<leader>uS"] = false -- toggle conceal
+
 -- Packages
 maps.n["<leader>pA"] = false
 maps.n["<leader>pa"] = false
