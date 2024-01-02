@@ -45,7 +45,7 @@ return {
 	{ "hrsh7th/cmp-nvim-lua" },
 	{
 		"David-Kunz/cmp-npm",
-		ft = "json",
+		event = "BufRead package.json",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
