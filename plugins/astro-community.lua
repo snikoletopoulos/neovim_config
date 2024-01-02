@@ -2,7 +2,7 @@ return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.debugging.nvim-bqf" },
 
-	{ import = "astrocommunity.editing-support.hypersonic-nvim" },
+	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
 	{ import = "astrocommunity.editing-support.treesj" },
 	{ import = "astrocommunity.editing-support.vim-move" },
 

@@ -59,22 +59,18 @@ return {
 	},
 	{
 		"folke/noice.nvim",
-		opts = function(_, opts)
-			if not opts.routes then
-				opts.routes = {}
-			end
-
-			table.insert(opts.routes, {
-				filter = {
-					event = "notify",
-					find = "No information available",
+		opts = {
+			routes = {
+				{
+					filter = {
+						event = "notify",
+						find = "No information available",
+					},
+					opts = { skip = true },
 				},
-				opts = { skip = true },
-			})
-
-			opts.lsp.progress = { enabled = false }
-
-			opts.views = vim.tbl_deep_extend("force", opts.views or {}, {
+			},
+			lsp = { progress = { enabled = false } },
+			views = {
 				cmdline_popup = {
 					border = {
 						style = "none",
@@ -85,22 +81,17 @@ return {
 						winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
 					},
 				},
-			})
-
-			opts.presets.bottom_search = false
-			return opts
-		end,
+			},
+			presets = { bottom_search = false },
+		},
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		config = function(plugin, opts)
-			if not opts.extensions then
-				opts.extensions = {}
-			end
-			opts.extensions.command_palette =
-				astronvim.user_opts("command_palette", {})
-			require("plugins.configs.telescope")(plugin, opts)
-		end,
+		opts = {
+			extensions = {
+				command_palette = astronvim.user_opts("command_palette", {}),
+			},
+		},
 	},
 	{ "kevinhwang91/nvim-bqf", ft = "qf" },
 }

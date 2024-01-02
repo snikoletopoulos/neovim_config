@@ -1,11 +1,10 @@
 return {
 	{
 		"onsails/lspkind.nvim",
-		opts = function(_, opts)
-			opts.mode = "symbol_text"
-			opts.preset = "codicons"
-
-			opts.menu = {
+		opts = {
+			mode = "symbol_text",
+			preset = "codicons",
+			menu = {
 				nvim_lua = "[NeoVim]",
 				nvim_lsp = "[LSP]",
 				luasnip = "[LuaSnip]",
@@ -13,9 +12,8 @@ return {
 				npm = "[NPM]",
 				buffer = "[Buffer]",
 				path = "[Path]",
-			}
-
-			opts.symbol_map = {
+			},
+			symbol_map = {
 				Array = "",
 				Boolean = "",
 				Key = "",
@@ -50,9 +48,7 @@ return {
 				Event = " ",
 				Operator = " ",
 				TypeParameter = " ",
-			}
-
-			return opts
-		end,
+			},
+		},
 	},
 }
