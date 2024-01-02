@@ -138,5 +138,9 @@ return {
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 		opts = { server = require("astronvim.utils.lsp").config("tsserver") },
 	},
+	{
+		"dmmulroy/tsc.nvim",
+		cmd = { "TSC" },
+		opts = {},
 	},
 }
