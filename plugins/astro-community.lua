@@ -3,6 +3,7 @@ return {
 	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
+	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 	{ import = "astrocommunity.editing-support.vim-move" },
 
@@ -21,6 +22,7 @@ return {
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
 	{ import = "astrocommunity.scrolling.neoscroll-nvim" },
+	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
 	{ import = "astrocommunity.search.sad-nvim" },
 
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words

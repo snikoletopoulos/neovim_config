@@ -148,6 +148,15 @@ return {
 			end,
 		},
 	},
+	-- TODO: testing
+	-- {
+	-- 	"karb94/neoscroll.nvim",
+	-- 	opts = {
+	-- 		post_hook = function()
+	-- 			vim.fn.feedkeys("M")
+	-- 		end,
+	-- 	},
+	-- },
 	{ "mg979/vim-visual-multi", lazy = false },
 	{
 		"pocco81/auto-save.nvim",

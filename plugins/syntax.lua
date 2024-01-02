@@ -17,18 +17,10 @@ return {
 	},
 	{
 		"folke/todo-comments.nvim",
-		lazy = false,
-		keys = {
-			{ "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find todos" },
-		},
-		dependencies = "nvim-lua/plenary.nvim",
+		keys = { { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find todos" } },
 		opts = {
-			highlight = {
-				pattern = [[.*<(KEYWORDS)\s*]],
-			},
-			search = {
-				pattern = [[\b(KEYWORDS)\b]],
-			},
+			highlight = { pattern = [[.*<(KEYWORDS)\s*]] },
+			search = { pattern = [[\b(KEYWORDS)\b]] },
 		},
 	},
 	{

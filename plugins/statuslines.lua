@@ -117,20 +117,13 @@ return {
 	},
 	{
 		"petertriho/nvim-scrollbar",
-		event = "User AstroFile",
 		opts = {
-			hide_if_all_visible = true,
 			excluded_filetypes = {
-				"cmp_docs",
+				-- "cmp_docs",
 				"cmp_menu",
-				"noice",
-				"prompt",
+				-- 	"noice",
+				-- 	"prompt",
 				"TelescopePrompt",
-				"neo-tree",
-			},
-			handlers = {
-				gitsigns = true,
-				search = false,
 			},
 		},
 	},
