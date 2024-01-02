@@ -202,12 +202,10 @@ return {
 			require("telescope").load_extension("harpoon")
 		end,
 	},
-	-- NOTE: Vim plugin
 	{
 		"s1n7ax/nvim-window-picker",
 		opts = { show_prompt = false },
 	},
-	-- NOTE: Vim plugin
 	{
 		"SmiteshP/nvim-navbuddy",
 		keys = {

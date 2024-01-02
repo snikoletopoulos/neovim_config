@@ -23,7 +23,6 @@ return {
 			},
 		},
 	},
-	-- NOTE: Vim plugin
 	{
 		"Wansmer/treesj",
 		keys = {

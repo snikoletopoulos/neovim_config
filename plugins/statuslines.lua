@@ -115,7 +115,6 @@ return {
 			return opts
 		end,
 	},
-	-- NOTE: Vim plugin
 	{
 		"petertriho/nvim-scrollbar",
 		opts = {
