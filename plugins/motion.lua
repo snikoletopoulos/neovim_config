@@ -1,4 +1,5 @@
 return {
+	-- NOTE: Vim plugin
 	{
 		"bkad/CamelCaseMotion",
 		lazy = false, -- TODO: remove this when keymaps are fixed
@@ -29,5 +30,6 @@ return {
 			},
 		},
 	},
+	-- NOTE: Vim plugin
 	{ "wellle/targets.vim", lazy = false },
 }

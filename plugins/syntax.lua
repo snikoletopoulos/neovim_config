@@ -1,4 +1,5 @@
 return {
+	-- NOTE: Vim plugin
 	{
 		"styled-components/vim-styled-components",
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,

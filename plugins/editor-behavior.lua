@@ -157,6 +157,7 @@ return {
 	-- 		end,
 	-- 	},
 	-- },
+	-- NOTE: Vim plugin
 	{ "mg979/vim-visual-multi", lazy = false },
 	{
 		"pocco81/auto-save.nvim",
@@ -258,6 +259,7 @@ return {
 			require("telescope").load_extension("harpoon")
 		end,
 	},
+	-- NOTE: Vim plugin
 	{
 		"s1n7ax/nvim-window-picker",
 		opts = { show_prompt = false },
@@ -266,6 +268,7 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = "SmiteshP/nvim-navbuddy",
 	},
+	-- NOTE: Vim plugin
 	{
 		"SmiteshP/nvim-navbuddy",
 		keys = {
@@ -284,6 +287,7 @@ return {
 		},
 		opts = { lsp = { auto_attach = true } },
 	},
+	-- NOTE: Vim plugin
 	{
 		"Wansmer/treesj",
 		keys = {

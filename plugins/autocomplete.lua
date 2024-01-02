@@ -1,5 +1,5 @@
-
 return {
+	-- NOTE: Vim plugin
 	{
 		"github/copilot.vim",
 		event = "VeryLazy",
