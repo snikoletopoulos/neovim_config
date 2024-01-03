@@ -36,8 +36,6 @@ return {
 	{
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
-		-- NOTE: plugin is being rewritten
-		tag = "legacy",
 		opts = {},
 	},
 	{
