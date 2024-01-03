@@ -1,5 +1,7 @@
 return {
 	"AstroNvim/astrocommunity",
+	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
+
 	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
