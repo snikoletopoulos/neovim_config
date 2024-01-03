@@ -77,12 +77,4 @@ maps.n["<leader>bsm"] = false
 maps.n["<leader>bsp"] = false
 maps.n["<leader>bsr"] = false
 
--- CamelCaseMotion
--- maps.n["<leader>w"] = { desc = "Next camel case word" }
--- maps.v["<leader>w"] = { desc = "Next camel case word" }
--- maps.v["<leader>e"] = { desc = "Next end of camel case word" }
--- maps.v["<leader>b"] = { desc = "Next start of camel case word" }
--- maps.n["<leader>ge"] = { desc = "Previous end of camel case word" }
--- maps.v["<leader>ge"] = { desc = "Previous end of camel case word" }
-
 return maps

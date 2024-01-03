@@ -1,32 +1,34 @@
 return {
-	-- NOTE: Vim plugin
 	{
-		"bkad/CamelCaseMotion",
-		lazy = false, -- TODO: remove this when keymaps are fixed
+		"chrisgrieser/nvim-spider",
 		keys = {
+			{ "w", enabled = false },
+			{ "e", enabled = false },
+			{ "b", enabled = false },
+			{ "ge", enabled = false },
 			{
 				"<leader>w",
-				"<Plug>CamelCaseMotion_w",
-				desc = "Next camel case word",
-				mode = { "n", "v" },
+				"<cmd>lua require('spider').motion('w')<CR>",
+				mode = { "n", "x", "o" },
+				desc = "Next word",
 			},
 			{
 				"<leader>e",
-				"<Plug>CamelCaseMotion_e",
-				desc = "Next end of camel case word",
-				mode = { "n", "v" },
+				"<cmd>lua require('spider').motion('e')<CR>",
+				mode = { "n", "x", "o" },
+				desc = "Next end of word",
 			},
 			{
 				"<leader>b",
-				"<Plug>CamelCaseMotion_b",
-				desc = "Next start of camel case word",
-				mode = { "n", "v" },
+				"<cmd>lua require('spider').motion('b')<CR>",
+				mode = { "n", "x", "o" },
+				desc = "Previous word",
 			},
 			{
 				"<leader>ge",
-				"<Plug>CamelCaseMotion_ge",
-				desc = "Previous end of camel case word",
-				mode = { "n", "v" },
+				"<cmd>lua require('spider').motion('ge')<CR>",
+				mode = { "n", "x", "o" },
+				desc = "Previous end of word",
 			},
 		},
 	},
