@@ -1,16 +1,10 @@
 return {
-	-- NOTE: Vim plugin
 	{
-		"github/copilot.vim",
-		event = "VeryLazy",
-		keys = {
-			{
-				"<M-Tab>",
-				'copilot#Accept("")',
-				replace_keycodes = false,
-				expr = true,
-				desc = "Accept Copilot suggestion",
-				mode = "i",
+		"zbirenbaum/copilot.lua",
+		opts = {
+			filetypes = {
+				yaml = true,
+				markdown = true,
 			},
 		},
 	},
