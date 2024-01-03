@@ -122,7 +122,7 @@ return {
 				-- "cmp_docs",
 				"cmp_menu",
 				-- 	"noice",
-				-- 	"prompt",
+				"prompt",
 				"TelescopePrompt",
 			},
 		},
