@@ -9,12 +9,16 @@ return {
 
 	{ import = "astrocommunity.git.diffview-nvim" }, -- NOTE: testing
 
+	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming files
+
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
+
 	{ import = "astrocommunity.scrolling.neoscroll-nvim" },
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
+
 	{ import = "astrocommunity.search.sad-nvim" },
 
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words
