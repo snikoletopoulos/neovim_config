@@ -111,15 +111,7 @@ return {
 		},
 		{
 			"jackMort/ChatGPT.nvim",
-			event = "VeryLazy",
-			opts = {
-				api_key_cmd = "echo $CHAT_GPT_API_KEY",
-			},
-			dependencies = {
-				"MunifTanjim/nui.nvim",
-				"nvim-lua/plenary.nvim",
-				"nvim-telescope/telescope.nvim",
-			},
+			opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
 		},
 	},
 	{
