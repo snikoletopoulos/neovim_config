@@ -22,6 +22,8 @@ return {
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
 
+	{ import = "astrocommunity.project.projectmgr-nvim" },
+
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
 
 	{ import = "astrocommunity.scrolling.neoscroll-nvim" },

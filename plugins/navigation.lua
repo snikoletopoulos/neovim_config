@@ -207,4 +207,12 @@ return {
 		},
 		opts = { lsp = { auto_attach = true } },
 	},
+	{
+		"charludo/projectmgr.nvim",
+		keys = {
+			{ "<leader>P", enabled = false },
+			{ "<leader>fp", "<cmd>ProjectMgr<cr>", desc = "Change project" },
+		},
+		opts = { session = { enabled = false } },
+	},
 }
