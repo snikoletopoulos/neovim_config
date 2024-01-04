@@ -36,6 +36,7 @@ maps.n["<leader>e"] = false -- CamelCaseMotion
 maps.n["<leader>w"] = false -- CamelCaseMotion
 maps.n["<leader>ud"] = false -- neo-tree-diagnostics.nvim
 maps.n["<leader>fm"] = false -- find man
+maps.n["<leader>ua"] = false -- toggle auto pairs
 maps.n["<leader>ub"] = false -- toggle background
 maps.n["<leader>uY"] = false -- toggle LSP semantic highlighting TODO: not working
 maps.n["<leader>uy"] = false -- toggle syntax highlighting
