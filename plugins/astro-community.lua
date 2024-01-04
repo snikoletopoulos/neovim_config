@@ -7,7 +7,6 @@ return {
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
-	{ import = "astrocommunity.editing-support.vim-move" },
 
 	{ import = "astrocommunity.git.diffview-nvim" }, -- NOTE: testing
 
@@ -15,6 +14,7 @@ return {
 
 	{ import = "astrocommunity.completion.copilot-lua" },
 
+	{ import = "astrocommunity.motion.mini-move" },
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
