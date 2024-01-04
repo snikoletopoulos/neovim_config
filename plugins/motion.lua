@@ -32,6 +32,4 @@ return {
 			},
 		},
 	},
-	-- NOTE: Vim plugin
-	{ "wellle/targets.vim", lazy = false },
 }
