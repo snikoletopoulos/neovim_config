@@ -2,6 +2,8 @@ return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
 
+	{ import = "astrocommunity.completion.copilot-lua" },
+
 	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 
 	{ import = "astrocommunity.editing-support.auto-save-nvim" },
@@ -14,12 +16,10 @@ return {
 
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming files
 
-	{ import = "astrocommunity.completion.copilot-lua" },
-
 	{ import = "astrocommunity.motion.mini-move" },
+	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
-	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
@@ -34,5 +34,4 @@ return {
 
 	-- Learning good vim
 	{ import = "astrocommunity.workflow.hardtime-nvim" },
-	-- { import = "astrocommunity.workflow.bad-practices-nvim" },
 }
