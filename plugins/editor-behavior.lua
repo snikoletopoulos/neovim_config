@@ -1,13 +1,4 @@
 return {
-	-- TODO: testing
-	-- {
-	-- 	"karb94/neoscroll.nvim",
-	-- 	opts = {
-	-- 		post_hook = function()
-	-- 			vim.fn.feedkeys("M")
-	-- 		end,
-	-- 	},
-	-- },
 	-- NOTE: Vim plugin
 	{ "mg979/vim-visual-multi", lazy = false },
 	{
