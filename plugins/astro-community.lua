@@ -11,6 +11,7 @@ return {
 	{ import = "astrocommunity.editing-support.auto-save-nvim" },
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
+	-- { import = "astrocommunity.editing-support.multicursors-nvim" },
 	{ import = "astrocommunity.editing-support.nvim-devdocs" },
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
@@ -22,8 +23,25 @@ return {
 	{ import = "astrocommunity.motion.mini-move" },
 	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
 	{ import = "astrocommunity.motion.nvim-surround" },
+	-- NOTE: Vim plugin
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
+
+	-- { import = "astrocommunity.pack.astro" },
+	{ import = "astrocommunity.pack.bash" },
+	{ import = "astrocommunity.pack.cpp" },
+	{ import = "astrocommunity.pack.docker" },
+	{ import = "astrocommunity.pack.html-css" },
+	{ import = "astrocommunity.pack.java" },
+	{ import = "astrocommunity.pack.json" },
+	{ import = "astrocommunity.pack.kotlin" },
+	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.pack.markdown" },
+	{ import = "astrocommunity.pack.prisma" },
+	{ import = "astrocommunity.pack.python" },
+	{ import = "astrocommunity.pack.tailwindcss" },
+	{ import = "astrocommunity.pack.typescript" },
+	-- { import = "astrocommunity.pack.yaml" },
 
 	{ import = "astrocommunity.project.projectmgr-nvim" },
 
@@ -34,9 +52,11 @@ return {
 
 	{ import = "astrocommunity.search.sad-nvim" },
 
+	-- { import = "astrocommunity.split-and-window.edgy-nvim" },
+
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words
 	{ import = "astrocommunity.utility.noice-nvim" },
 
 	-- Learning good vim
-	{ import = "astrocommunity.workflow.hardtime-nvim" },
+	-- { import = "astrocommunity.workflow.hardtime-nvim" },
 }

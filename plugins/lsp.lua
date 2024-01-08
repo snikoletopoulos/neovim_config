@@ -1,33 +1,25 @@
+local utils = require("astronvim.utils")
+
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-				"astro",
-				"bash",
-				"css",
-				"dockerfile",
+		opts = function(_, opts)
+			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
+				-- NOTE: temporary until c libraries are fixed
+				-- "astro",
 				"dot",
 				"graphql",
-				"html",
-				"java",
-				"javascript",
-				"jsdoc",
-				"json",
-				"jsonc",
-				"kotlin",
-				"lua",
-				"markdown",
-				"markdown_inline",
-				"prisma",
-				"python",
+				-- "javascript",
+				-- "jsdoc",
+				-- "tsx",
+				-- "typescript",
 				"regex",
 				"swift",
-				"tsx",
-				"typescript",
-				"yaml",
-			},
-		},
+				-- NOTE: temporary until c libraries are fixed
+				-- "yaml",
+			})
+			return opts
+		end,
 		config = function(_, opts)
 			require("nvim-treesitter.install").compilers = { "gcc-13" }
 			require("nvim-treesitter.configs").setup(opts)
@@ -35,59 +27,45 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		opts = {
-			ensure_installed = {
+		opts = function(_, opts)
+			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
 				"astro",
-				"bashls",
-				"cssls",
-				"cssmodules_ls",
-				"dockerls",
 				"dotls",
-				"emmet_ls",
 				"gradle_ls",
 				"graphql",
-				"html",
-				"jsonls",
-				"kotlin_language_server",
-				"lua_ls",
-				"marksman",
-				"prismals",
-				"pyright",
-				"tailwindcss",
-				"tsserver",
+				-- "tsserver",
 				"yamlls",
-			},
-		},
+			})
+			return opts
+		end,
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
-		opts = {
-			ensure_installed = {
-				"beautysh",
+		opts = function(_, opts)
+			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
 				"cspell",
-				"prettierd",
-				"luacheck",
 				"markdownlint",
-				"black",
 				"jsonlint",
-				"eslint_d",
+				-- "eslint_d",
 				"mypy",
 				"pydocstyle",
 				"pylint",
-				"shellcheck",
-				"stylua",
 				"sql_formatter",
-				"yamlfmt",
 				"yamllint",
-			},
-			automatic_installation = true,
-		},
+			})
+
+			opts.automatic_installation = true
+
+			return opts
+		end,
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
-		opts = {
-			ensure_installed = { "python", "node2", "chrome", "bash" },
-		},
+		opts = function(_, opts)
+			opts.ensure_installed =
+				utils.list_insert_unique(opts.ensure_installed, {})
+			return opts
+		end,
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
@@ -97,7 +75,8 @@ return {
 			config.sources = {
 				-- Code Actions
 				null_ls.builtins.code_actions.cspell,
-				null_ls.builtins.code_actions.eslint_d,
+				-- null_ls.builtins.code_actions.eslint_d,
+				null_ls.builtins.code_actions.eslint,
 				null_ls.builtins.code_actions.shellcheck,
 				require("typescript.extensions.null-ls.code-actions"),
 
@@ -107,12 +86,14 @@ return {
 				-- Diagnostics
 				null_ls.builtins.diagnostics.cspell,
 				null_ls.builtins.diagnostics.dotenv_linter,
-				null_ls.builtins.diagnostics.eslint_d.with({
-					extra_args = { "--cache" },
-				}),
+				-- null_ls.builtins.diagnostics.eslint_d.with({
+				-- 	extra_args = { "--cache" },
+				-- }),
+				null_ls.builtins.diagnostics.eslint,
 				null_ls.builtins.diagnostics.jsonlint,
 				null_ls.builtins.diagnostics.luacheck,
 				null_ls.builtins.diagnostics.markdownlint,
+				null_ls.builtins.diagnostics.hadolint, -- Linter for docker
 				null_ls.builtins.diagnostics.mypy,
 				null_ls.builtins.diagnostics.pydocstyle,
 				null_ls.builtins.diagnostics.pylint,
@@ -122,13 +103,15 @@ return {
 
 				-- Formatting
 				null_ls.builtins.formatting.black,
+				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.json_tool,
 				null_ls.builtins.formatting.markdownlint,
 				null_ls.builtins.formatting.nginx_beautifier,
 				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.clang_format, -- For Java
 				null_ls.builtins.formatting.prismaFmt,
+				null_ls.builtins.formatting.shfmt,
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.yamlfmt,
 			}
 			return config
 		end,
@@ -138,9 +121,9 @@ return {
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 		opts = { server = require("astronvim.utils.lsp").config("tsserver") },
 	},
-	{
-		"dmmulroy/tsc.nvim",
-		cmd = { "TSC" },
-		opts = {},
-	},
+	-- {
+	-- 	"dmmulroy/tsc.nvim",
+	-- 	cmd = { "TSC" },
+	-- 	opts = {},
+	-- },
 }
