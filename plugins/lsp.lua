@@ -7,10 +7,6 @@ return {
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
 				"dot",
 				"graphql",
-				-- "javascript",
-				-- "jsdoc",
-				-- "tsx",
-				-- "typescript",
 				"regex",
 				"swift",
 			})
@@ -28,8 +24,12 @@ return {
 				"dotls",
 				"gradle_ls",
 				"graphql",
-				-- "tsserver",
 			})
+
+			astronvim
+				.user_opts("utils.helpers")
+				.remove_list_value(opts.ensure_installed, "eslint")
+
 			return opts
 		end,
 	},
@@ -40,13 +40,17 @@ return {
 				"cspell",
 				"markdownlint",
 				"jsonlint",
-				-- "eslint_d",
+				"eslint_d",
 				"mypy",
 				"pydocstyle",
 				"pylint",
 				"sql_formatter",
 				"yamllint",
 			})
+
+			astronvim
+				.user_opts("utils.helpers")
+				.remove_list_value(opts.ensure_installed, "eslint-lsp")
 
 			opts.automatic_installation = true
 
@@ -69,8 +73,7 @@ return {
 			config.sources = {
 				-- Code Actions
 				null_ls.builtins.code_actions.cspell,
-				-- null_ls.builtins.code_actions.eslint_d,
-				null_ls.builtins.code_actions.eslint,
+				null_ls.builtins.code_actions.eslint_d,
 				null_ls.builtins.code_actions.shellcheck,
 				require("typescript.extensions.null-ls.code-actions"),
 
@@ -80,10 +83,7 @@ return {
 				-- Diagnostics
 				null_ls.builtins.diagnostics.cspell,
 				null_ls.builtins.diagnostics.dotenv_linter,
-				-- null_ls.builtins.diagnostics.eslint_d.with({
-				-- 	extra_args = { "--cache" },
-				-- }),
-				null_ls.builtins.diagnostics.eslint,
+				null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.diagnostics.jsonlint,
 				null_ls.builtins.diagnostics.luacheck,
 				null_ls.builtins.diagnostics.markdownlint,
@@ -110,14 +110,4 @@ return {
 			return config
 		end,
 	},
-	{
-		"jose-elias-alvarez/typescript.nvim",
-		ft = astronvim.user_opts("utils.constants").filetype.javascript,
-		opts = { server = require("astronvim.utils.lsp").config("tsserver") },
-	},
-	-- {
-	-- 	"dmmulroy/tsc.nvim",
-	-- 	cmd = { "TSC" },
-	-- 	opts = {},
-	-- },
 }
