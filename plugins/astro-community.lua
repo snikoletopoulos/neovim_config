@@ -18,7 +18,7 @@ return {
 
 	{ import = "astrocommunity.git.diffview-nvim" }, -- NOTE: testing
 
-	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming files
+	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
 
 	{ import = "astrocommunity.motion.mini-move" },
 	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
