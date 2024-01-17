@@ -27,7 +27,7 @@ return {
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
 
-	-- { import = "astrocommunity.pack.astro" },
+	{ import = "astrocommunity.pack.astro" },
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.cpp" },
 	{ import = "astrocommunity.pack.docker" },
@@ -41,7 +41,7 @@ return {
 	{ import = "astrocommunity.pack.python" },
 	{ import = "astrocommunity.pack.tailwindcss" },
 	{ import = "astrocommunity.pack.typescript" },
-	-- { import = "astrocommunity.pack.yaml" },
+	{ import = "astrocommunity.pack.yaml" },
 
 	{ import = "astrocommunity.project.projectmgr-nvim" },
 

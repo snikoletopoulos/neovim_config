@@ -5,8 +5,6 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
-				-- NOTE: temporary until c libraries are fixed
-				-- "astro",
 				"dot",
 				"graphql",
 				-- "javascript",
@@ -15,8 +13,6 @@ return {
 				-- "typescript",
 				"regex",
 				"swift",
-				-- NOTE: temporary until c libraries are fixed
-				-- "yaml",
 			})
 			return opts
 		end,
@@ -29,12 +25,10 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		opts = function(_, opts)
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
-				"astro",
 				"dotls",
 				"gradle_ls",
 				"graphql",
 				-- "tsserver",
-				"yamlls",
 			})
 			return opts
 		end,
