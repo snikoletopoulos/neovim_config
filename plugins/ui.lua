@@ -104,10 +104,10 @@ return {
 			max_lines = 8,
 			trim_scope = "outer",
 		},
-		{
-			"jackMort/ChatGPT.nvim",
-			opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
-		},
+	},
+	{
+		"jackMort/ChatGPT.nvim",
+		opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
 	},
 	{
 		"vuki656/package-info.nvim",
