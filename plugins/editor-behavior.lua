@@ -2,7 +2,7 @@ return {
 	-- NOTE: Vim plugin
 	{ "mg979/vim-visual-multi", lazy = false },
 	{
-		"pocco81/auto-save.nvim",
+		"Pocco81/auto-save.nvim",
 		keys = { { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" } },
 		opts = {
 			debounce_delay = 1000,
