@@ -30,12 +30,6 @@ return {
 		end,
 	},
 	{ "hrsh7th/cmp-nvim-lua" },
-	-- {
-	-- 	"David-Kunz/cmp-npm",
-	-- 	event = "BufRead package.json",
-	-- 	dependencies = { "nvim-lua/plenary.nvim" },
-	-- 	opts = {},
-	-- },
 	{
 		"hrsh7th/nvim-cmp",
 		opts = function(_, opts)
