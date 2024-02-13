@@ -1,12 +1,7 @@
 return {
 	{
 		"zbirenbaum/copilot.lua",
-		opts = {
-			filetypes = {
-				yaml = true,
-				markdown = true,
-			},
-		},
+		opts = { filetypes = { yaml = true, markdown = true } },
 	},
 	{
 		"axelvc/template-string.nvim",
