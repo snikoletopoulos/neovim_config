@@ -209,6 +209,5 @@ return {
 			{ "<leader>P", enabled = false },
 			{ "<leader>fp", "<cmd>ProjectMgr<cr>", desc = "Change project" },
 		},
-		opts = { session = { enabled = false } },
 	},
 }
