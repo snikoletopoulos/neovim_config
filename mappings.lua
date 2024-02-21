@@ -1,7 +1,5 @@
 local maps = { n = {}, i = {}, v = {}, x = {}, o = {}, c = {} }
 
-maps = astronvim.user_opts("mappings.debugging").debugging(maps)
-
 maps = astronvim.user_opts("mappings.disable").astronvim(maps)
 maps = astronvim.user_opts("mappings.disable").tabline(maps)
 maps = astronvim.user_opts("mappings.disable").trouble(maps)

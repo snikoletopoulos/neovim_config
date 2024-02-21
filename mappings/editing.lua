@@ -4,12 +4,10 @@ function M.editing(maps)
 	maps.n.n = { "nzzzv", desc = "Next result" }
 	maps.n.N = { "Nzzzv", desc = "Previous result" }
 	maps.x["<leader>p"] = { '"_dP', desc = "Paste without coping" }
-	maps.n["<leader>y"] = { '"+y', desc = "Yank to clipboard" }
-	maps.x["<leader>y"] = { '"+y', desc = "Yank to clipboard" }
-	maps.n["<leader>Y"] = { '"+Y', desc = "Yank line to clipboard" }
-	-- TODO conflicting keymaps
-	maps.x["<leader>d"] = { '"_d', desc = "Cut" }
-	maps.n["<leader>d"] = { '"_d', desc = "Cut" }
+	maps.n["<leader>Y"] = { '"+y', desc = "Yank to clipboard" }
+	maps.x["<leader>Y"] = { '"+y', desc = "Yank to clipboard" }
+	maps.x["<leader>D"] = { '"_d', desc = "Cut" }
+	maps.n["<leader>D"] = { '"_d', desc = "Cut" }
 
 	maps.n["<leader>c"] = {
 		function()
