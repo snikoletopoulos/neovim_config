@@ -59,8 +59,7 @@ return {
 				local lspkind = require("lspkind")
 				local utils = require("astronvim.utils")
 
-				local kind =
-					lspkind.cmp_format(utils.plugin_opts("lspkind.nvim"))(entry, vim_item)
+				local kind = lspkind.cmp_format(utils.plugin_opts("lspkind.nvim"))(entry, vim_item)
 
 				local strings = vim.split(kind.kind, "%s", { trimempty = true })
 				kind.kind = " " .. (strings[1] or "")

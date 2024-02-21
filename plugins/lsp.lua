@@ -26,9 +26,7 @@ return {
 				"graphql",
 			})
 
-			astronvim
-				.user_opts("utils.helpers")
-				.remove_list_value(opts.ensure_installed, "eslint")
+			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint")
 
 			return opts
 		end,
@@ -48,9 +46,7 @@ return {
 				"yamllint",
 			})
 
-			astronvim
-				.user_opts("utils.helpers")
-				.remove_list_value(opts.ensure_installed, "eslint-lsp")
+			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint-lsp")
 
 			opts.automatic_installation = true
 
@@ -60,8 +56,7 @@ return {
 	{
 		"jay-babu/mason-nvim-dap.nvim",
 		opts = function(_, opts)
-			opts.ensure_installed =
-				utils.list_insert_unique(opts.ensure_installed, {})
+			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {})
 			return opts
 		end,
 	},

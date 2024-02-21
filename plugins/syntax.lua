@@ -24,10 +24,7 @@ return {
 		event = "User AstroFile",
 		dependencies = { "TheGLander/indent-rainbowline.nvim" },
 		opts = function(_, opts)
-			return require("indent-rainbowline").make_opts(
-				opts,
-				{ color_transparency = 0.04 }
-			)
+			return require("indent-rainbowline").make_opts(opts, { color_transparency = 0.04 })
 		end,
 	},
 }

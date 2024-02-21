@@ -12,8 +12,7 @@ return {
 		},
 		opts = function(_, opts)
 			local button, get_icon =
-				require("astronvim.utils").alpha_button,
-				require("astronvim.utils").get_icon
+				require("astronvim.utils").alpha_button, require("astronvim.utils").get_icon
 
 			opts.section.header.val = {
 				"███    ██ ██ ██  ██ ██████ ██████   ██████",
