@@ -60,15 +60,6 @@ return {
 	},
 	{
 		"folke/noice.nvim",
-		keys = {
-			{
-				"<leader>dn",
-				function()
-					require("notify").dismiss({ silent = true, pending = true })
-				end,
-				desc = "Dismiss notifications",
-			},
-		},
 		opts = {
 			routes = {
 				{
