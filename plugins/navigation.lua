@@ -79,7 +79,7 @@ return {
 								{ "name", zindex = 10, use_git_status_colors = true },
 								{ "clipboard", zindex = 10 },
 								{ "bufnr", zindex = 10 },
-								{ "harpoon_index", zindex = 10 },
+								-- { "harpoon_index", zindex = 10 },
 								{ "modified", zindex = 20, align = "right" },
 								{ "diagnostics", zindex = 20, align = "right" },
 								{ "git_status", zindex = 20, align = "right" },
