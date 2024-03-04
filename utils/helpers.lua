@@ -13,7 +13,7 @@ function Helpers:index_of(array, value)
 end
 
 function Helpers:remove_list_value(list, value)
-	local index = Helpers.index_of(list, value)
+	local index = self:index_of(list, value)
 	if index then
 		return table.remove(list, index)
 	end

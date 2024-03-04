@@ -26,7 +26,7 @@ return {
 				"graphql",
 			})
 
-			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint")
+			astronvim.user_opts("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint")
 
 			return opts
 		end,
@@ -46,7 +46,7 @@ return {
 				"yamllint",
 			})
 
-			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint-lsp")
+			astronvim.user_opts("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint-lsp")
 
 			opts.automatic_installation = true
 
