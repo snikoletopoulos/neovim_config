@@ -11,7 +11,8 @@ return {
 	{ import = "astrocommunity.editing-support.auto-save-nvim" },
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
-	-- { import = "astrocommunity.editing-support.multicursors-nvim" },
+	{ import = "astrocommunity.editing-support.multicursors-nvim" },
+
 	{ import = "astrocommunity.editing-support.nvim-devdocs" },
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
