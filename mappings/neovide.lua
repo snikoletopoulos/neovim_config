@@ -1,11 +1,9 @@
-local M = {}
+---@class NeovideKeymaps
+---@field configure fun(self: NeovideKeymaps, maps: Keymaps): nil
+local NeovideKeymaps = {}
 
-function M.neovide(maps)
-	if not vim.g.neovide then
-		return maps
-	end
-
-	maps.n["<F12>"] = {
+function NeovideKeymaps:configure(maps)
+	maps:add("n", "<F12>", {
 		function()
 			if vim.g.neovide_fullscreen == false then
 				vim.g.neovide_fullscreen = true
@@ -14,9 +12,9 @@ function M.neovide(maps)
 			end
 		end,
 		desc = "Toggle fullscreen",
-	}
+	})
 
-	maps.n["<F10>"] = {
+	maps:add("n", "<F10>", {
 		function()
 			if vim.g.neovide_transparency == 1.0 then
 				vim.g.neovide_window_blurred = false
@@ -28,15 +26,13 @@ function M.neovide(maps)
 			end
 		end,
 		desc = "Toggle transparency",
-	}
+	})
 
-	maps.v["<D-c>"] = { '"+y' } -- Copy
-	maps.n["<D-v>"] = { '"+P' } -- Paste normal mode
-	maps.v["<D-v>"] = { '"+P' } -- Paste visual mode
-	maps.c["<D-v>"] = { "<C-R>+" } -- Paste command mode
-	maps.i["<D-v>"] = { '<ESC>l"+Pli' } -- Paste insert mode
-
-	return maps
+	maps:add("n", "<D-c>", { '"+y' }) -- Copy
+	maps:add("n", "<D-v>", { '"+P' }) -- Paste normal mode
+	maps:add("n", "<D-v>", { '"+P' }) -- Paste visual mode
+	maps:add("n", "<D-v>", { "<C-R>+" }) -- Paste command mode
+	maps:add("n", "<D-v>", { '<ESC>l"+Pli' }) -- Paste insert mode
 end
 
-return M
+return NeovideKeymaps
