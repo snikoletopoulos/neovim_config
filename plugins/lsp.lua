@@ -77,8 +77,10 @@ return {
 
 				-- Diagnostics
 				null_ls.builtins.diagnostics.cspell,
-				null_ls.builtins.diagnostics.dotenv_linter,
 				null_ls.builtins.diagnostics.eslint_d,
+				null_ls.builtins.diagnostics.dotenv_linter.with({
+					filetypes = { "dotenv" },
+				}),
 				null_ls.builtins.diagnostics.jsonlint,
 				null_ls.builtins.diagnostics.luacheck,
 				null_ls.builtins.diagnostics.markdownlint,
