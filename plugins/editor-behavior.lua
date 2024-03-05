@@ -1,6 +1,17 @@
 return {
-	-- NOTE: Vim plugin
-	{ "mg979/vim-visual-multi", lazy = false },
+	{
+		"smoka7/multicursors.nvim",
+		keys = {
+			{ "<leader>m", enabled = false },
+			{
+				"<C-n>",
+				"<cmd>MCstart<cr>",
+				desc = "Create a selection for selected text or word under the cursor",
+				mode = { "v", "n" },
+			},
+		},
+	},
+
 	{
 		"Pocco81/auto-save.nvim",
 		keys = { { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" } },

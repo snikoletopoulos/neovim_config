@@ -1,12 +1,10 @@
-local filetype = {
-	javascript = {
-		"typescript",
-		"typescriptreact",
-		"javascript",
-		"javascriptreact",
-	},
-}
-
 return {
-	filetype = filetype,
+	filetype = {
+		javascript = {
+			"typescript",
+			"typescriptreact",
+			"javascript",
+			"javascriptreact",
+		},
+	},
 }

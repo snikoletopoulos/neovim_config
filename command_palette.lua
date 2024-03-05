@@ -1,3 +1,6 @@
+---@alias CommandPaletteEntry {[1]: string, [2]: string, [3]?: number}
+
+---@type {[1]: string, [2]: CommandPaletteEntry }[]
 return {
 	-- {
 	-- 	"Notes",

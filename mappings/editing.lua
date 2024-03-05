@@ -1,15 +1,17 @@
-local M = {}
+---@class EditingKeymaps
+---@field configure fun(self: EditingKeymaps, maps: Keymaps): nil
+local EditingKeymaps = {}
 
-function M.editing(maps)
-	maps.n.n = { "nzzzv", desc = "Next result" }
-	maps.n.N = { "Nzzzv", desc = "Previous result" }
-	maps.x["<leader>p"] = { '"_dP', desc = "Paste without coping" }
-	maps.n["<leader>Y"] = { '"+y', desc = "Yank to clipboard" }
-	maps.x["<leader>Y"] = { '"+y', desc = "Yank to clipboard" }
-	maps.x["<leader>D"] = { '"_d', desc = "Cut" }
-	maps.n["<leader>D"] = { '"_d', desc = "Cut" }
+---@param maps Keymaps
+function EditingKeymaps:configure(maps)
+	maps:add("n", "n", { "nzzzv", desc = "Next result" })
+	maps:add("x", "<leader>p", { '"_dP', desc = "Paste without coping" })
+	maps:add("n", "<leader>y", { '"+y', desc = "Yank to clipboard" })
+	maps:add("x", "<leader>y", { '"+y', desc = "Yank to clipboard" })
+	maps:add("x", "<leader>D", { '"_d', desc = "Cut" })
+	maps:add("n", "<leader>D", { '"_d', desc = "Cut" })
 
-	maps.n["<leader>c"] = {
+	maps:add("n", "<leader>c", {
 		function()
 			local bufs = vim.fn.getbufinfo({ buflisted = true })
 			require("astronvim.utils.buffer").close(0)
@@ -18,9 +20,7 @@ function M.editing(maps)
 			end
 		end,
 		desc = "Close buffer",
-	}
-
-	return maps
+	})
 end
 
-return M
+return EditingKeymaps

@@ -26,7 +26,7 @@ return {
 				"graphql",
 			})
 
-			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint")
+			astronvim.user_opts("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint")
 
 			return opts
 		end,
@@ -46,7 +46,7 @@ return {
 				"yamllint",
 			})
 
-			astronvim.user_opts("utils.helpers").remove_list_value(opts.ensure_installed, "eslint-lsp")
+			astronvim.user_opts("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint-lsp")
 
 			opts.automatic_installation = true
 
@@ -62,10 +62,10 @@ return {
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
-		opts = function(_, config)
+		opts = function(_, opts)
 			local null_ls = require("null-ls")
 
-			config.sources = {
+			opts.sources = {
 				-- Code Actions
 				null_ls.builtins.code_actions.cspell,
 				null_ls.builtins.code_actions.eslint_d,
@@ -77,8 +77,10 @@ return {
 
 				-- Diagnostics
 				null_ls.builtins.diagnostics.cspell,
-				null_ls.builtins.diagnostics.dotenv_linter,
 				null_ls.builtins.diagnostics.eslint_d,
+				null_ls.builtins.diagnostics.dotenv_linter.with({
+					filetypes = { "dotenv" },
+				}),
 				null_ls.builtins.diagnostics.jsonlint,
 				null_ls.builtins.diagnostics.luacheck,
 				null_ls.builtins.diagnostics.markdownlint,
@@ -102,7 +104,7 @@ return {
 				null_ls.builtins.formatting.shfmt,
 				null_ls.builtins.formatting.stylua,
 			}
-			return config
+			return opts
 		end,
 	},
 }
