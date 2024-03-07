@@ -27,4 +27,21 @@ return {
 			return require("indent-rainbowline").make_opts(opts, { color_transparency = 0.04 })
 		end,
 	},
+	{
+		"chrisgrieser/nvim-chainsaw",
+		keys = {
+			{ "<leader>cv", "<cmd>lua require('chainsaw').variableLog()<CR>" },
+			{ "<leader>co", "<cmd>lua require('chainsaw').objectLog()<CR>" },
+			{ "<leader>cm", "<cmd>lua require('chainsaw').messageLog()<CR>" },
+			{ "<leader>cb", "<cmd>lua require('chainsaw').beepLog()<CR>" },
+			{ "<leader>cr", "<cmd>lua require('chainsaw').removeLogs()<CR>" },
+		},
+		opts = {
+			logStatements = {
+				objectLog = {
+					javascript = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
+				},
+			},
+		},
+	},
 }
