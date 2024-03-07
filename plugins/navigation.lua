@@ -128,14 +128,14 @@ return {
 				desc = "Add file to Harpoon",
 			},
 			{
-				"[h",
+				"<C-p>",
 				function()
 					require("harpoon.ui").nav_prev()
 				end,
 				desc = "Previous Harpoon file",
 			},
 			{
-				"]h",
+				"<C-n>",
 				function()
 					require("harpoon.ui").nav_next()
 				end,

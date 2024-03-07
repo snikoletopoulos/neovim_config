@@ -4,7 +4,7 @@ return {
 		keys = {
 			{ "<leader>m", enabled = false },
 			{
-				"<C-n>",
+				"<M-n>",
 				"<cmd>MCstart<cr>",
 				desc = "Create a selection for selected text or word under the cursor",
 				mode = { "v", "n" },
