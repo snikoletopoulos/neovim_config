@@ -26,6 +26,7 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<leader>ul" }, -- toggle statusline
 		{ mode = "n", lhs = "<leader>uS" }, -- toggle conceal
 		{ mode = "n", lhs = "<leader>C" }, -- force close buffer
+		{ mode = "n", lhs = "<leader>c" }, -- swap with <leader>C
 	},
 	packages = {
 		{ mode = "n", lhs = "<leader>pA" },

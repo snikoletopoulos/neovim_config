@@ -10,6 +10,12 @@ function EditingKeymaps:configure(maps)
 	maps:add("x", "<leader>y", { '"+y', desc = "Yank to clipboard" })
 	maps:add("x", "<leader>D", { '"_d', desc = "Cut" })
 	maps:add("n", "<leader>D", { '"_d', desc = "Cut" })
+	maps:add("n", "<leader>C", {
+		function()
+			require("astronvim.utils.buffer").close()
+		end,
+		desc = "Close buffer",
+	})
 
 	maps:add("n", "<leader>c", {
 		function()
