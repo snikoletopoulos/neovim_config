@@ -117,6 +117,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
+		},
 		dependencies = "nvim-telescope/telescope.nvim",
 		branch = "harpoon2",
 		keys = function(_, keys)
