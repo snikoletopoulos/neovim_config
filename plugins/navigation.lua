@@ -14,7 +14,7 @@ return {
 			window = {
 				width = 40,
 				mappings = {
-					["<C-x"] = "open_split",
+					["<C-x>"] = "open_split",
 					["<C-v>"] = "open_vsplit",
 				},
 			},
