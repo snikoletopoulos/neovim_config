@@ -40,6 +40,9 @@ return {
 			logStatements = {
 				objectLog = {
 					javascript = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
+					javascriptreact = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
+					typescript = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
+					typescriptreact = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
 				},
 			},
 		},
