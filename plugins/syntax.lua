@@ -36,15 +36,16 @@ return {
 			{ "<leader>cb", "<cmd>lua require('chainsaw').beepLog()<CR>" },
 			{ "<leader>cr", "<cmd>lua require('chainsaw').removeLogs()<CR>" },
 		},
-		opts = {
-			logStatements = {
-				objectLog = {
-					javascript = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
-					javascriptreact = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
-					typescript = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
-					typescriptreact = 'console.log("%s %s:", JSON.stringify(%s, null, 2));',
-				},
-			},
-		},
+		opts = function(_, opts)
+			for _, language in pairs(astronvim.user_opts("utils.constants").filetype.javascript) do
+				if opts.logStatements == nil then
+					opts.logStatements = { objectLog = {} }
+				end
+				print(language)
+				opts.logStatements.objectLog[language] =
+					'console.log("%s %s:", JSON.stringify(%s, null, 2));'
+			end
+			return opts
+		end,
 	},
 }
