@@ -110,12 +110,6 @@ return {
 		opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
 	},
 	{
-		"vuki656/package-info.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		opts = {},
-		event = "BufRead package.json",
-	},
-	{
 		"akinsho/toggleterm.nvim",
 		opts = {
 			float_opts = {
