@@ -30,11 +30,11 @@ return {
 	{
 		"chrisgrieser/nvim-chainsaw",
 		keys = {
-			{ "<leader>cv", "<cmd>lua require('chainsaw').variableLog()<CR>" },
-			{ "<leader>co", "<cmd>lua require('chainsaw').objectLog()<CR>" },
-			{ "<leader>cm", "<cmd>lua require('chainsaw').messageLog()<CR>" },
-			{ "<leader>cb", "<cmd>lua require('chainsaw').beepLog()<CR>" },
-			{ "<leader>cr", "<cmd>lua require('chainsaw').removeLogs()<CR>" },
+			{ "<leader>cv", "<cmd>lua require('chainsaw').variableLog()<CR>", desc = "Log variable" },
+			{ "<leader>co", "<cmd>lua require('chainsaw').objectLog()<CR>", desc = "Log object" },
+			{ "<leader>cm", "<cmd>lua require('chainsaw').messageLog()<CR>", desc = "Log" },
+			{ "<leader>cb", "<cmd>lua require('chainsaw').beepLog()<CR>", desc = "Log beep" },
+			{ "<leader>cr", "<cmd>lua require('chainsaw').removeLogs()<CR>", desc = "Clear logs" },
 		},
 		opts = function(_, opts)
 			for _, language in pairs(astronvim.user_opts("utils.constants").filetype.javascript) do

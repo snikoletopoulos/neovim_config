@@ -12,13 +12,6 @@ function EditingKeymaps:configure(maps)
 	maps:add("n", "<leader>D", { '"_d', desc = "Cut" })
 	maps:add("n", "<leader>C", {
 		function()
-			require("astronvim.utils.buffer").close()
-		end,
-		desc = "Close buffer",
-	})
-
-	maps:add("n", "<leader>c", {
-		function()
 			local bufs = vim.fn.getbufinfo({ buflisted = true })
 			require("astronvim.utils.buffer").close(0)
 			if require("astronvim.utils").is_available("alpha-nvim") and not bufs[2] then
