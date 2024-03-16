@@ -187,6 +187,11 @@ return {
 	},
 	{
 		"SmiteshP/nvim-navbuddy",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"MunifTanjim/nui.nvim",
+			"neovim/nvim-lspconfig",
+		},
 		keys = {
 			{
 				"<leader>fs",
@@ -195,11 +200,6 @@ return {
 				end,
 				desc = "Breadcrumb search",
 			},
-		},
-		dependencies = {
-			"SmiteshP/nvim-navic",
-			"MunifTanjim/nui.nvim",
-			"neovim/nvim-lspconfig",
 		},
 		opts = { lsp = { auto_attach = true } },
 	},
