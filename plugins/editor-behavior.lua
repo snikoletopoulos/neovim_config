@@ -76,5 +76,5 @@ return {
 		"marilari88/twoslash-queries.nvim",
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 	},
-	{ "karb94/neoscroll.nvim", enabled = not vim.g.neovide },
+	{ "karb94/neoscroll.nvim", cond = not vim.g.neovide },
 }
