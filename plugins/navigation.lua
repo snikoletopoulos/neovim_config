@@ -20,7 +20,7 @@ return {
 			},
 			tabs_layout = "focus",
 			sort_case_insensitive = true,
-			sources = "filesystem",
+			sources = { "filesystem" },
 			source_selector = {
 				show_scrolled_off_parent_node = true,
 				sources = {
