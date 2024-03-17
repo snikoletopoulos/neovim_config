@@ -110,6 +110,7 @@ return {
 	},
 	{
 		"jackMort/ChatGPT.nvim",
+		enabled = vim.env.CHAT_GPT_API_KEY,
 		opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
 	},
 	{
