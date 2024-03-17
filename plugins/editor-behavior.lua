@@ -45,9 +45,9 @@ return {
 	},
 	{
 		"nvim-neorg/neorg",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-		event = "VeryLazy",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		build = ":Neorg sync-parsers",
+		ft = "norg",
 		opts = {
 			load = {
 				["core.defaults"] = {},
