@@ -123,7 +123,6 @@ return {
 		keys = function(_, keys)
 			local harpoon = require("harpoon")
 
-			print(vim.inspect(harpoon:list():get_by_display("src/middleware.ts")))
 			return vim.tbl_deep_extend("error", keys, {
 				{
 					"<leader>hh",

@@ -41,7 +41,6 @@ return {
 				if opts.logStatements == nil then
 					opts.logStatements = { objectLog = {} }
 				end
-				print(language)
 				opts.logStatements.objectLog[language] =
 					'console.log("%s %s:", JSON.stringify(%s, null, 2));'
 			end

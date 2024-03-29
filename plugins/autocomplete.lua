@@ -41,7 +41,6 @@ return {
 				"<leader>cch",
 				function()
 					local actions = require("CopilotChat.actions")
-					print(vim.inspect(actions.help_actions()))
 					require("CopilotChat.integrations.telescope").pick(actions.help_actions())
 				end,
 				desc = "Help actions",
@@ -61,7 +60,7 @@ return {
 			question_header = "## User ",
 			answer_header = "## Copilot ",
 			error_header = "## Error ",
-			separator = " ", -- Separator to use in chat
+			separator = " ",
 			auto_follow_cursor = false,
 			show_help = false,
 			window = { relative = "win" },
