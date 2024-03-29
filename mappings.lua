@@ -10,6 +10,12 @@ if not vim.g.neovide then
 end
 
 maps:add("n", "<leader>h", { name = "󱡅 Harpoon", desc = "󱡅 Harpoon" })
-maps:add("n", "<leader>c", { name = " Log", desc = " Log" })
+maps:add(
+	"n",
+	"<leader>c",
+	{ name = " Log / 󰭹 Copilot Chat", desc = " Log / 󰭹 Copilot Chat" }
+)
+maps:add("v", "<leader>c", { name = "󰭹 Copilot Chat", desc = "󰭹 Copilot Chat" })
+maps:add({ "n", "v" }, "<leader>cc", { name = "󰭹 Copilot Chat", desc = "󰭹 Copilot Chat" })
 
 return maps:create()
