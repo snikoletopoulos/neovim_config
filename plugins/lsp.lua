@@ -89,7 +89,12 @@ return {
 				null_ls.builtins.diagnostics.pydocstyle,
 				null_ls.builtins.diagnostics.pylint,
 				null_ls.builtins.diagnostics.shellcheck,
-				null_ls.builtins.diagnostics.yamllint,
+				null_ls.builtins.diagnostics.yamllint.with({
+					env = {
+						YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config")
+							.. "/lua/user/config_files/.yamllint.yaml",
+					},
+				}),
 				null_ls.builtins.diagnostics.zsh,
 
 				-- Formatting
