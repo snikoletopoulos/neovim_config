@@ -7,7 +7,6 @@ return {
 	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
-	{ import = "astrocommunity.editing-support.auto-save-nvim" },
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.hypersonic-nvim" }, -- RegEx explainer
 	{ import = "astrocommunity.editing-support.multicursors-nvim" },

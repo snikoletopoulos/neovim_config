@@ -11,17 +11,18 @@ return {
 			},
 		},
 	},
-
 	{
-		"Pocco81/auto-save.nvim",
-		keys = { { "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" } },
+		"okuuva/auto-save.nvim",
+		cmd = { "ASToggle" },
+		event = { "User AstroFile", "InsertLeave", "TextChanged" },
 		opts = {
-			debounce_delay = 1000,
-			execution_message = {
-				message = function()
-					return ""
-				end,
-			},
+			execution_message = { enabled = false },
+			condition = function(buffer)
+				return require("auto-save.utils.data").not_in(
+					vim.fn.getbufvar(buffer, "&filetype"),
+					{ "harpoon" }
+				)
+			end,
 		},
 	},
 	{
