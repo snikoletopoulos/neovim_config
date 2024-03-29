@@ -1,4 +1,4 @@
----@alias KeymapsPackage "astronvim"|"packages"|"tabline"|"trouble"
+---@alias KeymapsPackage "astronvim"|"packages"|"tabline"
 
 ---@class DisableKeymaps
 ---@field configure fun(self: DisableKeymaps, maps: Keymaps, options: table<KeymapsPackage, boolean>): nil
@@ -55,12 +55,6 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<leader>bsp" },
 		{ mode = "n", lhs = "<leader>bsr" },
 	},
-	trouble = {
-		{ mode = "n", lhs = "<leader>xX" },
-		{ mode = "n", lhs = "<leader>xx" },
-		{ mode = "n", lhs = "<leader>xl" },
-		{ mode = "n", lhs = "<leader>xq" },
-	},
 }
 
 function DisableKeymaps:configure(maps, options)
@@ -78,12 +72,6 @@ function DisableKeymaps:configure(maps, options)
 
 	if options.tabline then
 		for _, keymap in ipairs(self.tabline) do
-			maps:add(keymap.mode, keymap.lhs, false)
-		end
-	end
-
-	if options.trouble then
-		for _, keymap in ipairs(self.trouble) do
 			maps:add(keymap.mode, keymap.lhs, false)
 		end
 	end

@@ -1,11 +1,14 @@
 return {
 	{
 		"folke/trouble.nvim",
+		opts = {
+			use_diagnostic_signs = true,
+			action_keys = {
+				close = { "q", "<esc>" },
+				cancel = "<c-e>",
+			},
+		},
 		keys = {
-			{ "<leader>xX", enabled = false },
-			{ "<leader>xx", enabled = false },
-			{ "<leader>xl", enabled = false },
-			{ "<leader>xq", enabled = false },
 			{
 				"<leader>ud",
 				"<cmd>TroubleToggle workspace_diagnostics<CR>",
@@ -107,13 +110,8 @@ return {
 	},
 	{
 		"jackMort/ChatGPT.nvim",
+		enabled = vim.env.CHAT_GPT_API_KEY,
 		opts = { api_key_cmd = "echo $CHAT_GPT_API_KEY" },
-	},
-	{
-		"vuki656/package-info.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		opts = {},
-		event = "BufRead package.json",
 	},
 	{
 		"akinsho/toggleterm.nvim",

@@ -1,6 +1,7 @@
-local maps = { n = {}, i = {}, v = {}, x = {}, o = {}, c = {} }
+---@type Keymaps
+local maps = astronvim.user_opts("classes.Keymaps"):new()
 
-maps.n["<leader>uY"] = false -- toggle LSP semantic highlighting
-maps.v["<leader>uY"] = false -- toggle LSP semantic highlighting
+maps:add("n", "<leader>uY", false)
+maps:add("v", "<leader>uY", false)
 
-return maps
+return maps:create()

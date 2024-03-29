@@ -45,9 +45,9 @@ return {
 	},
 	{
 		"nvim-neorg/neorg",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-		event = "VeryLazy",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		build = ":Neorg sync-parsers",
+		ft = "norg",
 		opts = {
 			load = {
 				["core.defaults"] = {},
@@ -76,5 +76,5 @@ return {
 		"marilari88/twoslash-queries.nvim",
 		ft = astronvim.user_opts("utils.constants").filetype.javascript,
 	},
-	{ "karb94/neoscroll.nvim", enabled = not vim.g.neovide },
+	{ "karb94/neoscroll.nvim", cond = not vim.g.neovide },
 }
