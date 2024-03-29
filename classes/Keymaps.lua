@@ -1,4 +1,4 @@
----@alias Modes "n"|"i"|"v"|"x"|"o"|"c",
+---@alias KeymapModes "n"|"i"|"v"|"x"|"o"|"c",
 
 ---@class Keymaps
 ---@field n table
@@ -8,7 +8,7 @@
 ---@field o table
 ---@field c table
 ---@field new fun(self: Keymaps, o?: Keymaps): Keymaps
----@field add fun(self: Keymaps, mode: Modes, lhs: string, value: table|false): nil
+---@field add fun(self: Keymaps, mode: KeymapModes | KeymapModes[], lhs: string, value: table|false): nil
 ---@field create fun(self: Keymaps): table
 local Keymaps = { n = {}, i = {}, v = {}, x = {}, o = {}, c = {} }
 
@@ -19,8 +19,14 @@ function Keymaps:new(o)
 	return k
 end
 
-function Keymaps:add(mode, lhs, value)
-	self[mode][lhs] = value
+function Keymaps:add(modes, lhs, value)
+	if type(modes) == "table" then
+		for _, mode in ipairs(modes) do
+			self[mode][lhs] = value
+		end
+	else
+		self[modes][lhs] = value
+	end
 end
 
 function Keymaps:create()
