@@ -15,6 +15,15 @@ return {
 		"okuuva/auto-save.nvim",
 		cmd = { "ASToggle" },
 		event = { "User AstroFile", "InsertLeave", "TextChanged" },
+		keys = {
+			{
+				"<leader>fa",
+				function()
+					vim.cmd("ASToggle")
+				end,
+				desc = "Toggle auto-save",
+			},
+		},
 		opts = {
 			execution_message = { enabled = false },
 			condition = function(buffer)
