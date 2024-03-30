@@ -89,6 +89,29 @@ return {
 				null_ls.builtins.diagnostics.pydocstyle,
 				null_ls.builtins.diagnostics.pylint,
 				null_ls.builtins.diagnostics.shellcheck,
+				null_ls.builtins.diagnostics.stylelint.with({
+					extra_args = function()
+						local null_ls_utils = require("null-ls.utils").make_conditional_utils()
+						local has_project_config = null_ls_utils.root_has_file({
+							".stylelintrc.js",
+							"stylelint.config.js",
+							".stylelintrc.mjs",
+							"stylelint.config.mjs",
+							".stylelintrc.cjs",
+							"stylelint.config.cjs",
+							".stylelintrc.json",
+							".stylelintrc.yml",
+							".stylelintrc.yaml",
+						})
+						if has_project_config then
+							return nil
+						end
+						return {
+							"--config",
+							vim.fn.stdpath("config") .. "/lua/user/config_files/.stylelintrc.json",
+						}
+					end,
+				}),
 				null_ls.builtins.diagnostics.yamllint.with({
 					env = {
 						YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config")
