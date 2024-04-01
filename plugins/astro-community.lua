@@ -19,11 +19,12 @@ return {
 
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
 
+	-- TODO: write comment what this does
 	{ import = "astrocommunity.motion.mini-move" },
-	{ import = "astrocommunity.motion.nvim-spider" }, -- Replacement for CamelCaseMotion
 	{ import = "astrocommunity.motion.nvim-surround" },
 	-- NOTE: Vim plugin
 	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
+	-- TODO: write better comment what this does
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
 
 	{ import = "astrocommunity.pack.astro" },
@@ -59,4 +60,14 @@ return {
 
 	-- Learning good vim
 	-- { import = "astrocommunity.workflow.hardtime-nvim" },
+	-- { import = "astrocommunity.test.neotest" },
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	ft = astronvim.user_opts("utils.constants").filetype.javascript,
+	-- 	dependencies = { "marilari88/neotest-vitest" },
+	-- 	opts = function(_, opts)
+	-- 		opts.adapters = { require("neotest-vitest") }
+	-- 		return opts
+	-- 	end,
+	-- },
 }
