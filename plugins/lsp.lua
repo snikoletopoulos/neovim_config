@@ -5,7 +5,6 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
-				"dot",
 				"graphql",
 				"regex",
 				"swift",
@@ -21,7 +20,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		opts = function(_, opts)
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
-				"dotls",
 				"gradle_ls",
 				"graphql",
 			})
