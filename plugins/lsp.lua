@@ -7,6 +7,7 @@ return {
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
 				"graphql",
 				"regex",
+				"scss",
 				"swift",
 			})
 			return opts
@@ -22,6 +23,7 @@ return {
 			opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
 				"gradle_ls",
 				"graphql",
+				"somesass_ls",
 			})
 
 			astronvim.user_opts("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint")
@@ -40,6 +42,7 @@ return {
 				"mypy",
 				"pydocstyle",
 				"pylint",
+				"stylelint",
 				"sql_formatter",
 				"yamllint",
 			})
