@@ -100,6 +100,7 @@ return {
 	{ "kevinhwang91/nvim-bqf", ft = "qf" },
 	{
 		"nvim-treesitter/nvim-treesitter-context",
+		-- TODO: check lazy
 		lazy = false,
 		opts = {
 			mode = "topline",
@@ -123,6 +124,7 @@ return {
 		},
 	},
 	{
+		-- TODO: add to command palate
 		"luckasRanarison/nvim-devdocs",
 		opts = {
 			ensure_installed = {
