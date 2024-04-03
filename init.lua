@@ -1,31 +1,19 @@
-require("user.filetypes")
+-- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
+-- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
+local lazypath = vim.env.LAZY or vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
+  -- stylua: ignore
+  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return {
-	options = {
-		g = {
-			camelcasemotion_key = "<leader>",
-			loaded_perl_provider = 0,
-			maplocalleader = ",",
+-- validate that lazy is available
+if not pcall(require, "lazy") then
+  -- stylua: ignore
+  vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
+	vim.fn.getchar()
+	vim.cmd.quit()
+end
 
-			-- Neovide
-			neovide_cursor_animation_length = 0,
-			neovide_input_macos_alt_is_meta = true,
-			remember_window_size = true,
-			remember_window_position = true,
-		},
-		opt = {
-			clipboard = "",
-			swapfile = false,
-			foldmethod = "expr",
-			foldexpr = "nvim_treesitter#foldexpr()",
-			foldlevel = 99,
-			showtabline = 0,
-			conceallevel = 2,
-			scrolloff = 5,
-
-			-- Neovide
-			guifont = "FiraCode Nerd Font",
-			linespace = 6,
-		},
-	},
-}
+require("lazy_setup")
+require("polish")
