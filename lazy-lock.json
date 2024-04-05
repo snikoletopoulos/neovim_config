@@ -16,6 +16,7 @@
   "auto-save.nvim": { "branch": "main", "commit": "42fce87ab468efd080c74759b425be430d636d15" },
   "better-escape.nvim": { "branch": "master", "commit": "7e86edafb8c7e73699e0320f225464a298b96d12" },
   "clangd_extensions.nvim": { "branch": "main", "commit": "2992ba8c13c2de41f91a7c7488bf1c48bcec31fe" },
+  "cloak.nvim": { "branch": "main", "commit": "6e5bcd50bebc5cdb7cd3a00eb3d97ab7c4cc3b94" },
   "cmake-tools.nvim": { "branch": "master", "commit": "a4cd0b3a2c8a166a54b36bc00579954426748959" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-dap": { "branch": "master", "commit": "ea92773e84c0ad3288c3bc5e452ac91559669087" },

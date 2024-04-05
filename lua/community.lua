@@ -8,6 +8,7 @@ return {
 	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
+	{ import = "astrocommunity.editing-support.cloak-nvim" }, -- Hide env variables
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.multicursors-nvim" },
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
