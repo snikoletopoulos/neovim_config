@@ -36,6 +36,7 @@ return {
 	{ import = "astrocommunity.pack.markdown" },
 	{ import = "astrocommunity.pack.prisma" },
 	{ import = "astrocommunity.pack.python" },
+	{ import = "astrocommunity.pack.sql" },
 	{ import = "astrocommunity.pack.tailwindcss" },
 	{ import = "astrocommunity.pack.toml" },
 	{ import = "astrocommunity.pack.typescript" },

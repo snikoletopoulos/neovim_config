@@ -41,6 +41,9 @@ return {
 					return { "--config", vim.fn.stdpath("config") .. "/lua/user/config_files/.selene.toml" }
 				end,
 			}), -- Linter for Lua
+			none_ls.builtins.diagnostics.sqlfluff.with({
+				extra_args = { "--dialect", "postgres" },
+			}),
 			none_ls.builtins.diagnostics.yamllint.with({
 				env = {
 					YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config")
@@ -86,7 +89,9 @@ return {
 					}
 				end,
 			}),
-			none_ls.builtins.formatting.sql_formatter,
+			none_ls.builtins.formatting.sqlfluff.with({
+				extra_args = { "--dialect", "postgres" }, -- change to your dialect
+			}),
 			none_ls.builtins.formatting.stylua.with({
 				extra_args = function()
 					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
