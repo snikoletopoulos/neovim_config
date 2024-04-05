@@ -18,11 +18,13 @@ return {
 		config = {
 			lua_ls = { settings = { Lua = { hint = { enable = true, arrayIndex = "Disable" } } } },
 			emmet_ls = {
-				jsx = {
-					options = {
-						["jsx.enabled"] = true,
-						["output.selfClosingStyle"] = "xhtml",
-						["bem.enabled"] = true,
+				init_options = {
+					jsx = {
+						options = {
+							["jsx.enabled"] = true,
+							["output.selfClosingStyle"] = "xhtml",
+							["bem.enabled"] = true,
+						},
 					},
 				},
 			},
