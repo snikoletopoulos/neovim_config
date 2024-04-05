@@ -106,6 +106,7 @@
   "tokyonight.nvim": { "branch": "main", "commit": "9bf9ec53d5e87b025e2404069b71e7ebdc3a13e5" },
   "treesj": { "branch": "main", "commit": "60e27280030f9cd8dfb6ceb335922c6ff76682cc" },
   "trouble.nvim": { "branch": "main", "commit": "b9cf677f20bb2faa2dacfa870b084e568dca9572" },
+  "ts-error-translator.nvim": { "branch": "main", "commit": "11ae55b28bde02663b5f983f59b0e3fd9c4e845b" },
   "tsc.nvim": { "branch": "main", "commit": "02856f0c67741a7c060df8f24a7f2806e1935f46" },
   "twoslash-queries.nvim": { "branch": "main", "commit": "e000134c7ca3ea44f1095df3ceea89e485b7bdd5" },
   "typescript-tools.nvim": { "branch": "master", "commit": "c43d9580c3ff5999a1eabca849f807ab33787ea7" },

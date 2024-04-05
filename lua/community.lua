@@ -15,6 +15,7 @@ return {
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
+	{ import = "astrocommunity.lsp.ts-error-translator-nvim" },
 
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.mini-move" }, -- Move lines with <M>
