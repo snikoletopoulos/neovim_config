@@ -8,10 +8,7 @@ return {
 	opts = function(_, opts)
 		local none_ls = require("null-ls")
 
-		-- NOTE: Notify if sources get into config
-		if opts.sources then require("astrocore").notify("none-ls sources already exist") end
-
-		opts.sources = require("astrocore").extend_tbl(opts.sources, {
+		opts.sources = {
 
 			-- Code Actions
 			require("cspell").code_actions,
@@ -121,7 +118,7 @@ return {
 					}
 				end,
 			}),
-		})
+		}
 
 		return opts
 	end,
