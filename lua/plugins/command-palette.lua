@@ -1,6 +1,31 @@
 ---@type LazySpec
 return {
 	{
+		"ray-x/sad.nvim",
+		cmd = { "SearchAndReplace" },
+		config = function(_, opts)
+			require("sad").setup(opts)
+
+			vim.api.nvim_create_user_command("SearchAndReplace", function(params)
+				vim.ui.input({
+					prompt = "Search",
+					default = params.args[1] or vim.fn.expand("<cword>") or "",
+				}, function(search_word)
+					if search_word == nil then return end
+					vim.ui.input({
+						prompt = "Replace",
+					}, function(replace_word)
+						if replace_word == nil then return end
+						vim.ui.input(
+							{ prompt = "Filetype" },
+							function(filetype) require("sad").Replace(search_word, replace_word, filetype) end
+						)
+					end)
+				end)
+			end, { nargs = "?" })
+		end,
+	},
+	{
 		"LinArcX/telescope-command-palette.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim" },
 		keys = {
@@ -25,8 +50,8 @@ return {
 					},
 					{
 						"File",
-						{ "Search and Replace", ":Sad", 1 },
-						{ "Search and Replace current word", ":Sad" },
+						{ "Toggle env variables", "CloakToggle" },
+						{ "Search and Replace", ":SearchAndReplace" },
 						{ "Inspect types", ":InspectTwoslashQueries" },
 					},
 					{
@@ -34,23 +59,19 @@ return {
 						{ "Update Plugins and Mason", ":AstroUpdatePackages" },
 						{ "Mason Update", ":MasonUpdate" },
 						{ "Open Mason", ":Mason" },
-						{ "Plugins Status", ":lua require('lazy').home()" },
 						{ "Plugins Update", ":lua require('lazy').update()" },
 						{ "Plugins Sync", ":lua require('lazy').sync()" },
+						{ "Open Lazy", ":lua require('lazy').home()" },
 					},
 					{
 						"Vim",
 						{ "Commands", ":lua require('telescope.builtin').commands()" },
-						{
-							"Command history",
-							":lua require('telescope.builtin').command_history()",
-						},
 						{ "Vim options", ":lua require('telescope.builtin').vim_options()" },
-						{ "Check health", ":checkhealth" },
 						{
 							"Change colorshceme",
 							":lua require('telescope.builtin').colorscheme({ enable_preview = true })",
 						},
+						{ "Check health", ":checkhealth" },
 					},
 				},
 			},
