@@ -29,7 +29,7 @@ return {
 	{ import = "astrocommunity.pack.cpp" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.html-css" },
-	-- { import = "astrocommunity.pack.java" },
+	{ import = "astrocommunity.pack.java" },
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.kotlin" },
 	{ import = "astrocommunity.pack.lua" },

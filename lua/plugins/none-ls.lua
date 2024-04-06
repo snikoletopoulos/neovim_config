@@ -12,8 +12,6 @@ return {
 		if opts.sources then require("astrocore").notify("none-ls sources already exist") end
 
 		opts.sources = require("astrocore").extend_tbl(opts.sources, {
-			-- Formatting
-			-- none_ls.builtins.formatting.clang_format, -- For Java
 
 			-- Code Actions
 			require("cspell").code_actions,
@@ -53,6 +51,7 @@ return {
 
 			-- Formatting
 			none_ls.builtins.formatting.black, -- Formatter for Python
+			none_ls.builtins.formatting.clang_format, -- For Java
 			none_ls.builtins.formatting.isort, -- Sort Python imports
 			none_ls.builtins.formatting.ktlint, -- Formatter for Kotlin
 			none_ls.builtins.formatting.markdownlint,
