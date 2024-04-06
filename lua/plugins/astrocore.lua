@@ -49,6 +49,7 @@ return {
 				["tsconfig.json"] = "jsonc",
 				[".eslintrc.json"] = "jsonc",
 				[".yamlfmt"] = "yaml",
+				[".sqlfluff"] = "toml",
 			},
 			pattern = {
 				["%.env%.[%w_.-]+"] = "dotenv",

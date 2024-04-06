@@ -40,7 +40,22 @@ return {
 				end,
 			}), -- Linter for Lua
 			none_ls.builtins.diagnostics.sqlfluff.with({
-				extra_args = { "--dialect", "postgres" },
+				extra_args = function()
+					local args = { "--dialect", "postgres" }
+					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
+					local has_project_config = null_ls_utils.root_has_file({
+						"setup.cfg",
+						"tox.ini",
+						"pep8.ini",
+						".sqlfluff",
+						"pyproject.toml",
+					})
+					if has_project_config then return args end
+					return vim.list_extend(args, {
+						"--config",
+						vim.fn.stdpath("config") .. "/config_files/.sqlfluff",
+					})
+				end,
 			}),
 			none_ls.builtins.diagnostics.yamllint.with({
 				env = {
