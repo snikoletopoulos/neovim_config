@@ -9,7 +9,6 @@ return {
 		local none_ls = require("null-ls")
 
 		opts.sources = {
-
 			-- Code Actions
 			require("cspell").code_actions,
 			require("none-ls.code_actions.eslint_d"),
@@ -30,8 +29,8 @@ return {
 			none_ls.builtins.diagnostics.pylint,
 			none_ls.builtins.diagnostics.selene.with({
 				extra_args = function()
-					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
-					local has_project_config = null_ls_utils.root_has_file({ ".selene.toml", "selene.toml" })
+					local utils = require("null-ls.utils").make_conditional_utils()
+					local has_project_config = utils.root_has_file({ ".selene.toml", "selene.toml" })
 					if has_project_config then return nil end
 					return { "--config", vim.fn.stdpath("config") .. "/config_files/.selene.toml" }
 				end,
@@ -39,8 +38,8 @@ return {
 			none_ls.builtins.diagnostics.sqlfluff.with({
 				extra_args = function()
 					local args = { "--dialect", "postgres" }
-					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
-					local has_project_config = null_ls_utils.root_has_file({
+					local utils = require("null-ls.utils").make_conditional_utils()
+					local has_project_config = utils.root_has_file({
 						"setup.cfg",
 						"tox.ini",
 						"pep8.ini",
