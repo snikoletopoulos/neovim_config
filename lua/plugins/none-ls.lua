@@ -34,9 +34,9 @@ return {
 			none_ls.builtins.diagnostics.selene.with({
 				extra_args = function()
 					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
-					local has_project_config = null_ls_utils.root_has_file(".selene.toml")
+					local has_project_config = null_ls_utils.root_has_file({ ".selene.toml", "selene.toml" })
 					if has_project_config then return nil end
-					return { "--config", vim.fn.stdpath("config") .. "/lua/user/config_files/.selene.toml" }
+					return { "--config", vim.fn.stdpath("config") .. "/config_files/.selene.toml" }
 				end,
 			}), -- Linter for Lua
 			none_ls.builtins.diagnostics.sqlfluff.with({
