@@ -24,4 +24,5 @@ return {
 	},
 	{ "projekt0n/github-nvim-theme" },
 	{ "AstroNvim/astrotheme" },
+	{ "Mofiqul/vscode.nvim" },
 }

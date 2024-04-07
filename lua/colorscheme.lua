@@ -5,6 +5,7 @@ local favorites = {
 	edge = "edge",
 	github = "github_dark_colorblind",
 	astronvim = "astrodark",
+	vscode = "vscode",
 }
 
 return favorites.sonokai
