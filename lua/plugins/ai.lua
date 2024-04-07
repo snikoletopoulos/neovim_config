@@ -6,6 +6,8 @@ return {
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "canary",
+		dependencies = { "zbirenbaum/copilot.lua", "nvim-lua/plenary.nvim" },
 		cmd = {
 			"CopilotChat",
 			"CopilotChatOpen",
@@ -24,16 +26,14 @@ return {
 			"CopilotChatCommit",
 			"CopilotChatCommitStaged",
 		},
-		branch = "canary",
-		dependencies = { "zbirenbaum/copilot.lua", "nvim-lua/plenary.nvim" },
 		keys = {
 			{
 				"<leader>cca",
 				function()
-					local input = vim.fn.input("Quick Chat: ")
-					if input ~= "" then
+					vim.ui.input({ prompt = "Quick Chat" }, function(input)
+						if not input or input == "" then return end
 						require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
-					end
+					end)
 				end,
 				desc = "Quick chat",
 				mode = { "n", "v" },
