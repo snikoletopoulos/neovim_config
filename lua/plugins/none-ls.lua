@@ -55,8 +55,7 @@ return {
 			}),
 			none_ls.builtins.diagnostics.yamllint.with({
 				env = {
-					YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config")
-						.. "/lua/user/config_files/.yamllint.yaml",
+					YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config") .. "/config_files/.yamllint.yaml",
 				},
 			}),
 
@@ -70,7 +69,7 @@ return {
 			none_ls.builtins.formatting.prettierd.with({
 				env = {
 					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config")
-						.. "/lua/user/config_files/.prettierrc.json",
+						.. "/config_files/.prettierrc.json",
 				},
 			}),
 			none_ls.builtins.formatting.prismaFmt,
@@ -95,7 +94,7 @@ return {
 					if has_project_config then return nil end
 					return {
 						"--config",
-						vim.fn.stdpath("config") .. "/lua/user/config_files/.stylelintrc.json",
+						vim.fn.stdpath("config") .. "/config_files/.stylelintrc.json",
 					}
 				end,
 			}),
@@ -113,7 +112,7 @@ return {
 					if has_project_config then return nil end
 					return {
 						"--config-path",
-						vim.fn.stdpath("config") .. "/lua/user/config_files/.stylua.toml",
+						vim.fn.stdpath("config") .. "/config_files/.stylua.toml",
 					}
 				end,
 			}),
