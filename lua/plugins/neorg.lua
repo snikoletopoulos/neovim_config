@@ -1,11 +1,13 @@
--- TODO: configure neorg
-if true then return {} end
-
 ---@type LazySpec
 return {
 	"nvim-neorg/neorg",
-	dependencies = { "nvim-lua/plenary.nvim" },
-	build = ":Neorg sync-parsers",
+	dependencies = {
+		{
+			"vhyrro/luarocks.nvim",
+			priority = 1000,
+			config = true,
+		},
+	},
 	ft = "norg",
 	opts = {
 		load = {

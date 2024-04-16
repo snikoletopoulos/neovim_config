@@ -10,9 +10,6 @@ return {
 		})
 	end,
 	config = function(plugin, opts)
-		-- TODO: on neorg
-		-- require("nvim-treesitter.install").compilers = { "gcc-13" }
-		-- require("nvim-treesitter.configs").setup(opts)
 		require("astronvim.plugins.configs.nvim-treesitter")(plugin, opts)
 		vim.treesitter.language.register("bash", "dotenv")
 	end,
