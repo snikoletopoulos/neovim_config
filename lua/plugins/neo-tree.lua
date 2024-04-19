@@ -31,7 +31,7 @@ return {
 
 							local index = -1
 							for i, item in ipairs(harpoon:list():display()) do
-								if string.match(path, item) then
+								if item ~= "" and string.match(path, item) then
 									index = i
 									break
 								end
