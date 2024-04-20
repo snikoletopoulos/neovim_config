@@ -9,4 +9,5 @@
   "reportDescriptionlessDisables": true,
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true
+		"media-feature-range-notation": "prefix"
 }
