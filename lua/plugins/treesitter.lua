@@ -7,6 +7,7 @@ return {
 			"regex",
 			"scss",
 			"swift",
+			"tmux",
 		})
 	end,
 	config = function(plugin, opts)
