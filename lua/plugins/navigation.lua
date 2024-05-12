@@ -23,4 +23,5 @@ return {
 			{ "<leader>fp", "<cmd>ProjectMgr<cr>", desc = "Change project" },
 		},
 	},
+	{ "alexghergh/nvim-tmux-navigation" }
 }
