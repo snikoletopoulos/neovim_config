@@ -12,7 +12,12 @@ return {
 		formatting = {
 			format_on_save = { enabled = false },
 			timeout_ms = 2000,
-			filter = function(client) return client.name == "null-ls" end,
+			filter = function(client)
+				if vim.bo.filetype == "rust" then
+					return client.name == "rust-analyzer"
+				end
+				return client.name == "null-ls"
+			end,
 		},
 		---@diagnostic disable: missing-fields
 		config = {
@@ -35,6 +40,11 @@ return {
 					disable_member_code_lens = false,
 				},
 			},
+		},
+		setup_handlers = {
+			rust_analyzer = function(_, opts)
+				require("rust-tools").setup({ server = opts })
+			end,
 		},
 		autocmds = {
 			eslint_fix_on_save = false,
