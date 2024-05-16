@@ -58,6 +58,7 @@ return {
 					YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config") .. "/config_files/.yamllint.yaml",
 				},
 			}),
+			none_ls.builtins.diagnostics.zsh,
 
 			-- Formatting
 			none_ls.builtins.formatting.black, -- Formatter for Python
@@ -71,8 +72,8 @@ return {
 					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/config_files/.prettierrc.json",
 				},
 			}),
-			none_ls.builtins.formatting.shfmt, -- Formatter for Bash
 			-- none_ls.builtins.formatting.prismaFmt,
+			none_ls.builtins.formatting.shfmt.with({ extra_filetypes = { "zsh" } }), -- Formatter for Bash
 			none_ls.builtins.diagnostics.stylelint.with({
 				extra_args = function()
 					local null_ls_utils = require("null-ls.utils").make_conditional_utils()
