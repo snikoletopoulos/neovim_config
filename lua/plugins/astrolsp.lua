@@ -38,6 +38,9 @@ return {
 				settings = {
 					expose_as_code_action = "all",
 					disable_member_code_lens = false,
+					tsserver_file_preferences = {
+						preferTypeOnlyAutoImports = true,
+					},
 				},
 			},
 		},
