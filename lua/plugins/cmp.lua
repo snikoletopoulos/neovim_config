@@ -75,6 +75,7 @@ return {
 				return kind
 			end
 
+			---@diagnostic disable-next-line: missing-fields
 			opts.sorting = {
 				comparators = {
 					cmp.config.compare.offset,
