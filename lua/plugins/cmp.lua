@@ -56,7 +56,7 @@ return {
 			})
 
 			opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
-			opts.mapping["<C-m>"] = cmp.mapping(function()
+			opts.mapping["<C-Space>"] = cmp.mapping(function()
 				if cmp.visible() then
 					cmp.close()
 				else
