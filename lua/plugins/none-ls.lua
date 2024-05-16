@@ -61,15 +61,14 @@ return {
 
 			-- Formatting
 			none_ls.builtins.formatting.black, -- Formatter for Python
-			none_ls.builtins.formatting.clang_format, -- For Java
+			none_ls.builtins.formatting.clang_format,
 			none_ls.builtins.formatting.isort, -- Sort Python imports
 			none_ls.builtins.formatting.ktlint, -- Formatter for Kotlin
 			none_ls.builtins.formatting.markdownlint,
 			none_ls.builtins.formatting.nginx_beautifier,
 			none_ls.builtins.formatting.prettierd.with({
 				env = {
-					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config")
-						.. "/config_files/.prettierrc.json",
+					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/config_files/.prettierrc.json",
 				},
 			}),
 			none_ls.builtins.formatting.prismaFmt,
@@ -99,7 +98,7 @@ return {
 				end,
 			}),
 			none_ls.builtins.formatting.sqlfluff.with({
-				extra_args = { "--dialect", "postgres" }, -- change to your dialect
+				extra_args = { "--dialect", "postgres" },
 			}),
 			none_ls.builtins.formatting.stylua.with({
 				extra_args = function()
