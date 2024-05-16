@@ -36,6 +36,7 @@ return {
 				opts = {},
 			},
 		},
+		---@param opts cmp.ConfigSchema
 		opts = function(_, opts)
 			local cmp = require("cmp")
 
