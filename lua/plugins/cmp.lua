@@ -52,7 +52,7 @@ return {
 					keyword_length = 5,
 					max_item_count = 5,
 				},
-				{ name = "path", priority = 250 },
+				{ name = "path", priority = 200 },
 			})
 
 			opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
