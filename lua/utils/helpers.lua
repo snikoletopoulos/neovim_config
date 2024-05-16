@@ -2,6 +2,7 @@
 ---@field index_of fun(self: Helpers, array: table, value: any): number|nil
 ---@field remove_list_value fun(self: Helpers, list: table, value: any): any|nil
 ---@field check_json_key_exists fun(self: Helpers, filename: string, key: string): boolean
+---@field get_highlight fun(self: Helpers, name: string): { foreground: string?, background: string?, special: string?}?
 local Helpers = {}
 
 function Helpers:index_of(array, value)
@@ -28,6 +29,15 @@ function Helpers:check_json_key_exists(filename, key)
 	if not json_parsed or type(json) ~= "table" then return false end
 
 	return json[key] ~= nil
+end
+
+function Helpers:get_highlight(name)
+	local ok, hl = pcall(vim.api.nvim_get_hl_by_name, name, true)
+	if not ok then return end
+	for _, key in pairs({ "foreground", "background", "special" }) do
+		if hl[key] then hl[key] = string.format("#%06x", hl[key]) end
+	end
+	return hl
 end
 
 return Helpers
