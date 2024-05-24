@@ -20,7 +20,7 @@ return {
 		},
 		---@diagnostic disable: missing-fields
 		config = {
-			lua_ls = { settings = { Lua = { hint = { enable = true, arrayIndex = "Auto" } } } },
+			lua_ls = { settings = { Lua = { hint = { enable = true } } } },
 			emmet_ls = {
 				init_options = {
 					jsx = {
