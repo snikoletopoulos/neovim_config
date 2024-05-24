@@ -70,7 +70,7 @@ return {
 
 				local strings = vim.split(kind.kind, "%s", { trimempty = true })
 				kind.kind = " " .. (strings[1] or "")
-				kind.menu = (strings[3] or "") .. " " .. kind.menu
+				kind.menu = (strings[3] or "") .. " " .. (kind.menu or "[Color]")
 
 				return kind
 			end
