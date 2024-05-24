@@ -27,6 +27,7 @@ return {
 				"pylint",
 				"stylelint",
 				"sql_formatter",
+				"sqlfluff",
 				"yamllint",
 			})
 
