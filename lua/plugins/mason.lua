@@ -9,8 +9,6 @@ return {
 				"rust_analyzer",
 				"somesass_ls",
 			})
-
-			require("utils.helpers"):remove_list_value(opts.ensure_installed, "eslint")
 		end,
 	},
 	{
@@ -21,7 +19,6 @@ return {
 				"cspell",
 				"markdownlint",
 				-- "jsonlint",
-				"eslint_d",
 				"mypy",
 				-- "pydocstyle",
 				"pylint",

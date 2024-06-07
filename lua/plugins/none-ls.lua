@@ -11,14 +11,12 @@ return {
 		opts.sources = {
 			-- Code Actions
 			require("cspell").code_actions,
-			require("none-ls.code_actions.eslint_d"),
 
 			-- Diagnostics
 			require("cspell").diagnostics.with({
 				disabled_filetypes = { "dotenv" },
 			}),
 			none_ls.builtins.diagnostics.dotenv_linter.with({ filetype = { "dotenv" } }),
-			require("none-ls.diagnostics.eslint_d"),
 			none_ls.builtins.diagnostics.hadolint, -- Linter for Docker
 			none_ls.builtins.diagnostics.ktlint, -- Linter for Kotlin
 			-- none_ls.builtins.diagnostics.jsonlint,
