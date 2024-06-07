@@ -56,8 +56,7 @@ return {
 					},
 					{
 						"Packages",
-						{ "Update Plugins and Mason", ":AstroUpdatePackages" },
-						{ "Mason Update", ":MasonUpdate" },
+						{ "Mason Update", ":AstroMasonUpdateAll" },
 						{ "Open Mason", ":Mason" },
 						{ "Plugins Update", ":lua require('lazy').update()" },
 						{ "Plugins Sync", ":lua require('lazy').sync()" },
