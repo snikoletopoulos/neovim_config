@@ -45,6 +45,7 @@ return {
 					{
 						"LSP",
 						{ "Restart lua-ls", ":LspRestart lua-ls" },
+						{ "Restart prettierd", ":!prettierd restart" },
 						{ "Restart eslint_d", ":!eslint_d restart" },
 						{ "Restart tsserver", ":LspRestart tsserver" },
 					},
