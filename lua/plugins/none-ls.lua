@@ -70,7 +70,7 @@ return {
 					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/config_files/.prettierrc.json",
 				},
 			}),
-			-- none_ls.builtins.formatting.prismaFmt,
+			none_ls.builtins.formatting.prisma_format,
 			none_ls.builtins.formatting.shfmt.with({ extra_filetypes = { "zsh" } }), -- Formatter for Bash
 			none_ls.builtins.diagnostics.stylelint.with({
 				extra_args = function()
