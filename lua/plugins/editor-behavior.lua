@@ -28,4 +28,49 @@ return {
 			},
 		},
 	},
+	{
+		"chrisgrieser/nvim-spider",
+		keys = {
+			{
+				"<leader>w",
+				"<cmd>lua require('spider').motion('w')<CR>",
+				mode = { "n", "o", "x" },
+				desc = "Next camel case word",
+			},
+			{
+				"<leader>e",
+				"<cmd>lua require('spider').motion('e')<CR>",
+				mode = { "n", "o", "x" },
+				desc = "Next end of camel case word",
+			},
+			{
+				"<leader>b",
+				"<cmd>lua require('spider').motion('b')<CR>",
+				mode = { "n", "o", "x" },
+				desc = "Next start of camel case word",
+			},
+			{
+				"<leader>ge",
+				"<cmd>lua require('spider').motion('ge')<CR>",
+				mode = { "n", "o", "x" },
+				desc = "Previous end of camel case word",
+			},
+		},
+	},
+	{
+		"chrisgrieser/nvim-various-textobjs",
+		opts = { useDefaultKeymaps = false },
+		keys = {
+			{
+				"a<leader>w",
+				'<cmd>lua require("various-textobjs").subword("outer")<CR>',
+				mode = { "o", "x" },
+			},
+			{
+				"i<leader>w",
+				'<cmd>lua require("various-textobjs").subword("inner")<CR>',
+				mode = { "o", "x" },
+			},
+		},
+	},
 }
