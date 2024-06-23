@@ -25,6 +25,9 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>uS" }, -- toggle conceal
 		{ mode = "n", lhs = "<Leader>C" }, -- force close buffer
 		{ mode = "n", lhs = "<Leader>tl" }, -- duplicate lazygit
+		{ mode = "n", lhs = "gra" }, -- gr code actions
+		{ mode = "n", lhs = "grn" }, -- gr rename
+		{ mode = "n", lhs = "grr" }, -- gr search references
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>w" }, -- nvim-spider
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>e" }, -- nvim-spider
 	},
