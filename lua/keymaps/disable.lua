@@ -25,6 +25,8 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>uS" }, -- toggle conceal
 		{ mode = "n", lhs = "<Leader>C" }, -- force close buffer
 		{ mode = "n", lhs = "<Leader>tl" }, -- duplicate lazygit
+		{ mode = "n", lhs = "<Leader>lG" }, -- search workspace symbol
+		{ mode = "n", lhs = "<Leader>lR" }, -- search references
 		{ mode = "n", lhs = "gra" }, -- gr code actions
 		{ mode = "n", lhs = "grn" }, -- gr rename
 		{ mode = "n", lhs = "grr" }, -- gr search references
