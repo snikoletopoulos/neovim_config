@@ -57,14 +57,14 @@ return {
 		},
 		autocmds = {
 			eslint_fix_on_save = false,
-			mappings = {
-				n = {
-					["<Leader>uY"] = false,
-					["<Leader>lG"] = false,
-					["<Leader>lR"] = false,
-				},
-				v = { ["<leader>uY"] = false },
+		},
+		mappings = {
+			n = {
+				["<Leader>uY"] = false,
+				["<Leader>lG"] = false,
+				["<Leader>lR"] = false,
 			},
+			v = { ["<leader>uY"] = false },
 		},
 	},
 }
