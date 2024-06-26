@@ -11,12 +11,8 @@ return {
 					local highlights = type(highlights_init) == "function" and highlights_init()
 						or highlights_init
 
-					local comment_highlight = require("utils.helpers"):get_highlight("Comment")
-
 					---@type AstroUIOpts
 					return require("astrocore").extend_tbl(highlights, {
-						LspInlayHint = comment_highlight,
-
 						-- VS code cmp
 						CmpItemKindConstructor = { fg = "#f28b25" },
 						CmpItemKindUnit = { fg = "#D4D4D4" },
