@@ -65,13 +65,6 @@ return {
 				LSPLoading8 = "⠧",
 				LSPLoading9 = "⠇",
 				LSPLoading10 = "⠏",
-				-- ScrollText = "",
-				-- Diagnostic = "",
-				-- Ellipsis = "",
-				-- FileReadOnly = "",
-				-- GitConflict = "",
-				-- GitDelete = "",
-				-- LSPLoaded = "",
 			},
 			status = {
 				colors = {
