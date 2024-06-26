@@ -39,7 +39,7 @@ return {
 				settings = {
 					typescript = {
 						inlayHints = {
-							parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = false },
+							parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
 							parameterTypes = { enabled = true },
 							variableTypes = { enabled = false, suppressWhenTypeMatchesName = true },
 							propertyDeclarationTypes = { enabled = true },
