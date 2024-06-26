@@ -33,6 +33,28 @@ return {
 				},
 			},
 			vtsls = {
+				settings = {
+					typescript = {
+						inlayHints = {
+							parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = false },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = false, suppressWhenTypeMatchesName = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = false },
+						},
+					},
+					javascript = {
+						inlayHints = {
+							parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = false, suppressWhenTypeMatchesName = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = false },
+						},
+					},
+				},
 				on_attach = function(client, bufnr) require("twoslash-queries").attach(client, bufnr) end,
 			},
 		},
