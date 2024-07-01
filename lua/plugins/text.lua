@@ -50,4 +50,10 @@ return {
 			search = { pattern = [[\b(KEYWORDS)\b]] },
 		},
 	},
+	{
+		"windwp/nvim-ts-autotag",
+		opts = {
+			opts = { enable_close_on_slash = true },
+		},
+	},
 }
