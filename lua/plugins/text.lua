@@ -1,15 +1,6 @@
 ---@type LazySpec
 return {
 	{
-		"numToStr/Comment.nvim",
-		config = function()
-			local ft = require("Comment.ft")
-
-			local css = ft.get("css")
-			if css then ft.set("scss", css) end
-		end,
-	},
-	{
 		"axelvc/template-string.nvim",
 		ft = require("utils.constants").filetype.javascript,
 		opts = {
