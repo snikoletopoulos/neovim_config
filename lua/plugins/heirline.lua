@@ -1,6 +1,11 @@
 ---@type LazySpec
 return {
 	"rebelot/heirline.nvim",
+	dependencies = {
+		"abeldekat/harpoonline",
+		---@type HarpoonLineConfig
+		opts = { icon = "" },
+	},
 	opts = function(_, opts)
 		local status = require("astroui.status")
 
@@ -14,6 +19,17 @@ return {
 				filetype = {},
 				filename = false,
 				file_modified = false,
+			}),
+			status.component.builder({
+				provider = function()
+					local line = require("harpoonline").format()
+					return status.utils.stylize(line, { padding = { left = 1, right = 1 } })
+				end,
+				hl = function()
+					if require("harpoonline").is_buffer_harpooned() then
+						return { bg = "command", fg = "bg" }
+					end
+				end,
 			}),
 			status.component.git_diff(),
 			status.component.fill(),
