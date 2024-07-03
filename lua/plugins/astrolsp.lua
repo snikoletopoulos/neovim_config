@@ -83,7 +83,10 @@ return {
 						vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
 					end,
 				},
-				on_attach = function(client, bufnr) require("twoslash-queries").attach(client, bufnr) end,
+				on_attach = function(client, bufnr)
+					require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+					require("twoslash-queries").attach(client, bufnr)
+				end,
 			},
 		},
 		setup_handlers = {
