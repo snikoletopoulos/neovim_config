@@ -2,23 +2,39 @@
 return {
 	{
 		"folke/trouble.nvim",
+		cmd = "Trouble",
+		---@type trouble.Config
 		opts = {
-			use_diagnostic_signs = true,
-			action_keys = {
-				close = { "q", "<esc>" },
-				cancel = "<c-e>",
+			focus = true,
+			open_no_results = true,
+			warn_no_results = false,
+			---@type trouble.Window.opts
+			win = {
+				size = {
+					width = 80,
+					height = 10,
+				},
+			},
+			keys = {
+				["<c-s>"] = nil,
+				["<c-x>"] = "jump_split",
 			},
 		},
 		keys = {
 			{
 				"<leader>ud",
-				"<cmd>TroubleToggle workspace_diagnostics<CR>",
-				desc = "Toggle trouble",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Workspace diagnostics",
 			},
 			{
 				"<leader>fd",
-				"<cmd>TroubleToggle document_diagnostics<CR>",
-				desc = "Toggle trouble for document",
+				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+				desc = "Buffer diagnostics",
+			},
+			{
+				"<leader>ur",
+				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+				desc = "LSP Definitions / references / ... (Trouble)",
 			},
 		},
 	},
