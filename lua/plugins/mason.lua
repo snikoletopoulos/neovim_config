@@ -29,6 +29,8 @@ return {
 			})
 
 			opts.handlers = nil
+
+			return opts
 		end,
 	},
 	{
