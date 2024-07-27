@@ -24,6 +24,8 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>ul" }, -- toggle statusline
 		{ mode = "n", lhs = "<Leader>uS" }, -- toggle conceal
 		{ mode = "n", lhs = "<Leader>C" }, -- force close buffer
+		{ mode = "n", lhs = "<Leader>c" }, -- close buffer
+		{ mode = "n", lhs = "<Leader>h" }, -- home screen
 		{ mode = "n", lhs = "<Leader>tl" }, -- duplicate lazygit
 		{ mode = "n", lhs = "<Leader>lG" }, -- search workspace symbol
 		{ mode = "n", lhs = "<Leader>lR" }, -- search references
