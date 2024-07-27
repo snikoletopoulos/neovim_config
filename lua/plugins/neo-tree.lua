@@ -24,29 +24,6 @@ return {
 				sort_case_insensitive = true,
 				sources = { "filesystem" },
 				filesystem = {
-					components = {
-						harpoon_index = function(config, node)
-							local harpoon = require("harpoon")
-							local path = node:get_id()
-
-							local index = -1
-							for i, item in ipairs(harpoon:list():display()) do
-								if item ~= "" and string.match(path, item) then
-									index = i
-									break
-								end
-							end
-
-							if index > 0 then
-								return {
-									text = string.format(" ⥤ %d", index),
-									highlight = config.highlight or "NeoTreeDirectoryIcon",
-								}
-							else
-								return {}
-							end
-						end,
-					},
 					renderers = {
 						directory = {
 							{ "indent" },
@@ -81,7 +58,6 @@ return {
 									{ "name", zindex = 10, use_git_status_colors = true },
 									{ "clipboard", zindex = 10 },
 									{ "bufnr", zindex = 10 },
-									{ "harpoon_index", zindex = 10 },
 									{ "modified", zindex = 20, align = "right" },
 									{ "diagnostics", zindex = 20, align = "right" },
 									{ "git_status", zindex = 20, align = "right" },
