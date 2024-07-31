@@ -20,8 +20,6 @@ return {
 
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.mini-move" }, -- Move lines with <M>
-	-- NOTE: Vim plugin
-	{ import = "astrocommunity.motion.vim-matchup" }, -- Better % motion
 	-- TODO: write better comment what this does
 	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
 
