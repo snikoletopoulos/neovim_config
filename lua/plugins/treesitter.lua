@@ -6,7 +6,6 @@ return {
 			"graphql",
 			"regex",
 			"scss",
-			"swift",
 			"tmux",
 		})
 	end,

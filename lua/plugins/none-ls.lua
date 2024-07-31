@@ -23,7 +23,6 @@ return {
 			none_ls.builtins.diagnostics.hadolint, -- Linter for docker
 			none_ls.builtins.diagnostics.markdownlint,
 			none_ls.builtins.diagnostics.mypy,
-			-- none_ls.builtins.diagnostics.pydocstyle,
 			none_ls.builtins.diagnostics.pylint,
 			none_ls.builtins.diagnostics.selene.with({
 				extra_args = function()
@@ -33,6 +32,7 @@ return {
 					return { "--config", vim.fn.stdpath("config") .. "/config_files/.selene.toml" }
 				end,
 			}), -- Linter for Lua
+			-- none_ls.builtins.diagnostics.spectral, -- JSON/YAML linter
 			none_ls.builtins.diagnostics.sqlfluff.with({
 				extra_args = function()
 					local args = { "--dialect", "postgres" }

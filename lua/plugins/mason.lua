@@ -7,7 +7,6 @@ return {
 				"gradle_ls",
 				"graphql",
 				"rust_analyzer",
-				"somesass_ls",
 			})
 		end,
 	},
@@ -20,7 +19,6 @@ return {
 				"markdownlint",
 				-- "jsonlint",
 				"mypy",
-				-- "pydocstyle",
 				"pylint",
 				"stylelint",
 				"sql_formatter",
