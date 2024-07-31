@@ -13,6 +13,8 @@ return {
 
 					---@type AstroUIOpts
 					return require("astrocore").extend_tbl(highlights, {
+						LspInlayHint = { fg = "#555566", bg = "#333344" },
+
 						-- VS code cmp
 						CmpItemKindConstructor = { fg = "#f28b25" },
 						CmpItemKindUnit = { fg = "#D4D4D4" },
