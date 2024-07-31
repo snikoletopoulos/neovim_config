@@ -46,8 +46,8 @@ return {
 						"LSP",
 						{ "Restart lua-ls", ":LspRestart lua-ls" },
 						{ "Restart prettierd", ":!prettierd restart" },
-						{ "Restart eslint", ":!LspRestart eslint" },
-						{ "Restart tsserver", ":LspRestart tsserver" },
+						{ "Restart eslint", ":LspRestart eslint" },
+						{ "Restart tsserver", ":VtsExec restart_tsserver" },
 					},
 					{
 						"File",
@@ -57,7 +57,6 @@ return {
 					},
 					{
 						"Packages",
-						{ "Mason Update", ":AstroMasonUpdateAll" },
 						{ "Open Mason", ":Mason" },
 						{ "Plugins Update", ":lua require('lazy').update()" },
 						{ "Plugins Sync", ":lua require('lazy').sync()" },
