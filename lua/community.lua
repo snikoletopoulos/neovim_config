@@ -14,6 +14,8 @@ return {
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 
+	{ import = "astrocommunity.git.blame-nvim" }, -- Git blame
+
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
 
 	{ import = "astrocommunity.motion.nvim-surround" },

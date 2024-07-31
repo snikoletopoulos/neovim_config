@@ -25,4 +25,8 @@ return {
 		event = "VeryLazy",
 		opts = {},
 	},
+	{
+		"FabijanZulj/blame.nvim",
+		opts = { date_format = "%d/%m/%Y" },
+	},
 }
