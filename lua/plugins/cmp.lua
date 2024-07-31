@@ -55,6 +55,8 @@ return {
 				{ name = "path", priority = 200 },
 			})
 
+			opts.mapping["<Tab>"] = nil
+			opts.mapping["<S-Tab>"] = nil
 			opts.mapping["<CR>"] = cmp.mapping.confirm({ select = true })
 			opts.mapping["<C-Space>"] = cmp.mapping(function()
 				if cmp.visible() then
