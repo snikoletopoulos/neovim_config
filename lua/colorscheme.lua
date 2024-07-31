@@ -5,7 +5,7 @@ local favorites = {
 	astronvim = "astrodark",
 	ayu = "ayu",
 	synthweave = "synthweave",
-	onedarkpro = "onedark_dark",
+	onedarkpro = "onedark_vivid",
 }
 
 return favorites.onedarkpro
