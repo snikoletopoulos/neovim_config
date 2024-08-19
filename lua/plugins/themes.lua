@@ -30,6 +30,9 @@ return {
 				comments = "italic",
 				keywords = "italic",
 			},
+			options = {
+				cursorline = true,
+			},
 		},
 	},
 }
