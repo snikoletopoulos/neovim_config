@@ -5,7 +5,6 @@ return {
 
 	{ import = "astrocommunity.completion.copilot-lua" },
 
-	{ import = "astrocommunity.debugging.nvim-bqf" }, -- Quick fix list preview
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
 	{ import = "astrocommunity.editing-support.cloak-nvim" }, -- Hide env variables
@@ -44,6 +43,8 @@ return {
 	{ import = "astrocommunity.pack.toml" },
 	{ import = "astrocommunity.pack.typescript" },
 	{ import = "astrocommunity.pack.yaml" },
+
+	{ import = "astrocommunity.quickfix.nvim-bqf" }, -- Quick fix list preview
 
 	{ import = "astrocommunity.recipes.disable-tabline" },
 	{ import = "astrocommunity.recipes.heirline-mode-text-statusline" },
