@@ -22,8 +22,7 @@ return {
 
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.mini-move" }, -- Move lines with <M>
-	-- TODO: write better comment what this does
-	{ import = "astrocommunity.motion.mini-ai" }, -- a/i movements
+	{ import = "astrocommunity.motion.mini-ai" }, -- visual mode textobject selection for i/a
 
 	{ import = "astrocommunity.pack.astro" },
 	{ import = "astrocommunity.pack.bash" },
