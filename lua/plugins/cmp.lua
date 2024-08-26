@@ -43,16 +43,16 @@ return {
 			opts.sources = cmp.config.sources({
 				{ name = "nvim_lua", priority = 1250 },
 				{ name = "nvim_lsp", priority = 1000 },
-				{ name = "neorg", priority = 600 },
 				{ name = "luasnip", priority = 500 },
 				{ name = "npm", priority = 400 },
+				{ name = "path", priority = 200 },
+			}, {
 				{
 					name = "buffer",
 					priority = 300,
 					keyword_length = 5,
 					max_item_count = 5,
 				},
-				{ name = "path", priority = 200 },
 			})
 
 			opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
@@ -124,6 +124,25 @@ return {
 			}
 
 			return opts
+		end,
+		config = function(plugin, opts)
+			require("astronvim.plugins.configs.cmp")(plugin, opts)
+			local cmp = require("cmp")
+
+			cmp.setup.filetype("gitcommit", {
+				sources = cmp.config.sources({
+					{ name = "conventionalcommits" },
+					{ name = "git" },
+				}, {
+					{ name = "path" },
+					{
+						name = "buffer",
+						priority = 300,
+						keyword_length = 5,
+						max_item_count = 5,
+					},
+				}),
+			})
 		end,
 	},
 }
