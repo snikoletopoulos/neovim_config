@@ -35,6 +35,8 @@ return {
 				ft = "json",
 				opts = {},
 			},
+			{ "petertriho/cmp-git", ft = "gitcommit", opts = {} },
+			{ "davidsierradz/cmp-conventionalcommits" },
 		},
 		---@param opts cmp.ConfigSchema
 		opts = function(_, opts)
@@ -133,6 +135,20 @@ return {
 				sources = cmp.config.sources({
 					{ name = "conventionalcommits" },
 					{ name = "git" },
+				}, {
+					{ name = "path" },
+					{
+						name = "buffer",
+						priority = 300,
+						keyword_length = 5,
+						max_item_count = 5,
+					},
+				}),
+			})
+
+			cmp.setup.filetype("norg", {
+				sources = cmp.config.sources({
+					{ name = "neorg" },
 				}, {
 					{ name = "path" },
 					{
