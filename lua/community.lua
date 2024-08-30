@@ -7,6 +7,8 @@ return {
 
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
+	{ import = "astrocommunity.docker.lazydocker" },
+
 	{ import = "astrocommunity.editing-support.cloak-nvim" }, -- Hide env variables
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.multicursors-nvim" },
