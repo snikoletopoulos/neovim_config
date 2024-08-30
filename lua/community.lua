@@ -2,6 +2,7 @@
 return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
+	{ import = "astrocommunity.color.nvim-highlight-colors" }, -- Dim inactive windows
 
 	{ import = "astrocommunity.completion.copilot-lua" },
 

@@ -1,12 +1,8 @@
 ---@type LazySpec
 return {
 	{
-		"NvChad/nvim-colorizer.lua",
-		opts = function(_, opts)
-			return require("astrocore").extend_tbl(opts, {
-				user_default_options = { RRGGBBAA = true },
-			})
-		end,
+		"brenoprata10/nvim-highlight-colors",
+		opts = { enable_tailwind = true, enabled_named_colors = true },
 	},
 	{
 		"chrisgrieser/nvim-chainsaw",

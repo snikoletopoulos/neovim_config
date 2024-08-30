@@ -83,15 +83,21 @@ return {
 				end
 			end, { "i" })
 
-			local existing_formatter = opts.formatting.format
-			opts.formatting.format = function(entry, vim_item)
-				local kind = existing_formatter(entry, vim_item)
+			local format_kinds = opts.formatting.format
+			opts.formatting.format = function(entry, item)
+				local color_item = require("nvim-highlight-colors").format(entry, { kind = item.kind })
+				item = format_kinds(entry, item)
 
-				local strings = vim.split(kind.kind, "%s", { trimempty = true })
-				kind.kind = " " .. (strings[1] or "")
-				kind.menu = (strings[3] or "") .. " " .. (kind.menu or "[Color]")
+				if color_item.abbr_hl_group then
+					item.kind_hl_group = color_item.abbr_hl_group
+					item.kind = color_item.abbr
+				end
 
-				return kind
+				local strings = vim.split(item.kind, "%s", { trimempty = true })
+				item.kind = " " .. (strings[1] or "")
+				item.menu = (strings[3] or "") .. " " .. (item.menu or "[Color]")
+
+				return item
 			end
 
 			---@diagnostic disable-next-line: missing-fields
