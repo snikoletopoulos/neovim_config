@@ -17,6 +17,7 @@ return {
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 
 	{ import = "astrocommunity.git.blame-nvim" }, -- Git blame
+	{ import = "astrocommunity.git.diffview-nvim" },
 
 	{ import = "astrocommunity.icon.mini-icons" },
 

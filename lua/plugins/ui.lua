@@ -31,4 +31,10 @@ return {
 		"FabijanZulj/blame.nvim",
 		opts = { date_format = "%d/%m/%Y" },
 	},
+	{
+		"sindrets/diffview.nvim",
+		opts = {
+			view = { merge_tool = { layout = "diff4_mixed" } },
+		},
+	},
 }
