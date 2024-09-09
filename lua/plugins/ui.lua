@@ -21,7 +21,6 @@ return {
 		},
 		init = function() vim.g.undotree_WindowLayout = 2 end,
 	},
-	},
 	{
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
