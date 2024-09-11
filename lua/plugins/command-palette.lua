@@ -3,27 +3,36 @@ return {
 	{
 		"ray-x/sad.nvim",
 		cmd = { "SearchAndReplace" },
-		config = function(_, opts)
-			require("sad").setup(opts)
-
-			vim.api.nvim_create_user_command("SearchAndReplace", function(params)
-				vim.ui.input({
-					prompt = "Search",
-					default = params.args[1] or vim.fn.expand("<cword>") or "",
-				}, function(search_word)
-					if search_word == nil then return end
-					vim.ui.input({
-						prompt = "Replace",
-					}, function(replace_word)
-						if replace_word == nil then return end
-						vim.ui.input(
-							{ prompt = "Filetype" },
-							function(filetype) require("sad").Replace(search_word, replace_word, filetype) end
-						)
-					end)
-				end)
-			end, { nargs = "?" })
-		end,
+		dependencies = {
+			{
+				"AstroNvim/astrocore",
+				opts = {
+					commands = {
+						SearchAndReplace = {
+							function(params)
+								vim.ui.input({
+									prompt = "Search",
+									default = params.args[1] or vim.fn.expand("<cword>") or "",
+								}, function(search_word)
+									if search_word == nil then return end
+									vim.ui.input({
+										prompt = "Replace",
+									}, function(replace_word)
+										if replace_word == nil then return end
+										vim.ui.input(
+											{ prompt = "Filetype" },
+											function(filetype) require("sad").Replace(search_word, replace_word, filetype) end
+										)
+									end)
+								end)
+							end,
+							nargs = "?",
+							desc = "Search and replace",
+						},
+					},
+				},
+			},
+		},
 	},
 	{
 		"LinArcX/telescope-command-palette.nvim",
