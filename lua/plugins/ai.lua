@@ -63,7 +63,7 @@ return {
 			error_header = "## Error ",
 			separator = " ",
 			auto_follow_cursor = false,
-			show_help = false,
+			show_help = true,
 			window = { relative = "win" },
 			mappings = { reset = { normal = "<C-r>", insert = "<C-r>" } },
 		},
