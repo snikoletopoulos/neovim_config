@@ -6,6 +6,8 @@ return {
 			opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
 				"gradle_ls",
 				"graphql",
+				-- TODO: wait for mason 1.11.0 release
+				-- "nginx_language_server",
 				"rust_analyzer",
 			})
 		end,
