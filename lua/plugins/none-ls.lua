@@ -11,6 +11,8 @@ return {
 		opts.sources = {
 			-- Code Actions
 			require("cspell").code_actions,
+			-- TODO: research this
+			none_ls.builtins.code_actions.refactoring,
 
 			-- Diagnostics
 			require("cspell").diagnostics.with({
