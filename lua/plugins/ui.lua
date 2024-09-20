@@ -22,6 +22,32 @@ return {
 		init = function() vim.g.undotree_WindowLayout = 2 end,
 	},
 	{
+		"nvim-telescope/telescope.nvim",
+		opts = {
+			extensions = {
+				undo = {
+					use_delta = false,
+					mappings = {
+						i = {
+							["<cr>"] = require("telescope-undo.actions").restore,
+							["<S-cr>"] = false,
+							["<C-cr>"] = false,
+							-- alternative defaults, for users whose terminals do questionable things with modified <cr>
+							["<C-y>"] = require("telescope-undo.actions").yank_additions,
+							["<C-r>"] = require("telescope-undo.actions").yank_deletions,
+							["<C-g>"] = require("telescope-undo.actions").restore,
+						},
+						n = {
+							["y"] = require("telescope-undo.actions").yank_additions,
+							["r"] = require("telescope-undo.actions").yank_deletions,
+							["d"] = require("telescope-undo.actions").restore,
+						},
+					},
+				},
+			},
+		},
+	},
+	{
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
 		opts = {},
