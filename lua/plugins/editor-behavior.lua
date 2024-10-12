@@ -8,7 +8,6 @@ return {
 			{ "<leader>fa", "ASToggle", desc = "Toggle auto-save" },
 		},
 		opts = {
-			execution_message = { enabled = false },
 			condition = function(buffer)
 				return require("auto-save.utils.data").not_in(
 					vim.fn.getbufvar(buffer, "&filetype"),
