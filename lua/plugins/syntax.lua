@@ -9,9 +9,9 @@ return {
 		keys = {
 			{ "<leader>cv", function() require("chainsaw").variableLog() end, desc = "Log variable" },
 			{ "<leader>co", function() require("chainsaw").objectLog() end, desc = "Log object" },
-			{ "<leader>cm", function() require('chainsaw').messageLog()end, desc = "Log" },
-			{ "<leader>cb", function() require('chainsaw').emojiLog()end, desc = "Log beep" },
-			{ "<leader>cr", function() require('chainsaw').removeLogs()end, desc = "Clear logs" },
+			{ "<leader>cm", function() require("chainsaw").messageLog() end, desc = "Log" },
+			{ "<leader>cb", function() require("chainsaw").emojiLog() end, desc = "Log beep" },
+			{ "<leader>cr", function() require("chainsaw").removeLogs() end, desc = "Clear logs" },
 		},
 		opts = function(_, opts)
 			for _, language in pairs(require("utils.constants").filetype.javascript) do
