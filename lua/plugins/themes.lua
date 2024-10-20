@@ -10,7 +10,6 @@ return {
 			vim.g.sonokai_spell_foreground = "colored"
 			vim.g.sonokai_float_style = "dim"
 			vim.g.sonokai_diagnostic_virtual_text = "colored"
-			vim.g.sonokai_better_performance = 1
 			vim.g.sonokai_inlay_hints_background = "dimmed"
 		end,
 	},
