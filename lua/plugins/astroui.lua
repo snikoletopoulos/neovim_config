@@ -10,7 +10,13 @@ return {
 					local highlights = type(opts.highlights.init) == "function" and opts.highlights.init()
 						or opts.highlights.init
 
+					local get_hlgroup = require("astroui").get_hlgroup
+					local normal_fg = get_hlgroup("Normal").fg
+					local bg_visual = get_hlgroup("Visual").bg
+
 					return require("astrocore").extend_tbl(highlights, {
+						-- Telescope
+						TelescopePromptNormal = { fg = normal_fg, bg = bg_visual },
 
 						-- VS code cmp
 						CmpItemKindConstructor = { fg = "#f28b25" },
