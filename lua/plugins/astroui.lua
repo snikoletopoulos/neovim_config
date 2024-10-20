@@ -11,7 +11,6 @@ return {
 						or opts.highlights.init
 
 					return require("astrocore").extend_tbl(highlights, {
-						LspInlayHint = { fg = "#555566", bg = "#333344" },
 
 						-- VS code cmp
 						CmpItemKindConstructor = { fg = "#f28b25" },
@@ -49,6 +48,7 @@ return {
 						},
 					})
 				end,
+				onedark_vivid = { LspInlayHint = { fg = "#555566", bg = "#333344" } },
 			},
 			icons = {
 				LSPLoading1 = "⠋",
