@@ -12,6 +12,7 @@ return {
 			codelens = true,
 			inlay_hints = true,
 			semantic_tokens = true,
+			signature_help = true,
 		},
 		formatting = {
 			format_on_save = { enabled = false },
@@ -115,9 +116,7 @@ return {
 				})
 			end,
 		},
-		autocmds = {
-			eslint_fix_on_save = false,
-		},
+		autocmds = { eslint_fix_on_save = false },
 		mappings = {
 			n = {
 				["<Leader>uY"] = false,

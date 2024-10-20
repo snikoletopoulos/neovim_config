@@ -2,14 +2,12 @@
 return {
 	"AstroNvim/astroui",
 	opts = function(_, opts)
-		local highlights_init = opts.highlights.init
-
 		return require("astrocore").extend_tbl(opts, {
 			colorscheme = require("colorscheme"),
 			highlights = {
 				init = function()
-					local highlights = type(highlights_init) == "function" and highlights_init()
-						or highlights_init
+					local highlights = type(opts.highlights.init) == "function" and opts.highlights.init()
+						or opts.highlights.init
 
 					---@type AstroUIOpts
 					return require("astrocore").extend_tbl(highlights, {
