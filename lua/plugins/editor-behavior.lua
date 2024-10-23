@@ -3,9 +3,9 @@ return {
 	{
 		"okuuva/auto-save.nvim",
 		cmd = { "ASToggle" },
-		event = { "User AstroFile", "InsertLeave", "TextChanged" },
+		event = { "User AstroFile", "InsertEnter" },
 		keys = {
-			{ "<leader>fa", "ASToggle", desc = "Toggle auto-save" },
+			{ "<leader>fa", "<cmd>ASToggle<cr>", desc = "Toggle auto-save" },
 		},
 		opts = {
 			condition = function(buffer)
