@@ -1,5 +1,5 @@
 local favorites = {
-	tokyonight = "tokyonight-night",
+	tokyonight = "tokyonight",
 	one = "one",
 	sonokai = "sonokai",
 	astronvim = "astrodark",

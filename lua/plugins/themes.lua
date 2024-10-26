@@ -1,5 +1,14 @@
 return {
-	{ "folke/tokyonight.nvim" },
+	{
+		"folke/tokyonight.nvim",
+		---@type tokyonight.Config
+		opts = {
+			styles = {
+				types = { bold = true },
+				variables = { bold = true },
+			},
+		},
+	},
 	{ "rakr/vim-one" },
 	{
 		"sainnhe/sonokai",
