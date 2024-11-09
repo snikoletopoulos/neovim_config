@@ -30,7 +30,20 @@ return {
 	},
 	{ "samharju/synthweave.nvim" },
 	{
+		"navarasu/onedark.nvim",
+		opts = {
+			style = "darker",
+			code_style = {
+				variables = "bold",
+				functions = "bold",
+				comments = "italic",
+				keywords = "italic",
+			},
+		},
+	},
+	{
 		"olimorris/onedarkpro.nvim",
+		enabled = require("colorscheme") == "onedark_vivid",
 		opts = {
 			styles = {
 				types = "bold",
