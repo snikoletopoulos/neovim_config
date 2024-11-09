@@ -28,9 +28,7 @@
     "body": [
       "import { View } from 'react-native'",
       "",
-      "interface Props {}",
-      "",
-      "export const ${1:$TM_FILENAME_BASE} = (props: Props) => {",
+      "export const ${1:$TM_FILENAME_BASE} = ({}: {}) => {",
       "  return <View>${2}</View>",
       "}"
     ],
@@ -41,14 +39,24 @@
     "body": [
       "import { View } from 'react-native'",
       "",
-      "interface Props {}",
-      "",
-      "const ${1:$TM_FILENAME_BASE} = (props: Props) => {",
+      "const ${1:$TM_FILENAME_BASE} = ({}: {}) => {",
       "  return <View>${2}</View>",
       "}",
       "",
       "export default $1"
     ],
     "description": "react native component template export"
+  },
+  "react native style sheet": {
+    "prefix": "rnstyles",
+    "body": [
+      "const styles = StyleSheet.create({",
+      "  container: {",
+      "    flex: 1,",
+      "  },",
+      "});"
+    ],
+    "description": "react native style sheet"
   }
+
 }
