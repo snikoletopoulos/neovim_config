@@ -9,6 +9,7 @@ return {
 				-- 	"noice",
 				"prompt",
 				"TelescopePrompt",
+				"neo-tree",
 			},
 		},
 	},
