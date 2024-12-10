@@ -17,7 +17,7 @@ return {
 			for _, language in pairs(require("utils.constants").filetype.javascript) do
 				if opts.logStatements == nil then opts.logStatements = { objectLog = {} } end
 				opts.logStatements.objectLog[language] =
-					'console.log("%s %s:", JSON.stringify(%s, null, 2));'
+					'console.log("{{marker}} {{var}}:", JSON.stringify({{var}}, null, 2));'
 			end
 			return opts
 		end,
