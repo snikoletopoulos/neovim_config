@@ -25,18 +25,9 @@ return {
 				foldlevel = 99,
 				conceallevel = 2,
 
-				-- Neovide
-				guifont = "FiraCode Nerd Font",
-				linespace = 6,
 			},
 			g = {
 				loaded_perl_provider = 0,
-
-				-- Neovide
-				neovide_cursor_animation_length = 0,
-				neovide_input_macos_alt_is_meta = true,
-				remember_window_size = true,
-				remember_window_position = true,
 			},
 		},
 		mappings = require("keymaps"):create(),

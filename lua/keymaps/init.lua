@@ -3,7 +3,6 @@ local maps = require("classes.Keymaps"):new()
 
 require("keymaps.disable"):configure(maps, { astronvim = true, packages = true, tabline = true })
 require("keymaps.editing"):configure(maps)
-if not vim.g.neovide then require("keymaps.neovide"):configure(maps) end
 
 require("which-key").add({
 	{ "<leader>h", group = "󱡅 Harpoon", mode = "n" },
