@@ -3,10 +3,6 @@ return {
 	{
 		"akinsho/toggleterm.nvim",
 		opts = {
-			float_opts = {
-				width = 1000,
-				height = 1000,
-			},
 			winbar = { enabled = false },
 		},
 	},
