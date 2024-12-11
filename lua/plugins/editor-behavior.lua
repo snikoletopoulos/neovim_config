@@ -9,10 +9,9 @@ return {
 		},
 		opts = {
 			condition = function(buffer)
-				return require("auto-save.utils.data").not_in(
-					vim.fn.getbufvar(buffer, "&filetype"),
-					{ "harpoon" }
-				)
+				local filetype = vim.fn.getbufvar(buffer, "&filetype")
+				if vim.list_contains({ "harpoon" }, filetype) then return false end
+				return true
 			end,
 		},
 	},
