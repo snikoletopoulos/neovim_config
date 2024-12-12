@@ -56,7 +56,7 @@ return {
 					desc = "Next Harpoon file",
 				},
 				{
-					"<C-x>",
+					"<leader>fh",
 					function()
 						vim.ui.input({ prompt = "Harpoon mark index: " }, function(input)
 							local num = tonumber(input)
