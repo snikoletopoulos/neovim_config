@@ -2,9 +2,7 @@
 return {
 	{
 		"akinsho/toggleterm.nvim",
-		opts = {
-			winbar = { enabled = false },
-		},
+		opts = { winbar = { enabled = false } },
 	},
 	{
 		"mbbill/undotree",
@@ -67,8 +65,6 @@ return {
 	},
 	{
 		"sindrets/diffview.nvim",
-		opts = {
-			view = { merge_tool = { layout = "diff4_mixed" } },
-		},
+		opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
 	},
 }
