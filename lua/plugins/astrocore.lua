@@ -24,7 +24,6 @@ return {
 				foldexpr = "nvim_treesitter#foldexpr()",
 				foldlevel = 99,
 				conceallevel = 2,
-
 			},
 			g = {
 				loaded_perl_provider = 0,
@@ -46,6 +45,5 @@ return {
 				["%.env%.[%w_.-]+"] = "dotenv",
 			},
 		},
-		rooter = { notify = true },
 	},
 }
