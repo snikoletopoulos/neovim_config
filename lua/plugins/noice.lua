@@ -11,7 +11,7 @@ return {
 				opts = { skip = true },
 			},
 		},
-		lsp = { progress = { enabled = false } },
+		lsp = { progress = { enabled = true } },
 		views = {
 			cmdline_popup = {
 				border = {

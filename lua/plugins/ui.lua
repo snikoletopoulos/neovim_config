@@ -55,11 +55,6 @@ return {
 		end,
 	},
 	{
-		"j-hui/fidget.nvim",
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
 		"FabijanZulj/blame.nvim",
 		opts = { date_format = "%d/%m/%Y" },
 	},
