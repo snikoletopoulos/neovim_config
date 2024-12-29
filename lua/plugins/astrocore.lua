@@ -33,6 +33,7 @@ return {
 		filetypes = {
 			extension = {
 				env = "dotenv",
+				podspec = "ruby",
 			},
 			filename = {
 				[".env"] = "dotenv",
@@ -40,6 +41,7 @@ return {
 				[".eslintrc.json"] = "jsonc",
 				[".yamlfmt"] = "yaml",
 				[".sqlfluff"] = "toml",
+				["Podfile"] = "ruby",
 			},
 			pattern = {
 				["%.env%.[%w_.-]+"] = "dotenv",
