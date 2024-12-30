@@ -61,6 +61,7 @@ return {
 					{
 						"File",
 						{ "Toggle env variables", "CloakToggle" },
+						{ "View on GitHub", ":lua Snacks.gitbrowse()" },
 						{ "Search and Replace", ":SearchAndReplace" },
 						{ "Inspect types", ":InspectTwoslashQueries" },
 					},
@@ -80,6 +81,7 @@ return {
 							":lua require('telescope.builtin').colorscheme({ enable_preview = true })",
 						},
 						{ "Check health", ":checkhealth" },
+						{ "Zen mode", ":lua Snacks.zen()" },
 					},
 				},
 			},

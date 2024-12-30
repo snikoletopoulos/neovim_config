@@ -1,29 +1,41 @@
 ---@type LazySpec
 return {
 	"folke/noice.nvim",
-	opts = {
-		routes = {
-			{
-				filter = {
-					event = "notify",
-					find = "No information available",
+	dependencies = { "folke/snacks.nvim" },
+	opts = function()
+		return {
+			lsp = { progress = { enabled = true } },
+			views = {
+				cmdline_popup = {
+					border = Snacks.util.is_transparent() and {} or {
+						style = "none",
+						padding = { 1, 2 },
+					},
+					filter_options = {},
+					win_options = {
+						winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+					},
 				},
-				opts = { skip = true },
+				popupmenu = {
+					relative = "editor",
+					position = {
+						row = 27,
+						col = "50%",
+					},
+					size = {
+						width = 60,
+						height = 10,
+					},
+					border = {
+						style = "rounded",
+						padding = { 0, 1 },
+					},
+				},
 			},
-		},
-		lsp = { progress = { enabled = true } },
-		views = {
-			cmdline_popup = {
-				border = {
-					style = "none",
-					padding = { 1, 2 },
-				},
-				filter_options = {},
-				win_options = {
-					winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
-				},
+			presets = {
+				bottom_search = false,
+				command_palette = false,
 			},
-		},
-		presets = { bottom_search = false },
-	},
+		}
+	end,
 }

@@ -62,4 +62,6 @@ return {
 		"sindrets/diffview.nvim",
 		opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
 	},
+	{ "rcarriga/nvim-notify", enabled = false },
+	{ "goolord/alpha-nvim", enabled = false },
 }

@@ -62,7 +62,6 @@ return {
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
 
-	{ import = "astrocommunity.scrolling.neoscroll-nvim" },
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
 
 	{ import = "astrocommunity.search.sad-nvim" },

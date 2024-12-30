@@ -69,11 +69,17 @@ return {
 				event_handlers = {
 					{
 						event = neo_tree_events.NEO_TREE_WINDOW_AFTER_OPEN,
-						handler = function() vim.cmd("wincmd =") end,
+						handler = function()
+							vim.cmd("wincmd =")
+							Snacks.dashboard.update()
+						end,
 					},
 					{
 						event = neo_tree_events.NEO_TREE_WINDOW_AFTER_CLOSE,
-						handler = function() vim.cmd("wincmd =") end,
+						handler = function()
+							vim.cmd("wincmd =")
+							Snacks.dashboard.update()
+						end,
 					},
 				},
 			})
