@@ -13,6 +13,7 @@ return {
 			hl = { fg = "fg", bg = "bg" },
 			status.component.mode({
 				mode_text = { padding = { left = 1, right = 1 } },
+				hl = { fg = "#1e1e2e" },
 			}),
 			status.component.git_branch(),
 			status.component.file_info({
