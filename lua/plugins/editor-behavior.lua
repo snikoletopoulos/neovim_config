@@ -95,4 +95,16 @@ return {
 			}
 		end,
 	},
+	{
+		"lewis6991/hover.nvim",
+		opts = {
+			init = function()
+				require("hover.providers.lsp")
+				require("hover.providers.gh_user")
+				require("hover.providers.dap")
+				require("hover.providers.diagnostic")
+				require("hover.providers.man")
+			end,
+		},
+	},
 }
