@@ -23,6 +23,8 @@ jobs:
         with:
           path: ~/.cargo/bin
           key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles('.github/workflows/ci.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-bin-lint-
 
       - name: Install Selene
         if: steps.deps-cache.outputs.cache-hit != 'true'
@@ -45,6 +47,8 @@ jobs:
         with:
           path: ~/.cargo/bin
           key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles('.github/workflows/ci.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-bin-format-
 
       - name: Install Stylua
         if: steps.deps-cache.outputs.cache-hit != 'true'
