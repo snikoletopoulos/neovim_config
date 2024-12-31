@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Cargo Binaries
+        id: deps-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin
+          key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles('.github/workflows/ci.yml') }}
+
+      - name: Install Selene
+        if: steps.deps-cache.outputs.cache-hit != 'true'
+        run: cargo install selene
+
+      - name: Lint
+        run: make lint
+
+  format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Cache Cargo Binaries
+        id: deps-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin
+          key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles('.github/workflows/ci.yml') }}
+
+      - name: Install Stylua
+        if: steps.deps-cache.outputs.cache-hit != 'true'
+        run: cargo install stylua
+
+      - name: Check format
+        id: check-format
+        continue-on-error: true
+        run: |
+          make check-format || {
+            echo "::error::Code formatting check failed. The workflow will automatically format the code and commit the changes in a new commit."
+            exit 1
+          }
+
+      - name: Format
+        if: steps.check-format.outcome == 'failure'
+        run: make format
+
+      - name: Commit changes
+        if: steps.check-format.outcome == 'failure'
+        run: |
+          git config --global user.name 'Github Actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -am 'Format code'
+          git push
