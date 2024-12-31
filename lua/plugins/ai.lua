@@ -66,7 +66,7 @@ return {
 			show_help = true,
 			window = { relative = "win" },
 			mappings = { reset = { normal = "<C-r>", insert = "<C-r>" } },
-		},
+			},
 		config = function(_, opts)
 			require("CopilotChat").setup(opts)
 
