@@ -57,7 +57,11 @@ jobs:
       - name: Check format
         id: check-format
         continue-on-error: true
-        run: make check-format
+        run: |
+          make check-format || {
+            echo "::error::Code formatting check failed. Changes will be committed automatically."
+            exit 1
+          }
 
       - name: Format
         if: steps.check-format.outcome == 'failure'
