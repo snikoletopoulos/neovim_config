@@ -57,7 +57,7 @@ jobs:
         continue-on-error: true
         run: |
           make check-format || {
-            echo "::error::Code formatting check failed. Changes will be committed automatically."
+            echo "::error::Code formatting check failed. The workflow will automatically format the code and commit the changes in a new commit."
             exit 1
           }
 
