@@ -44,17 +44,17 @@ jobs:
       - name: Install Stylua
         if: steps.deps-cache.outputs.cache-hit != 'true'
         run: cargo install stylua
-      - name: Check format
 
+      - name: Check format
         id: check-format
         run: stylua --check .
 
       - name: Format
-        if: steps.check-format.outcome == 'failure'
+        if: steps.check-format.conclusion == 'failure'
         run: echo "Run 'make format' to format the code"
 
       # - name: Commit changes
-      #   if: steps.check-format.outcome == 'failure'
+      #   if: steps.check-format.conclusion == 'failure'
       #   run: |
       #     git config --global user.name 'Github Actions'
       #     git config --global user.email 'snikoletopulos@users.noreply.github.com'
