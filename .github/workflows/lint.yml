@@ -19,7 +19,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles('.github/workflows/cargo.yml') }}
+          key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles('.github/workflows/ci.yml') }}
           restore-keys: |
             ${{ runner.os }}-cargo-bin-lint-
 
@@ -45,7 +45,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles('.github/workflows/cargo.yml') }}
+          key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles('.github/workflows/ci.yml') }}
           restore-keys: |
             ${{ runner.os }}-cargo-bin-format-
 
