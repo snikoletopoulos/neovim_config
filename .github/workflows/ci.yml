@@ -28,10 +28,6 @@ jobs:
       - name: Lint
         run: make lint
 
-      # - uses: leafo/gh-actions-lua@v5
-      #   with:
-      #     luaVersion: ${{ matrix.luaVersion }}
-
   format:
     runs-on: ubuntu-latest
     steps:
@@ -48,11 +44,19 @@ jobs:
       - name: Install Stylua
         if: steps.deps-cache.outputs.cache-hit != 'true'
         run: cargo install stylua
+      - name: Check format
+
+        id: check-format
+        run: stylua --check .
 
       - name: Format
-        run: make format
+        if: steps.check-format.outcome == 'failure'
+        run: echo "Run 'make format' to format the code"
 
-      # - uses: leafo/gh-actions-lua@v5
-      #   with:
-      #     luaVersion: ${{ matrix.luaVersion }}
-      # - uses: JohnnyMorganz/stylua-action@v4
+      # - name: Commit changes
+      #   if: steps.check-format.outcome == 'failure'
+      #   run: |
+      #     git config --global user.name 'Github Actions'
+      #     git config --global user.email 'snikoletopulos@users.noreply.github.com'
+      #     git commit -am "Format code"
+      #     git push
