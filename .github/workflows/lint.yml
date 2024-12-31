@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cache Cargo Binaries
+        id: deps-cache
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
@@ -23,6 +24,7 @@ jobs:
             ${{ runner.os }}-cargo-bin-lint-
 
       - name: Install Selene
+        if: steps.deps-cache.outputs.cache-hit != 'true'
         run: cargo install selene
 
       - name: Lint
@@ -39,6 +41,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cache Cargo Binaries
+        id: deps-cache
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
@@ -47,6 +50,7 @@ jobs:
             ${{ runner.os }}-cargo-bin-format-
 
       - name: Install Stylua
+        if: steps.deps-cache.outputs.cache-hit != 'true'
         run: cargo install stylua
 
       - name: Format
