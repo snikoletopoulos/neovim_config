@@ -1,3 +1,5 @@
+.PHONY: lint check-format format
+
 lint:
 	selene .
 
