@@ -55,7 +55,7 @@ jobs:
         run: make format
 
       - name: Commit changes
-        if: steps.check-format.outcome == "failure"
+        if: steps.check-format.outcome == 'failure'
         run: |
           git config --global user.name 'Github Actions'
           git config --global user.email '78855607+snikoletopoulos@users.noreply.github.com'
