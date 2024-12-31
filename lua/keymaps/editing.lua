@@ -27,8 +27,8 @@ function EditingKeymaps:configure(maps)
 		desc = "Close buffer",
 	})
 	maps:add("n", "<Leader>tt", {
-			function() require("astrocore").toggle_term_cmd({ cmd = "btop ", direction = "float" }) end,
-			desc = "ToggleTerm lazygit",
+		function() require("astrocore").toggle_term_cmd({ cmd = "btop ", direction = "float" }) end,
+		desc = "ToggleTerm lazygit",
 	})
 end
 
