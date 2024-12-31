@@ -48,16 +48,17 @@ jobs:
       - name: Check format
         id: check-format
         continue-on-error: true
-        run: stylua --check .
+        run: make check-format
 
       - name: Format
         if: steps.check-format.outcome == 'failure'
-        run: git status
+        run: make format
 
-      # - name: Commit changes
-      #   if: steps.check-format.conclusion == 'failure'
-      #   run: |
-      #     git config --global user.name 'Github Actions'
-      #     git config --global user.email 'snikoletopulos@users.noreply.github.com'
-      #     git commit -am "Format code"
-      #     git push
+      - name: Commit changes
+        if: steps.check-format.conclusion == 'failure'
+        run: git status
+        # run: |
+        #   git config --global user.name 'Github Actions'
+        #   git config --global user.email 'snikoletopulos@users.noreply.github.com'
+        #   git commit -am "Format code"
+        #   git push
