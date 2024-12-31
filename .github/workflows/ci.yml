@@ -52,7 +52,7 @@ jobs:
 
       - name: Format
         # if: steps.check-format.conclusion == 'failure'
-        run: echo "conclusion:" "${{ steps.check-format.conclusion }}"
+        run: echo "conclusion:" "${{ steps.check-format.outcome }}"
 
       # - name: Commit changes
       #   if: steps.check-format.conclusion == 'failure'
