@@ -55,7 +55,7 @@ jobs:
         run: make format
 
       - name: Commit changes
-        if: steps.check-format.conclusion == 'failure'
+        if: steps.check-format.outcome == 'failure'
         run: git status
         # run: |
         #   git config --global user.name 'Github Actions'
