@@ -50,8 +50,8 @@ jobs:
         run: stylua --check .
 
       - name: Format
-        if: steps.check-format.conclusion == 'failure'
-        run: echo "Run 'make format' to format the code"
+        # if: steps.check-format.conclusion == 'failure'
+        run: echo "conclusion: ${{ steps.check-format.conclusion }}"
 
       # - name: Commit changes
       #   if: steps.check-format.conclusion == 'failure'
