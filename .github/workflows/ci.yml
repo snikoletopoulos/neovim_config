@@ -55,10 +55,9 @@ jobs:
         run: make format
 
       - name: Commit changes
-        run: git status
-        # run: |
-        #   git config --global user.name 'Github Actions'
-        #   git config --global user.email 'snikoletopulos@users.noreply.github.com'
-        #   git commit -am "Format code"
-        #   git push
         if: steps.check-format.outcome == "failure"
+        run: |
+          git config --global user.name "Github Actions"
+          git config --global user.email "78855607+snikoletopoulos@users.noreply.github.com"
+          git commit -am "Format code"
+          git push
