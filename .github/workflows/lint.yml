@@ -54,7 +54,7 @@ jobs:
         run: cargo install stylua
 
       - name: Format
-        run: make lint
+        run: make format
 
       # - uses: leafo/gh-actions-lua@v5
       #   with:
