@@ -19,10 +19,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles('.github/workflows/ci.yml') }}
+          key: ${{ runner.os }}-cargo-bin-lint-${{ hashFiles(".github/workflows/ci.yml") }}
 
       - name: Install Selene
-        if: steps.deps-cache.outputs.cache-hit != 'true'
+        if: steps.deps-cache.outputs.cache-hit != "true"
         run: cargo install selene
 
       - name: Lint
@@ -39,10 +39,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles('.github/workflows/ci.yml') }}
+          key: ${{ runner.os }}-cargo-bin-format-${{ hashFiles(".github/workflows/ci.yml") }}
 
       - name: Install Stylua
-        if: steps.deps-cache.outputs.cache-hit != 'true'
+        if: steps.deps-cache.outputs.cache-hit != "true"
         run: cargo install stylua
 
       - name: Check format
@@ -51,14 +51,14 @@ jobs:
         run: make check-format
 
       - name: Format
-        if: steps.check-format.outcome == 'failure'
+        if: steps.check-format.outcome == "failure"
         run: make format
 
       - name: Commit changes
-        if: steps.check-format.outcome == 'failure'
         run: git status
         # run: |
         #   git config --global user.name 'Github Actions'
         #   git config --global user.email 'snikoletopulos@users.noreply.github.com'
         #   git commit -am "Format code"
         #   git push
+        if: steps.check-format.outcome == "failure"
