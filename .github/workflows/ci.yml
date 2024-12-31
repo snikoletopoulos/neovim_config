@@ -51,8 +51,8 @@ jobs:
         run: stylua --check .
 
       - name: Format
-        # if: steps.check-format.conclusion == 'failure'
-        run: echo "conclusion:" "${{ steps.check-format.outcome }}"
+        if: steps.check-format.outcome == 'failure'
+        run: git status
 
       # - name: Commit changes
       #   if: steps.check-format.conclusion == 'failure'
