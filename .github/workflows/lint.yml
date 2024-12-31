@@ -17,11 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install Selene
+        run: cargo install selene
+
+      - name: Lint
+        run: make lint
+
       # - uses: leafo/gh-actions-lua@v5
       #   with:
       #     luaVersion: ${{ matrix.luaVersion }}
-
-      - uses: NTBBloodbath/selene-action@v1.0.0
 
   format:
     runs-on: ubuntu-latest
@@ -32,7 +36,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install Stylua
+        run: cargo install stylua
+
+      - name: Format
+        run: make lint
+
       # - uses: leafo/gh-actions-lua@v5
       #   with:
       #     luaVersion: ${{ matrix.luaVersion }}
-      - uses: JohnnyMorganz/stylua-action@v4
+      # - uses: JohnnyMorganz/stylua-action@v4
