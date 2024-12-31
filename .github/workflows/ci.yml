@@ -47,6 +47,7 @@ jobs:
 
       - name: Check format
         id: check-format
+        continue-on-error: true
         run: stylua --check .
 
       - name: Format
