@@ -26,37 +26,6 @@ return {
 			"CopilotChatCommit",
 			"CopilotChatCommitStaged",
 		},
-		keys = {
-			{
-				"<leader>cca",
-				function()
-					vim.ui.input({ prompt = "Quick Chat" }, function(input)
-						if not input or input == "" then return end
-						require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
-					end)
-				end,
-				desc = "Quick chat",
-				mode = { "n", "v" },
-			},
-			{
-				"<leader>cch",
-				function()
-					local actions = require("CopilotChat.actions")
-					require("CopilotChat.integrations.telescope").pick(actions.help_actions())
-				end,
-				desc = "Help actions",
-				mode = { "n", "v" },
-			},
-			{
-				"<leader>ccp",
-				function()
-					local actions = require("CopilotChat.actions")
-					require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-				end,
-				desc = "Prompt actions",
-				mode = { "n", "v" },
-			},
-		},
 		opts = {
 			question_header = "## User ",
 			answer_header = "## Copilot ",
