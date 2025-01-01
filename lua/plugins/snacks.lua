@@ -39,6 +39,14 @@ return {
 							desc = "Recent Files",
 							action = ":lua Snacks.dashboard.pick('oldfiles')",
 						},
+						{
+							icon = " ",
+							key = "g",
+							desc = "Lazygit",
+							action = function()
+								require("astrocore").toggle_term_cmd({ cmd = "lazygit ", direction = "float" })
+							end,
+						},
 						{ icon = " ", key = "p", desc = "Select project", action = "<cmd>ProjectMgr<cr>" },
 						{
 							icon = " ",
