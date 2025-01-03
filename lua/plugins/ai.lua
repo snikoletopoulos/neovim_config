@@ -36,18 +36,6 @@ return {
 			window = { relative = "win" },
 			mappings = { reset = { normal = "<C-r>", insert = "<C-r>" } },
 		},
-		config = function(_, opts)
-			require("CopilotChat").setup(opts)
-
-			-- TODO: make markdown plugins treat copilot buffer as markdown
-			vim.api.nvim_create_autocmd("BufEnter", {
-				pattern = "copilot-*",
-				callback = function()
-					local ft = vim.bo.filetype
-					if ft == "copilot-chat" then vim.bo.filetype = "markdown" end
-				end,
-			})
-		end,
 	},
 	{
 		"jackMort/ChatGPT.nvim",
