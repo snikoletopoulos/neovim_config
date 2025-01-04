@@ -2,7 +2,21 @@
 return {
 	{
 		"zbirenbaum/copilot.lua",
-		opts = { filetypes = { yaml = true, markdown = true } },
+		opts = {
+			filetypes = { yaml = true, markdown = true },
+			suggestion = { enabled = false },
+			panel = { enabled = false },
+		},
+	},
+	{
+		"supermaven-inc/supermaven-nvim",
+		opts = {
+			keymaps = {
+				accept_suggestion = "<M-l>",
+				clear_suggestion = "<M-h>",
+				accept_word = "<M-w>",
+			},
+		},
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
