@@ -126,6 +126,7 @@
   "snacks.nvim": { "branch": "main", "commit": "d312053f78b4fb55523def179ac502438dd93193" },
   "sonokai": { "branch": "master", "commit": "0df1462da40e1473a61b80b7ce62497e0b59ff86" },
   "sqls.nvim": { "branch": "main", "commit": "a514379f5f89bf72955ed3bf5c1c31a40b8a1472" },
+  "supermaven-nvim": { "branch": "main", "commit": "07d20fce48a5629686aefb0a7cd4b25e33947d50" },
   "synthweave.nvim": { "branch": "master", "commit": "50cb17af14dbdf8a2af634c40b9b20298f67aba0" },
   "telescope-command-palette.nvim": { "branch": "master", "commit": "cf38d89446ff36d07191d32796eed6e38e5ce118" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b" },

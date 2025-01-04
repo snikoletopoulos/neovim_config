@@ -5,6 +5,7 @@ return {
 	{ import = "astrocommunity.color.nvim-highlight-colors" }, -- Dim inactive windows
 
 	{ import = "astrocommunity.completion.copilot-lua" },
+	{ import = "astrocommunity.completion.supermaven-nvim" },
 
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
