@@ -42,6 +42,32 @@ return {
 		end,
 	},
 	{
+		"malbertzard/inline-fold.nvim",
+		cmd = { "InlineFoldToggle" },
+		opts = function(_, opts)
+			opts.defaultPlaceholder = "…"
+			if not opts.queries then
+				opts.queries = {
+					html = {
+						{ pattern = 'class="([^"]*)"' },
+						{ pattern = 'className="([^"]*)"' },
+						{ pattern = 'href="(.-)"' },
+						{ pattern = 'src="(.-)"' },
+					},
+				}
+			end
+
+			for _, language in ipairs(require("utils.constants").filetype.javascript) do
+				opts.queries[language] = {
+					{ pattern = 'className="([^"]*)"' },
+					{ pattern = 'href="(.-)"' },
+					{ pattern = 'src="(.-)"' },
+				}
+			end
+			return opts
+		end,
+	},
+	{
 		"anuvyklack/fold-preview.nvim",
 		event = "VeryLazy",
 		dependencies = "anuvyklack/keymap-amend.nvim",

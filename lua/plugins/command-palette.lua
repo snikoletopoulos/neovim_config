@@ -62,6 +62,7 @@ return {
 						"File",
 						{ "Toggle env variables", "CloakToggle" },
 						{ "View on GitHub", ":lua Snacks.gitbrowse()" },
+						{ "Toggle inline folds", ":InlineFoldToggle" },
 						{ "Search and Replace", ":SearchAndReplace" },
 						{ "Inspect types", ":InspectTwoslashQueries" },
 					},

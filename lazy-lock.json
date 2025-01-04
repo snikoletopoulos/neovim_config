@@ -48,6 +48,7 @@
   "hydra.nvim": { "branch": "master", "commit": "55de54543d673824435930ecf533256eea2e565b" },
   "indent-blankline.nvim": { "branch": "master", "commit": "259357fa4097e232730341fa60988087d189193a" },
   "keymap-amend.nvim": { "branch": "master", "commit": "b8bf9d820878d5497fdd11d6de55dea82872d98e" },
+  "inline-fold.nvim": { "branch": "main", "commit": "d0a24dd55c2fe9477e2636a589499fb7d530e9a3" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "lazydev.nvim": { "branch": "main", "commit": "f59bd14a852ca43db38e3662395354cb2a9b13e0" },
   "lazydocker.nvim": { "branch": "main", "commit": "404061ec122e4782d12d04d4cdbb74ad3fc42c26" },
