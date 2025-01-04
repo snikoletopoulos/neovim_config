@@ -50,7 +50,6 @@ return {
 				opts.queries = {
 					html = {
 						{ pattern = 'class="([^"]*)"' },
-						{ pattern = 'className="([^"]*)"' },
 						{ pattern = 'href="(.-)"' },
 						{ pattern = 'src="(.-)"' },
 					},
