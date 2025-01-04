@@ -42,6 +42,7 @@ return {
 				[".yamlfmt"] = "yaml",
 				[".sqlfluff"] = "toml",
 				["Podfile"] = "ruby",
+				["dot-zshrc"] = "zsh",
 			},
 			pattern = {
 				["%.env%.[%w_.-]+"] = "dotenv",
