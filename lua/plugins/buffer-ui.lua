@@ -43,7 +43,7 @@ return {
 	},
 	{
 		"malbertzard/inline-fold.nvim",
-		lazy = false,
+		cmd = { "InlineFoldToggle" },
 		opts = function(_, opts)
 			opts.defaultPlaceholder = "…"
 			if not opts.queries then
