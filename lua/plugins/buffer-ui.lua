@@ -46,6 +46,7 @@ return {
 		cmd = { "InlineFoldToggle" },
 		opts = function(_, opts)
 			opts.defaultPlaceholder = "…"
+
 			if not opts.queries then
 				opts.queries = {
 					html = {
@@ -63,6 +64,7 @@ return {
 					{ pattern = 'src="(.-)"' },
 				}
 			end
+
 			return opts
 		end,
 	},
