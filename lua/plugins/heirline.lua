@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"abeldekat/harpoonline",
 		---@type HarpoonLineConfig
+		---@diagnostic disable: missing-fields
 		opts = { icon = "" },
 	},
 	opts = function(_, opts)
