@@ -47,15 +47,13 @@ return {
 		opts = function(_, opts)
 			opts.defaultPlaceholder = "…"
 
-			if not opts.queries then
-				opts.queries = {
-					html = {
-						{ pattern = 'class="([^"]*)"' },
-						{ pattern = 'href="(.-)"' },
-						{ pattern = 'src="(.-)"' },
-					},
-				}
-			end
+			if not opts.queries then opts.queries = {} end
+
+			opts.queries.html = require("astrocore").extend_tbl(opts.queries.html, {
+				{ pattern = 'class="([^"]*)"' },
+				{ pattern = 'href="(.-)"' },
+				{ pattern = 'src="(.-)"' },
+			})
 
 			for _, language in ipairs(require("utils.constants").filetype.javascript) do
 				opts.queries[language] = {
