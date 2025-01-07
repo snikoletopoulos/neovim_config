@@ -14,7 +14,7 @@ return {
 					local normal_fg = get_hlgroup("Normal").fg
 					local bg_visual = get_hlgroup("Visual").bg
 
-					return require("astrocore").extend_tbl(highlights, {
+					local base_highlights = require("astrocore").extend_tbl(highlights, {
 						-- Telescope
 						TelescopePromptNormal = { fg = normal_fg, bg = bg_visual },
 
@@ -53,6 +53,15 @@ return {
 							strikethrough = true,
 						},
 					})
+
+					if Snacks.util.is_transparent() then
+						return require("astrocore").extend_tbl(
+							base_highlights,
+							require("utils.telescope"):get_highlight()
+						)
+					end
+
+					return base_highlights
 				end,
 				onedark_vivid = { LspInlayHint = { fg = "#555566", bg = "#333344" } },
 			},

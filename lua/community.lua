@@ -57,7 +57,6 @@ return {
 	{ import = "astrocommunity.recipes.disable-tabline" },
 	{ import = "astrocommunity.recipes.heirline-vscode-winbar" },
 	{ import = "astrocommunity.recipes.telescope-lsp-mappings" },
-	{ import = "astrocommunity.recipes.telescope-nvchad-theme" },
 	{ import = "astrocommunity.recipes.vscode-icons" },
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
