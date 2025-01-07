@@ -54,7 +54,7 @@ return {
 						},
 					})
 
-					if Snacks.util.is_transparent() then
+					if require("snacks").util.is_transparent() then
 						return require("astrocore").extend_tbl(
 							base_highlights,
 							require("utils.telescope"):get_highlight()
