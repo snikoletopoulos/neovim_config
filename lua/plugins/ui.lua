@@ -62,6 +62,14 @@ return {
 		"sindrets/diffview.nvim",
 		opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
 	},
+	{
+		"kevinhwang91/nvim-bqf",
+		opts = function(_, opts)
+			if not opts.preview then opts.preview = {} end
+			if Snacks.util.is_transparent() then opts.preview.winblend = 0 end
+			return opts
+		end,
+	},
 	{ "rcarriga/nvim-notify", enabled = false },
 	{ "goolord/alpha-nvim", enabled = false },
 }
