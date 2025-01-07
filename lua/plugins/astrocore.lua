@@ -13,6 +13,9 @@ return {
 		},
 		diagnostics = {
 			severity_sort = true,
+			underline = true,
+			signs = true,
+			virtual_text = true,
 		},
 		options = {
 			opt = {

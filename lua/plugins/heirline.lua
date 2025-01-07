@@ -74,6 +74,8 @@ return {
 			status.component.nav(),
 		}
 
+		opts.statuscolumn = nil
+
 		return opts
 	end,
 }

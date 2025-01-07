@@ -149,7 +149,10 @@ return {
 			notifier = { enabled = true },
 			quickfile = { enabled = true },
 			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
+			statuscolumn = {
+				right = { "git", "fold" },
+				folds = { open = true },
+			},
 			zen = {
 				enabled = true,
 				-- toggles = {
