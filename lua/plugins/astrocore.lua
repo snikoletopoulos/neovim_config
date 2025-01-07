@@ -26,6 +26,7 @@ return {
 				foldmethod = "expr",
 				foldexpr = "nvim_treesitter#foldexpr()",
 				foldlevel = 99,
+				foldlevelstart = 99,
 				conceallevel = 2,
 			},
 			g = {
