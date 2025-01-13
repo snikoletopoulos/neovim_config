@@ -8,7 +8,7 @@ return {
 	opts = function(_, opts)
 		local none_ls = require("null-ls")
 
-		opts.sources = {
+		opts.sources = require("astrocore").extend_tbl(opts.sources, {
 			-- Code Actions
 			require("cspell").code_actions,
 			-- TODO: research this
@@ -116,7 +116,7 @@ return {
 					}
 				end,
 			}),
-		}
+		})
 
 		return opts
 	end,
