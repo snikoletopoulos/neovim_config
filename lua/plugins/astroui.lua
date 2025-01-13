@@ -7,17 +7,13 @@ return {
 			colorscheme = require("colorscheme"),
 			highlights = {
 				init = function()
-					local highlights = type(opts.highlights.init) == "function" and opts.highlights.init()
-						or opts.highlights.init
-
-					local get_hlgroup = require("astroui").get_hlgroup
-					local normal_fg = get_hlgroup("Normal").fg
-					local bg_visual = get_hlgroup("Visual").bg
+					local highlights = {}
+					if opts.highlights then
+						highlights = type(opts.highlights.init) == "function" and opts.highlights.init()
+							or opts.highlights.init
+					end
 
 					local base_highlights = require("astrocore").extend_tbl(highlights, {
-						-- Telescope
-						TelescopePromptNormal = { fg = normal_fg, bg = bg_visual },
-
 						-- VS code cmp
 						CmpItemKindConstructor = { fg = "#f28b25" },
 						CmpItemKindUnit = { fg = "#D4D4D4" },
@@ -54,7 +50,7 @@ return {
 						},
 					})
 
-					if require("snacks").util.is_transparent() then
+					if not require("snacks").util.is_transparent() then
 						return require("astrocore").extend_tbl(
 							base_highlights,
 							require("utils.telescope"):get_highlight()
