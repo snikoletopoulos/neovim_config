@@ -153,16 +153,7 @@ return {
 				right = { "git", "fold" },
 				folds = { open = true },
 			},
-			zen = {
-				enabled = true,
-				-- toggles = {
-				-- 	dim = true,
-				-- 	git_signs = false,
-				-- 	mini_diff_signs = false,
-				-- 	-- diagnostics = false,
-				-- 	-- inlay_hints = false,
-				-- },
-			},
+			zen = { enabled = true },
 		},
 		init = function()
 			vim.api.nvim_create_autocmd("User", {
