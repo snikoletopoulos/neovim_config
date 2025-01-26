@@ -22,24 +22,62 @@ return {
 			trim_scope = "outer",
 		},
 	},
+	-- {
+	-- 	"OXY2DEV/markview.nvim",
+	-- 	opts = function()
+	-- 		local presets = require("markview.presets")
+	--
+	-- 		return {
+	-- 			modes = { "n", "i", "no", "c" },
+	-- 			hybrid_modes = { "i" },
+	-- 			callbacks = {
+	-- 				on_enable = function(_, win)
+	-- 					vim.wo[win].conceallevel = 2
+	-- 					vim.wo[win].concealcursor = "nc"
+	-- 				end,
+	-- 			},
+	-- 			headings = { shift_width = 2 },
+	-- 			horizontal_rules = presets.horizontal_rules.thin,
+	-- 		}
+	-- 	end,
+	-- },
 	{
-		"OXY2DEV/markview.nvim",
-		opts = function()
-			local presets = require("markview.presets")
-
-			return {
-				modes = { "n", "i", "no", "c" },
-				hybrid_modes = { "i" },
-				callbacks = {
-					on_enable = function(_, win)
-						vim.wo[win].conceallevel = 2
-						vim.wo[win].concealcursor = "nc"
-					end,
-				},
-				headings = { shift_width = 2 },
-				horizontal_rules = presets.horizontal_rules.thin,
-			}
-		end,
+		"MeanderingProgrammer/render-markdown.nvim",
+		opts = {
+			heading = {
+				render_modes = true,
+				border = true,
+				border_virtual = true,
+			},
+			paragraph = { render_modes = true },
+			code = {
+				render_modes = true,
+				width = "block",
+				left_pad = 2,
+				right_pad = 2,
+			},
+			dash = { render_modes = true },
+			bullet = { render_modes = true },
+			checkbox = {
+				render_modes = true,
+				scope_highlight = "@markup.strikethrough",
+			},
+			quote = { render_modes = true },
+			pipe_table = { render_modes = true },
+			link = { render_modes = true },
+			indent = {
+				enabled = true,
+				render_modes = true,
+				per_level = 2,
+				skip_heading = true,
+			},
+		},
+	},
+	{
+		"kevinhwang91/nvim-ufo",
+		event = "BufReadPost",
+		dependencies = { "kevinhwang91/promise-async" },
+		opts = {},
 	},
 	{
 		"malbertzard/inline-fold.nvim",

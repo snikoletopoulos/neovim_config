@@ -4,6 +4,7 @@ return {
 	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
 	{ import = "astrocommunity.color.nvim-highlight-colors" }, -- Dim inactive windows
 
+	{ import = "astrocommunity.completion.avante-nvim" },
 	{ import = "astrocommunity.completion.copilot-lua" },
 	{ import = "astrocommunity.completion.supermaven-nvim" },
 
@@ -26,7 +27,7 @@ return {
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
 	{ import = "astrocommunity.lsp.actions-preview-nvim" },
 
-	{ import = "astrocommunity.markdown-and-latex.markview-nvim" },
+	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
 	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.motion.mini-move" }, -- Move lines with <M>

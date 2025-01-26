@@ -152,6 +152,19 @@ return {
 				}),
 			})
 
+			cmp.setup.filetype("markdown", {
+				sources = cmp.config.sources({
+					{ name = "render-markdown" },
+					{ name = "path" },
+					{
+						name = "buffer",
+						priority = 300,
+						keyword_length = 5,
+						max_item_count = 5,
+					},
+				}),
+			})
+
 			cmp.setup.filetype("norg", {
 				sources = cmp.config.sources({
 					{ name = "neorg" },

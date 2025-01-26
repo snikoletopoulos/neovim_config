@@ -59,7 +59,10 @@ return {
 
 					return base_highlights
 				end,
-				onedark_vivid = { LspInlayHint = { fg = "#555566", bg = "#333344" } },
+				onedark_vivid = {
+					LspInlayHint = { fg = "#555566", bg = "#333344" },
+					["@markup.list.checked"] = { bg = "NONE" },
+				},
 			},
 			icons = {
 				LSPLoading1 = "⠋",
