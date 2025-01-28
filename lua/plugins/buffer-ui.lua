@@ -60,7 +60,17 @@ return {
 			bullet = { render_modes = true },
 			checkbox = {
 				render_modes = true,
-				scope_highlight = "@markup.strikethrough",
+				unchecked = { icon = "✘ " },
+				checked = {
+					icon = "✔ ",
+					scope_highlight = "@markup.strikethrough",
+				},
+				custom = {
+					todo = {
+						rendered = "◯ ",
+						scope_highlight = "@markup.strikethrough",
+					},
+				},
 			},
 			quote = { render_modes = true },
 			pipe_table = { render_modes = true },
