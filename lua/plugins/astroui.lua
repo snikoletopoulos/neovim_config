@@ -43,11 +43,7 @@ return {
 						CmpItemAbbrMatch = { fg = "#18a2fe", bold = true },
 						CmpItemAbbrMatchFuzzy = { fg = "#18a2fe", bold = true },
 						CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
-						CmpItemAbbrDeprecated = {
-							fg = "#7E8294",
-							bg = "NONE",
-							strikethrough = true,
-						},
+						CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
 					})
 
 					if not require("snacks").util.is_transparent() then
@@ -61,7 +57,7 @@ return {
 				end,
 				onedark_vivid = {
 					LspInlayHint = { fg = "#555566", bg = "#333344" },
-					["@markup.list.checked"] = { bg = "NONE" },
+					["@markup.list.checked"] = { fg = "#d55fde", bg = "NONE" },
 				},
 			},
 			icons = {
