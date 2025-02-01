@@ -4,9 +4,7 @@ return {
 		"petertriho/nvim-scrollbar",
 		opts = {
 			excluded_filetypes = {
-				-- "cmp_docs",
 				"cmp_menu",
-				-- 	"noice",
 				"prompt",
 				"TelescopePrompt",
 				"neo-tree",
@@ -22,25 +20,6 @@ return {
 			trim_scope = "outer",
 		},
 	},
-	-- {
-	-- 	"OXY2DEV/markview.nvim",
-	-- 	opts = function()
-	-- 		local presets = require("markview.presets")
-	--
-	-- 		return {
-	-- 			modes = { "n", "i", "no", "c" },
-	-- 			hybrid_modes = { "i" },
-	-- 			callbacks = {
-	-- 				on_enable = function(_, win)
-	-- 					vim.wo[win].conceallevel = 2
-	-- 					vim.wo[win].concealcursor = "nc"
-	-- 				end,
-	-- 			},
-	-- 			headings = { shift_width = 2 },
-	-- 			horizontal_rules = presets.horizontal_rules.thin,
-	-- 		}
-	-- 	end,
-	-- },
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		opts = {
