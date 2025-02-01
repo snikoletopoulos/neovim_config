@@ -12,8 +12,9 @@ return {
 		opts.sources = require("astrocore").extend_tbl(opts.sources, {
 			-- Code Actions
 			require("cspell").code_actions,
-			-- TODO: research this
-			none_ls.builtins.code_actions.refactoring,
+			none_ls.builtins.code_actions.refactoring.with({
+				extra_filetypes = require("utils.constants").filetype.typescript,
+			}),
 
 			-- Diagnostics
 			require("cspell").diagnostics.with({
