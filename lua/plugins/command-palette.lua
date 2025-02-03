@@ -1,9 +1,66 @@
+function Command_palette()
+	local commands = {
+		{
+			name = "LSP",
+			commands = {
+				{ "Restart tsserver", ":VtsExec restart_tsserver" },
+				{ "Restart eslint", ":LspRestart eslint" },
+				{ "Restart prettierd", ":!prettierd restart" },
+				{ "Restart lua-ls", ":LspRestart lua-ls" },
+			},
+		},
+		{
+			name = "File",
+			commands = {
+				{ "Inspect types", ":InspectTwoslashQueries" },
+				{ "Toggle inline folds", ":InlineFoldToggle" },
+				{ "Search and Replace", ":SearchAndReplace" },
+				{ "View on GitHub", function() Snacks.gitbrowse() end },
+				{ "Toggle env variables", "CloakToggle" },
+			},
+		},
+		{
+			name = "Vim",
+			commands = {
+				{ "Open Lazy", function() require("lazy").home() end },
+				{ "Open Mason", ":Mason" },
+				{ "Zen mode", function() Snacks.zen() end },
+				{ "Check health", ":checkhealth" },
+				{
+					"Change colorshceme",
+					function() Snacks.picker.colorschemes() end,
+				},
+				{ "Commands", function() Snacks.picker.commands() end },
+			},
+		},
+	}
+
+	vim.ui.select(
+		commands,
+		{ prompt = "Select category:", format_item = function(item) return item.name end },
+		function(category)
+			vim.ui.select(
+				category.commands,
+				{ prompt = "Select command:", format_item = function(item) return item[1] end },
+
+				function(command)
+					if type(command[2]) == "function" then
+						command[2]()
+					elseif type(command[2]) == "string" then
+						vim.cmd(command[2])
+					end
+				end
+			)
+		end
+	)
+end
+
 ---@type LazySpec
 return {
 	{
 		"ray-x/sad.nvim",
 		cmd = { "SearchAndReplace" },
-		dependencies = {
+		specs = {
 			{
 				"AstroNvim/astrocore",
 				opts = {
@@ -29,60 +86,6 @@ return {
 							nargs = "?",
 							desc = "Search and replace",
 						},
-					},
-				},
-			},
-		},
-	},
-	{
-		"LinArcX/telescope-command-palette.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim" },
-		keys = {
-			{
-				"<leader>P",
-				"<cmd>Telescope command_palette<CR>",
-				desc = "Command palette",
-			},
-		},
-		config = function() require("telescope").load_extension("command_palette") end,
-	},
-	{
-		"nvim-telescope/telescope.nvim",
-		opts = {
-			extensions = {
-				command_palette = {
-					{
-						"LSP",
-						{ "Restart lua-ls", ":LspRestart lua-ls" },
-						{ "Restart prettierd", ":!prettierd restart" },
-						{ "Restart eslint", ":LspRestart eslint" },
-						{ "Restart tsserver", ":VtsExec restart_tsserver" },
-					},
-					{
-						"File",
-						{ "Toggle env variables", "CloakToggle" },
-						{ "View on GitHub", ":lua Snacks.gitbrowse()" },
-						{ "Toggle inline folds", ":InlineFoldToggle" },
-						{ "Search and Replace", ":SearchAndReplace" },
-						{ "Inspect types", ":InspectTwoslashQueries" },
-					},
-					{
-						"Packages",
-						{ "Open Mason", ":Mason" },
-						{ "Plugins Update", ":lua require('lazy').update()" },
-						{ "Plugins Sync", ":lua require('lazy').sync()" },
-						{ "Open Lazy", ":lua require('lazy').home()" },
-					},
-					{
-						"Vim",
-						{ "Commands", ":lua require('telescope.builtin').commands()" },
-						{ "Vim options", ":lua require('telescope.builtin').vim_options()" },
-						{
-							"Change colorshceme",
-							":lua require('telescope.builtin').colorscheme({ enable_preview = true })",
-						},
-						{ "Check health", ":checkhealth" },
-						{ "Zen mode", ":lua Snacks.zen()" },
 					},
 				},
 			},
