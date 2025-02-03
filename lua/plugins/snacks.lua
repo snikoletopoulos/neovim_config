@@ -13,6 +13,7 @@ return {
 			{ "<leader>fS", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
 			{ "<leader>uD", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
 			{ "<leader>ua", function() Snacks.dashboard.open() end, desc = "Toggle home screen" },
+			{ "<leader>gL", function() Snacks.git.blame_line() end, desc = "View full Git blame" },
 		},
 		opts = {
 			bigfile = { enabled = true },
