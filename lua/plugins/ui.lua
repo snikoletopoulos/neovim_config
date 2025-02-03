@@ -9,7 +9,7 @@ return {
 		keys = {
 			{
 				"<leader>uu",
-				"<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>",
+				":UndotreeToggle<CR>:UndotreeFocus<CR>",
 				desc = "Toggle undotree",
 			},
 		},

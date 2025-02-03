@@ -5,7 +5,7 @@ return {
 		keys = {
 			{
 				"<leader>ue",
-				"<cmd>Neotree toggle action=show<cr>",
+				":Neotree toggle action=show<CR>",
 				desc = "Toggle Explorer",
 			},
 		},

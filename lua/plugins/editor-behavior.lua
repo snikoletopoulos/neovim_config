@@ -5,7 +5,7 @@ return {
 		cmd = { "ASToggle" },
 		event = { "User AstroFile", "InsertEnter" },
 		keys = {
-			{ "<leader>fa", "<cmd>ASToggle<cr>", desc = "Toggle auto-save" },
+			{ "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" },
 		},
 		opts = {
 			condition = function(buffer)
@@ -20,7 +20,7 @@ return {
 		keys = {
 			{
 				"<M-n>",
-				"<cmd>MCstart<cr>",
+				":MCstart<CR>",
 				desc = "Create a selection for selected text or word under the cursor",
 				mode = { "v", "n" },
 			},
@@ -31,25 +31,25 @@ return {
 		keys = {
 			{
 				"<leader>w",
-				"<cmd>lua require('spider').motion('w')<CR>",
+				function() require("spider").motion("w") end,
 				mode = { "n", "o", "x" },
 				desc = "Next camel case word",
 			},
 			{
 				"<leader>e",
-				"<cmd>lua require('spider').motion('e')<CR>",
+				function() require("spider").motion("e") end,
 				mode = { "n", "o", "x" },
 				desc = "Next end of camel case word",
 			},
 			{
 				"<leader>b",
-				"<cmd>lua require('spider').motion('b')<CR>",
+				function() require("spider").motion("b") end,
 				mode = { "n", "o", "x" },
 				desc = "Next start of camel case word",
 			},
 			{
 				"<leader>ge",
-				"<cmd>lua require('spider').motion('ge')<CR>",
+				function() require("spider").motion("ge") end,
 				mode = { "n", "o", "x" },
 				desc = "Previous end of camel case word",
 			},
@@ -61,12 +61,12 @@ return {
 		keys = {
 			{
 				"a<leader>w",
-				'<cmd>lua require("various-textobjs").subword("outer")<CR>',
+				function() require("various-textobjs").subword("outer") end,
 				mode = { "o", "x" },
 			},
 			{
 				"i<leader>w",
-				'<cmd>lua require("various-textobjs").subword("inner")<CR>',
+				function() require("various-textobjs").subword("inner") end,
 				mode = { "o", "x" },
 			},
 		},
