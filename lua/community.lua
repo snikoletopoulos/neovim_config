@@ -16,7 +16,6 @@ return {
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 	{ import = "astrocommunity.editing-support.multicursors-nvim" },
 	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
-	{ import = "astrocommunity.editing-support.telescope-undo-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 
 	{ import = "astrocommunity.git.blame-nvim" },
