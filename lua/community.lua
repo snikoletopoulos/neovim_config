@@ -24,7 +24,8 @@ return {
 	{ import = "astrocommunity.icon.mini-icons" },
 
 	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
-	{ import = "astrocommunity.lsp.actions-preview-nvim" },
+
+	{ import = "astrocommunity.fuzzy-finder.snacks-picker" },
 
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 

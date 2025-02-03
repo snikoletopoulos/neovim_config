@@ -154,6 +154,14 @@ return {
 				folds = { open = true },
 			},
 			zen = { enabled = true },
+			picker = {
+				ui_select = true,
+				matcher = {
+					cwd_bonus = true,
+					frecency = true,
+				},
+				previewers = { git = { native = true } },
+			},
 		},
 		init = function()
 			vim.api.nvim_create_autocmd("User", {

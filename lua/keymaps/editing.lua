@@ -12,10 +12,6 @@ function EditingKeymaps:configure(maps)
 	maps:add("x", "<Leader>Y", { '"+Y', desc = "Yank rest of line to clipboard" })
 	maps:add("x", "<Leader>D", { '"_d', desc = "Cut" })
 	maps:add("n", "<Leader>D", { '"_d', desc = "Cut" })
-	maps:add("n", "gr", {
-		function() require("telescope.builtin").lsp_references() end,
-		desc = "Go to reference",
-	})
 	maps:add("n", "<leader>C", {
 		function()
 			local bufs = vim.fn.getbufinfo({ buflisted = true })
@@ -25,10 +21,6 @@ function EditingKeymaps:configure(maps)
 			end
 		end,
 		desc = "Close buffer",
-	})
-	maps:add("n", "<Leader>tt", {
-		function() require("astrocore").toggle_term_cmd({ cmd = "btop ", direction = "float" }) end,
-		desc = "ToggleTerm lazygit",
 	})
 end
 

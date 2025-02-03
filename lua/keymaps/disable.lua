@@ -36,6 +36,9 @@ local DisableKeymaps = {
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>e" }, -- nvim-spider
 		{ mode = "n", lhs = "<Leader>ur" }, -- trouble
 		{ mode = "n", lhs = "<Leader>tt" }, -- btm
+		{ mode = "n", lhs = "<Leader>fs" }, -- snacks
+		{ mode = "n", lhs = "<Leader>fn" }, -- snacks
+		{ mode = "n", lhs = "<Leader>fl" }, -- snacks find line
 	},
 	packages = {
 		{ mode = "n", lhs = "<Leader>pa" },
