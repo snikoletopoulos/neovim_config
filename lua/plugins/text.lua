@@ -34,7 +34,7 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		keys = {
-			{ "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "Find todos" },
+			{ "<leader>ft", "<CMD>TodoTelescope<CR>", desc = "Find todos" },
 		},
 		opts = {
 			highlight = { pattern = [[.*<(KEYWORDS)\s*]] },

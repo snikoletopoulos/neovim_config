@@ -11,7 +11,7 @@ function UiKeymaps:configure(maps)
 		function() require("astrocore").toggle_term_cmd({ cmd = "btop ", direction = "float" }) end,
 		desc = "ToggleTerm btop",
 	})
-	maps:add("n", "<Leader>P", { function() Command_palette() end, desc = "Command Palette" })
+	maps:add("n", "<Leader>P", { "<CMD>CommandPalette<CR>", desc = "Command Palette" })
 end
 
 return UiKeymaps

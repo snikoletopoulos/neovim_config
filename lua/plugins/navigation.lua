@@ -20,7 +20,7 @@ return {
 		"charludo/projectmgr.nvim",
 		event = "VeryLazy",
 		keys = {
-			{ "<leader>fp", ":ProjectMgr<cr>", desc = "Change project" },
+			{ "<leader>fp", "<CMD>ProjectMgr<cr>", desc = "Change project" },
 		},
 	},
 	{ "alexghergh/nvim-tmux-navigation" },

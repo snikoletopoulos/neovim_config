@@ -23,17 +23,17 @@ return {
 		keys = {
 			{
 				"<leader>ud",
-				":Trouble diagnostics toggle<CR>",
+				"<CMD>Trouble diagnostics toggle<CR>",
 				desc = "Workspace diagnostics",
 			},
 			{
 				"<leader>fd",
-				":Trouble diagnostics toggle filter.buf=0<CR>",
+				"<CMD>Trouble diagnostics toggle filter.buf=0<CR>",
 				desc = "Buffer diagnostics",
 			},
 			{
 				"<leader>ur",
-				":Trouble lsp toggle focus=false win.position=right<CR>",
+				"<CMD>Trouble lsp toggle focus=false win.position=right<CR>",
 				desc = "LSP Definitions / references / ... (Trouble)",
 			},
 		},

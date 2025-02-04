@@ -5,7 +5,7 @@ return {
 		cmd = { "ASToggle" },
 		event = { "User AstroFile", "InsertEnter" },
 		keys = {
-			{ "<leader>fa", ":ASToggle<CR>", desc = "Toggle auto-save" },
+			{ "<leader>fa", "<CMD>ASToggle<CR>", desc = "Toggle auto-save" },
 		},
 		opts = {
 			condition = function(buffer)
@@ -20,7 +20,7 @@ return {
 		keys = {
 			{
 				"<M-n>",
-				":MCstart<CR>",
+				"<CMD>MCstart<CR>",
 				desc = "Create a selection for selected text or word under the cursor",
 				mode = { "v", "n" },
 			},
