@@ -100,4 +100,38 @@ return {
 			end
 		end,
 	},
+	{
+		"ray-x/sad.nvim",
+		cmd = { "SearchAndReplace" },
+		specs = {
+			{
+				"AstroNvim/astrocore",
+				opts = {
+					commands = {
+						SearchAndReplace = {
+							function(params)
+								vim.ui.input({
+									prompt = "Search",
+									default = params.args[1] or vim.fn.expand("<cword>") or "",
+								}, function(search_word)
+									if search_word == nil then return end
+									vim.ui.input({
+										prompt = "Replace",
+									}, function(replace_word)
+										if replace_word == nil then return end
+										vim.ui.input(
+											{ prompt = "Filetype" },
+											function(filetype) require("sad").Replace(search_word, replace_word, filetype) end
+										)
+									end)
+								end)
+							end,
+							nargs = "?",
+							desc = "Search and replace",
+						},
+					},
+				},
+			},
+		},
+	},
 }
