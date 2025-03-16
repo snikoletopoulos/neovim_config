@@ -1,10 +1,13 @@
-.PHONY: lint check-format format
+FORMATTER_ARGS = --check
+
+all: format lint
 
 lint:
-	selene .
-
-check-format: CLEAN_ARGS = --check
-check-format: format
+	@echo "Running lint checks..."
+	@selene .
 
 format:
-	stylua $(CLEAN_ARGS) .
+	@echo "Formatting code..."
+	@stylua $(FORMATTER_ARGS) .
+
+.PHONY: all lint format
