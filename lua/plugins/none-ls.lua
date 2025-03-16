@@ -17,6 +17,7 @@ return {
 			}),
 
 			-- Diagnostics
+			none_ls.builtins.diagnostics.checkmake,
 			require("cspell").diagnostics.with({
 				disabled_filetypes = { "dotenv" },
 			}),
