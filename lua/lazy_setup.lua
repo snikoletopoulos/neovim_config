@@ -15,6 +15,7 @@ require("lazy").setup({
 } --[[@as LazySpec]], {
 	install = { colorscheme = { require("colorscheme"), "astrodark", "habamax" } }, -- spell-checker:disable-line
 	ui = { backdrop = 40 },
+	concurrency = 64,
 	performance = {
 		rtp = {
 			disabled_plugins = {
