@@ -17,7 +17,7 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>up" }, -- toggle paste mode
 		{ mode = "n", lhs = "<Leader>un" }, -- change line numbering
 		{ mode = "n", lhs = "<Leader>ug" }, -- toggle git signs column
-		{ mode = "n", lhs = "<Leader>uC" }, -- toggle color highlight
+		{ mode = "n", lhs = "<Leader>uC" }, -- toggle autocompletion
 		{ mode = "n", lhs = "<Leader>uc" }, -- toggle autocompletion
 		{ mode = "n", lhs = "<Leader>ui" }, -- change indent setting
 		{ mode = "n", lhs = "<Leader>ut" }, -- toggle tabline
@@ -29,15 +29,12 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>tl" }, -- duplicate lazygit
 		{ mode = "n", lhs = "<Leader>lG" }, -- search workspace symbol
 		{ mode = "n", lhs = "<Leader>lR" }, -- search references
-		{ mode = "n", lhs = "gra" }, -- gr code actions
-		{ mode = "n", lhs = "grn" }, -- gr rename
-		{ mode = "n", lhs = "grr" }, -- gr search references
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>w" }, -- nvim-spider
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>e" }, -- nvim-spider
 		{ mode = "n", lhs = "<Leader>ur" }, -- trouble
 		{ mode = "n", lhs = "<Leader>tt" }, -- btm
 		{ mode = "n", lhs = "<Leader>fs" }, -- snacks
-		{ mode = "n", lhs = "<Leader>fn" }, -- snacks
+		{ mode = "n", lhs = "<Leader>fn" }, -- snacks find notifications
 		{ mode = "n", lhs = "<Leader>fl" }, -- snacks find line
 	},
 	packages = {
