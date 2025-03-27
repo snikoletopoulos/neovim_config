@@ -1,5 +1,6 @@
 ---@type LazySpec
 return {
+
 	{
 		"axelvc/template-string.nvim",
 		ft = require("utils.constants").filetype.javascript,
@@ -28,10 +29,6 @@ return {
 		},
 	},
 	{
-		"marilari88/twoslash-queries.nvim",
-		ft = require("utils.constants").filetype.javascript,
-	},
-	{
 		"folke/todo-comments.nvim",
 		keys = {
 			{ "<leader>ft", "<CMD>TodoTelescope<CR>", desc = "Find todos" },
@@ -39,12 +36,6 @@ return {
 		opts = {
 			highlight = { pattern = [[.*<(KEYWORDS)\s*]] },
 			search = { pattern = [[\b(KEYWORDS)\b]] },
-		},
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		opts = {
-			opts = { enable_close_on_slash = true },
 		},
 	},
 	{

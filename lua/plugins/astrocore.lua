@@ -4,30 +4,21 @@ return {
 	---@type AstroCoreOpts
 	opts = {
 		features = {
-			large_buf = { size = 1024 * 500, lines = 10000 },
+			large_buf = { size = 1024 * 256, lines = 10000 },
 			autopairs = true,
 			cmp = true,
-			highlighturl = true,
+			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
+			highlighturl = false, -- TODO: fix underline
 			notifications = true,
 		},
 		diagnostics = {
-			severity_sort = true,
-			underline = true,
-			signs = true,
 			virtual_text = true,
+			underline = false, -- TODO: fix underline
+			severity_sort = true,
+			signs = true,
 		},
 		options = {
-			opt = {
-				clipboard = "",
-				scrolloff = 5,
-				showtabline = 0,
-				swapfile = false,
-				foldmethod = "expr",
-				foldexpr = "nvim_treesitter#foldexpr()",
-				foldlevel = 99,
-				foldlevelstart = 99,
-				conceallevel = 2,
-			},
+			opt = {},
 			g = {
 				loaded_perl_provider = 0,
 			},
@@ -93,7 +84,8 @@ return {
 				desc = "Command palette",
 			},
 		},
-		mappings = require("keymaps"):create(),
+		-- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
+		mappings = {},
 		filetypes = {
 			extension = {
 				env = "dotenv",

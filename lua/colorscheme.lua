@@ -8,4 +8,4 @@ local favorites = {
 	onedarkpro = "onedark_vivid",
 }
 
-return favorites.onedarkpro
+return favorites.astronvim
