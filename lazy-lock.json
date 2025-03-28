@@ -32,7 +32,7 @@
   "harpoon": { "branch": "harpoon2", "commit": "ed1f853847ffd04b2b61c314865665e1dadf22c7" },
   "harpoonline": { "branch": "main", "commit": "50b33fbeaf6bd0349f6609013c0c33bed7effcbb" },
   "heirline.nvim": { "branch": "master", "commit": "cc359b628266cb9a84b2d71c883f2b99e16473a0" },
-  "hydra.nvim": { "branch": "master", "commit": "55de54543d673824435930ecf533256eea2e565b" },
+  "hover.nvim": { "branch": "main", "commit": "140c4d0ae9397b76baa46b87c574f5377de09309" },
   "inline-fold.nvim": { "branch": "main", "commit": "d0a24dd55c2fe9477e2636a589499fb7d530e9a3" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "f59bd14a852ca43db38e3662395354cb2a9b13e0" },

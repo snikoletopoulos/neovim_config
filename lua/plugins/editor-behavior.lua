@@ -76,6 +76,18 @@ return {
 	-- 	config = function() require("distant"):setup({}) end,
 	-- },
 	{
+		"lewis6991/hover.nvim",
+		opts = {
+			init = function()
+				require("hover.providers.lsp")
+				require("hover.providers.gh_user")
+				require("hover.providers.dap")
+				require("hover.providers.diagnostic")
+				require("hover.providers.man")
+			end,
+		},
+	},
+	{
 		"lewis6991/gitsigns.nvim",
 		opts = function(_, opts)
 			local original_on_attach = opts.on_attach
