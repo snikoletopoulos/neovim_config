@@ -133,6 +133,7 @@ return {
 				{ section = "startup" },
 			},
 		},
+		image = { enabled = false }, -- TODO: set it up
 		quickfile = { enabled = true },
 		scroll = { enabled = true },
 		statuscolumn = {
