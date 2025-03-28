@@ -1,5 +1,10 @@
 ---@type LazySpec
 return {
+	-- TODO: test default
+	-- {
+	-- 	"brenoprata10/nvim-highlight-colors",
+	-- 	opts = { enable_tailwind = true, enabled_named_colors = true },
+	-- },
 	{
 		"chrisgrieser/nvim-chainsaw",
 		keys = {

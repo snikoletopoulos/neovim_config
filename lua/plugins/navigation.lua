@@ -16,5 +16,12 @@ return {
 		},
 		opts = { lsp = { auto_attach = true } },
 	},
+	{
+		"charludo/projectmgr.nvim",
+		event = "VeryLazy",
+		keys = {
+			{ "<leader>fp", "<CMD>ProjectMgr<cr>", desc = "Change project" },
+		},
+	},
 	{ "alexghergh/nvim-tmux-navigation" },
 }

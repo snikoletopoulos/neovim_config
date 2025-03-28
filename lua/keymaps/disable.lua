@@ -33,8 +33,7 @@ local DisableKeymaps = {
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>e" }, -- nvim-spider
 		{ mode = "n", lhs = "<Leader>ur" }, -- trouble
 		{ mode = "n", lhs = "<Leader>tt" }, -- btm
-		{ mode = "n", lhs = "<Leader>fs" }, -- snacks
-		{ mode = "n", lhs = "<Leader>fn" }, -- snacks find notifications
+		{ mode = "n", lhs = "<Leader>fs" }, -- snacks smart
 		{ mode = "n", lhs = "<Leader>fl" }, -- snacks find line
 	},
 	packages = {
@@ -64,3 +63,4 @@ function DisableKeymaps:configure(maps, options)
 end
 
 return DisableKeymaps
+-- { mode = "n", lhs = "<Leader>uh" }, -- toggle inlay hint

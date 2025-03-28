@@ -8,17 +8,26 @@ return {
 			autopairs = true,
 			cmp = true,
 			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-			highlighturl = false, -- TODO: fix underline
+			highlighturl = false, -- TODO: fix underline for tmux
 			notifications = true,
 		},
 		diagnostics = {
 			virtual_text = true,
-			underline = false, -- TODO: fix underline
+			underline = false, -- TODO: fix underline for tmux
 			severity_sort = true,
 			signs = true,
 		},
 		options = {
-			opt = {},
+			opt = {
+				clipboard = "",
+				scrolloff = 5,
+				swapfile = false,
+				-- foldmethod = "expr",
+				-- foldexpr = "nvim_treesitter#foldexpr()",
+				-- foldlevel = 99,
+				-- foldlevelstart = 99,
+				-- conceallevel = 2,
+			},
 			g = {
 				loaded_perl_provider = 0,
 			},
@@ -84,8 +93,7 @@ return {
 				desc = "Command palette",
 			},
 		},
-		-- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
-		mappings = {},
+		mappings = require("keymaps"):create(),
 		filetypes = {
 			extension = {
 				env = "dotenv",
