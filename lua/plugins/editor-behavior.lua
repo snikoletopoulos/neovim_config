@@ -14,17 +14,6 @@ return {
 		},
 	},
 	{
-		"smoka7/multicursors.nvim",
-		keys = {
-			{
-				"<M-n>",
-				"<CMD>MCstart<CR>",
-				desc = "Create a selection for selected text or word under the cursor",
-				mode = { "v", "n" },
-			},
-		},
-	},
-	{
 		"chrisgrieser/nvim-spider",
 		keys = {
 			{

@@ -45,7 +45,6 @@
   "mini.ai": { "branch": "main", "commit": "978ffc65c6b513fde9ef075326d34d89197f1ea5" },
   "mini.icons": { "branch": "main", "commit": "86a633f0dffcfd80110bac86681dbf4b5c37ba5c" },
   "mini.move": { "branch": "main", "commit": "c8b30e92dd2668dd6e56a9a23cb7d4ee38c2266d" },
-  "multicursors.nvim": { "branch": "main", "commit": "72225ea9e4443c3f4b9df91d0193e07c4ee8d382" },
   "neo-tree.nvim": { "branch": "main", "commit": "9b5d67119c46e3262ffe1508fe6d8540b79ad75d" },
   "neoconf.nvim": { "branch": "main", "commit": "d4848c791496eab6989951d46586fabf7a22942c" },
   "neovim-ayu": { "branch": "master", "commit": "f5da37a8ddd62fc3a7b28900c4d1b807a3582584" },
