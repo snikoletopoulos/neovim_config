@@ -17,6 +17,12 @@ return {
 			severity_sort = true,
 			signs = true,
 		},
+		signs = {
+			DiagnosticSignError = { text = "", texthl = "DiagnosticSignError" },
+			DiagnosticSignWarn = { text = "", texthl = "DiagnosticSignWarn" },
+			DiagnosticSignHint = { text = "󰌵", texthl = "DiagnosticSignHint" },
+			DiagnosticSignInfo = { text = "", texthl = "DiagnosticSignInfo" },
+		},
 		options = {
 			opt = {
 				clipboard = "",
