@@ -8,15 +8,14 @@ return {
 	---@type AstroLSPOpts
 	opts = {
 		features = {
-			autoformat = false,
 			codelens = true,
 			inlay_hints = true,
 			semantic_tokens = true,
-			signature_help = false,
+			signature_help = true,
 		},
 		formatting = {
 			format_on_save = { enabled = false },
-			timeout_ms = 2000,
+			timeout_ms = 1000,
 			filter = function(client)
 				if vim.bo.filetype == "rust" then return client.name == "rust-analyzer" end
 				if vim.bo.filetype == "toml" then return client.name == "taplo" end
@@ -99,7 +98,7 @@ return {
 				end,
 			},
 		},
-		setup_handlers = {
+		handlers = {
 			rust_analyzer = function(_, opts)
 				require("rust-tools").setup({
 					tools = {
@@ -124,6 +123,14 @@ return {
 				["<Leader>uY"] = false,
 				["<Leader>lG"] = false,
 				["<Leader>lR"] = false,
+				-- TODO: not working
+				["gra"] = false, -- gr code actions
+				-- TODO: not working
+				["grn"] = false, -- gr rename
+				-- TODO: not working
+				["gri"] = false, -- gr locations
+				-- TODO: not working
+				["grr"] = false, -- gr search references
 			},
 			v = { ["<leader>uY"] = false },
 		},

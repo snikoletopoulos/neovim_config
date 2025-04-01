@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -22,7 +23,16 @@ return {
 			vim.g.sonokai_inlay_hints_background = "dimmed"
 		end,
 	},
-	{ "AstroNvim/astrotheme" },
+	{
+		"AstroNvim/astrotheme",
+		opts = {
+			style = {
+				transparent = true,
+				inactive = false,
+				simple_syntax_colors = false,
+			},
+		},
+	},
 	{
 		"Shatur/neovim-ayu",
 		opts = { mirage = false },

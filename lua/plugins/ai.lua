@@ -8,16 +8,16 @@ return {
 			panel = { enabled = false },
 		},
 	},
-	{
-		"supermaven-inc/supermaven-nvim",
-		opts = {
-			keymaps = {
-				accept_suggestion = "<M-l>",
-				clear_suggestion = "<M-h>",
-				accept_word = "<M-w>",
-			},
-		},
-	},
+	-- {
+	-- 	"supermaven-inc/supermaven-nvim",
+	-- 	opts = {
+	-- 		keymaps = {
+	-- 			accept_suggestion = "<M-l>",
+	-- 			clear_suggestion = "<M-h>",
+	-- 			accept_word = "<M-w>",
+	-- 		},
+	-- 	},
+	-- },
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",
@@ -58,16 +58,10 @@ return {
 	},
 	-- {
 	-- 	"yetone/avante.nvim",
-	-- 	event = "VeryLazy",
-	-- 	-- lazy = false,
-	-- 	build = "make",
 	-- 	dependencies = {
 	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"stevearc/dressing.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"MunifTanjim/nui.nvim",
-	-- 		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-	-- 		"zbirenbaum/copilot.lua", -- for providers='copilot'
+	-- 		"echasnovski/mini.icons",
+	-- 		"zbirenbaum/copilot.lua",
 	-- 		{
 	-- 			"HakonHarnes/img-clip.nvim",
 	-- 			event = "VeryLazy",
@@ -75,25 +69,21 @@ return {
 	-- 				default = {
 	-- 					embed_image_as_base64 = false,
 	-- 					prompt_for_file_name = false,
-	-- 					drag_and_drop = {
-	-- 						insert_mode = true,
-	-- 					},
+	-- 					drag_and_drop = { insert_mode = true },
 	-- 					use_absolute_path = true,
 	-- 				},
 	-- 			},
 	-- 		},
 	-- 		{
-	-- 			-- Make sure to set this up properly if you have lazy=true
 	-- 			"MeanderingProgrammer/render-markdown.nvim",
-	-- 			opts = {
-	-- 				file_types = { "markdown", "Avante" },
-	-- 			},
+	-- 			opts = { file_types = { "markdown", "Avante" } },
 	-- 			ft = { "markdown", "Avante" },
 	-- 		},
 	-- 	},
 	-- 	opts = {
-	-- 		provider = "openai",
+	-- 		provider = "claude",
 	-- 		auto_suggestions_provider = "copilot",
+	-- 		openai = { api_key_name = "CHAT_GPT_API_KEY" },
 	-- 	},
 	-- },
 }

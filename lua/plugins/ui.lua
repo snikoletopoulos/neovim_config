@@ -1,8 +1,8 @@
 ---@type LazySpec
 return {
 	{
-		"akinsho/toggleterm.nvim",
-		opts = { winbar = { enabled = false } },
+		"FabijanZulj/blame.nvim",
+		opts = { date_format = "%d/%m/%Y" },
 	},
 	{
 		"mbbill/undotree",
@@ -16,40 +16,45 @@ return {
 		init = function() vim.g.undotree_WindowLayout = 2 end,
 	},
 	{
-		"nvim-telescope/telescope.nvim",
-		enabled = true,
-		opts = function(_, opts)
-			local actions = require("telescope.actions")
-
-			return require("astrocore").extend_tbl(opts, {
-				pickers = {
-					buffers = {
-						mappings = {
-							i = {
-								["<c-d>"] = actions.delete_buffer + actions.move_to_top,
-							},
-						},
-					},
-				},
-			})
-		end,
-	},
-	{
-		"FabijanZulj/blame.nvim",
-		opts = { date_format = "%d/%m/%Y" },
-	},
-	{
 		"sindrets/diffview.nvim",
 		opts = { view = { merge_tool = { layout = "diff4_mixed" } } },
 	},
 	{
 		"kevinhwang91/nvim-bqf",
+		dependencies = { "folke/snacks.nvim" },
 		opts = function(_, opts)
 			if not opts.preview then opts.preview = {} end
 			if Snacks.util.is_transparent() then opts.preview.winblend = 0 end
 			return opts
 		end,
 	},
-	{ "rcarriga/nvim-notify", enabled = false },
-	{ "goolord/alpha-nvim", enabled = false },
+	{
+		"folke/noice.nvim",
+		dependencies = { "folke/snacks.nvim" },
+		opts = function()
+			return {
+				lsp = {
+					signature = { enabled = false },
+					hover = { enabled = false },
+					override = {
+						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = true,
+					},
+				},
+				views = {
+					cmdline_popup = {
+						border = Snacks.util.is_transparent() and {} or {
+							style = "none",
+							padding = { 1, 2 },
+						},
+					},
+				},
+				presets = {
+					bottom_search = false,
+					command_palette = true,
+				},
+			}
+		end,
+	},
 }

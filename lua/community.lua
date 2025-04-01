@@ -2,30 +2,22 @@
 return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
-	{ import = "astrocommunity.color.nvim-highlight-colors" }, -- Show color as background
 
-	{ import = "astrocommunity.completion.avante-nvim" },
+	-- { import = "astrocommunity.completion.avante-nvim" },
 	{ import = "astrocommunity.completion.copilot-lua" },
-	{ import = "astrocommunity.completion.supermaven-nvim" },
+	-- { import = "astrocommunity.completion.supermaven-nvim" },
 
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
 
 	{ import = "astrocommunity.docker.lazydocker" },
 
+	{ import = "astrocommunity.editing-support.auto-save-nvim" },
 	{ import = "astrocommunity.editing-support.cloak-nvim" }, -- Hide env variables
 	{ import = "astrocommunity.editing-support.chatgpt-nvim" },
-	{ import = "astrocommunity.editing-support.multicursors-nvim" },
-	{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 	{ import = "astrocommunity.editing-support.treesj" }, -- Fold/Unfold code blocks
 
 	{ import = "astrocommunity.git.blame-nvim" },
 	{ import = "astrocommunity.git.diffview-nvim" },
-
-	{ import = "astrocommunity.icon.mini-icons" },
-
-	{ import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Fix import when renaming/moving files
-
-	{ import = "astrocommunity.fuzzy-finder.snacks-picker" },
 
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
@@ -58,8 +50,8 @@ return {
 
 	{ import = "astrocommunity.recipes.disable-tabline" },
 	{ import = "astrocommunity.recipes.heirline-vscode-winbar" },
-	{ import = "astrocommunity.recipes.telescope-lsp-mappings" },
-	{ import = "astrocommunity.recipes.vscode-icons" },
+	{ import = "astrocommunity.recipes.picker-lsp-mappings" },
+	-- { import = "astrocommunity.recipes.vscode-icons" },
 
 	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
 

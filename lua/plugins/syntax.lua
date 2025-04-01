@@ -1,10 +1,6 @@
 ---@type LazySpec
 return {
 	{
-		"brenoprata10/nvim-highlight-colors",
-		opts = { enable_tailwind = true, enabled_named_colors = true },
-	},
-	{
 		"chrisgrieser/nvim-chainsaw",
 		keys = {
 			{ "<leader>cv", function() require("chainsaw").variableLog() end, desc = "Log variable" },

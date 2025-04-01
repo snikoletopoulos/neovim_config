@@ -9,7 +9,6 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>uu" }, -- undotree.vim
 		{ mode = "n", lhs = "<Leader>ft" }, -- todo-comments.nvim
 		{ mode = "n", lhs = "<Leader>fT" }, -- todo-comments.nvim
-		{ mode = "n", lhs = "<Leader>uh" }, -- harpoon
 		{ mode = "n", lhs = "<Leader>ud" }, -- neo-tree-diagnostics.nvim
 		{ mode = "n", lhs = "<Leader>fm" }, -- find man
 		{ mode = "n", lhs = "<Leader>u>" }, -- toggle fold columns
@@ -17,7 +16,7 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>up" }, -- toggle paste mode
 		{ mode = "n", lhs = "<Leader>un" }, -- change line numbering
 		{ mode = "n", lhs = "<Leader>ug" }, -- toggle git signs column
-		{ mode = "n", lhs = "<Leader>uC" }, -- toggle color highlight
+		{ mode = "n", lhs = "<Leader>uC" }, -- toggle autocompletion
 		{ mode = "n", lhs = "<Leader>uc" }, -- toggle autocompletion
 		{ mode = "n", lhs = "<Leader>ui" }, -- change indent setting
 		{ mode = "n", lhs = "<Leader>ut" }, -- toggle tabline
@@ -29,15 +28,11 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>tl" }, -- duplicate lazygit
 		{ mode = "n", lhs = "<Leader>lG" }, -- search workspace symbol
 		{ mode = "n", lhs = "<Leader>lR" }, -- search references
-		{ mode = "n", lhs = "gra" }, -- gr code actions
-		{ mode = "n", lhs = "grn" }, -- gr rename
-		{ mode = "n", lhs = "grr" }, -- gr search references
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>w" }, -- nvim-spider
 		{ mode = { "n", "o", "x" }, lhs = "<Leader>e" }, -- nvim-spider
 		{ mode = "n", lhs = "<Leader>ur" }, -- trouble
 		{ mode = "n", lhs = "<Leader>tt" }, -- btm
-		{ mode = "n", lhs = "<Leader>fs" }, -- snacks
-		{ mode = "n", lhs = "<Leader>fn" }, -- snacks
+		{ mode = "n", lhs = "<Leader>fs" }, -- snacks smart
 		{ mode = "n", lhs = "<Leader>fl" }, -- snacks find line
 	},
 	packages = {
@@ -67,3 +62,4 @@ function DisableKeymaps:configure(maps, options)
 end
 
 return DisableKeymaps
+-- { mode = "n", lhs = "<Leader>uh" }, -- toggle inlay hint

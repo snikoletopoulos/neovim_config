@@ -2,8 +2,6 @@
 return {
 	{
 		"okuuva/auto-save.nvim",
-		cmd = { "ASToggle" },
-		event = { "User AstroFile", "InsertEnter" },
 		keys = {
 			{ "<leader>fa", "<CMD>ASToggle<CR>", desc = "Toggle auto-save" },
 		},
@@ -13,17 +11,6 @@ return {
 				if vim.list_contains({ "harpoon" }, filetype) then return false end
 				return true
 			end,
-		},
-	},
-	{
-		"smoka7/multicursors.nvim",
-		keys = {
-			{
-				"<M-n>",
-				"<CMD>MCstart<CR>",
-				desc = "Create a selection for selected text or word under the cursor",
-				mode = { "v", "n" },
-			},
 		},
 	},
 	{
@@ -71,11 +58,12 @@ return {
 			},
 		},
 	},
-	{
-		"chipsenkbeil/distant.nvim",
-		branch = "v0.3",
-		config = function() require("distant"):setup({}) end,
-	},
+	-- TODO
+	-- {
+	-- 	"chipsenkbeil/distant.nvim",
+	-- 	branch = "v0.3",
+	-- 	config = function() require("distant"):setup({}) end,
+	-- },
 	{
 		"lewis6991/hover.nvim",
 		opts = {

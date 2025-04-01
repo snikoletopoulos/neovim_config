@@ -4,29 +4,35 @@ return {
 	---@type AstroCoreOpts
 	opts = {
 		features = {
-			large_buf = { size = 1024 * 500, lines = 10000 },
+			large_buf = { size = 1024 * 256, lines = 10000 },
 			autopairs = true,
 			cmp = true,
-			highlighturl = true,
+			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
+			highlighturl = false, -- TODO: fix underline for tmux
 			notifications = true,
 		},
 		diagnostics = {
-			severity_sort = true,
-			underline = true,
-			signs = true,
 			virtual_text = true,
+			underline = false, -- TODO: fix underline for tmux
+			severity_sort = true,
+			signs = true,
+		},
+		signs = {
+			DiagnosticSignError = { text = "", texthl = "DiagnosticSignError" },
+			DiagnosticSignWarn = { text = "", texthl = "DiagnosticSignWarn" },
+			DiagnosticSignHint = { text = "󰌵", texthl = "DiagnosticSignHint" },
+			DiagnosticSignInfo = { text = "", texthl = "DiagnosticSignInfo" },
 		},
 		options = {
 			opt = {
 				clipboard = "",
 				scrolloff = 5,
-				showtabline = 0,
 				swapfile = false,
-				foldmethod = "expr",
-				foldexpr = "nvim_treesitter#foldexpr()",
-				foldlevel = 99,
-				foldlevelstart = 99,
-				conceallevel = 2,
+				-- foldmethod = "expr",
+				-- foldexpr = "nvim_treesitter#foldexpr()",
+				-- foldlevel = 99,
+				-- foldlevelstart = 99,
+				-- conceallevel = 2,
 			},
 			g = {
 				loaded_perl_provider = 0,

@@ -4,9 +4,7 @@ return {
 		"petertriho/nvim-scrollbar",
 		opts = {
 			excluded_filetypes = {
-				"cmp_menu",
 				"prompt",
-				"TelescopePrompt",
 				"neo-tree",
 			},
 		},
@@ -23,6 +21,7 @@ return {
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		opts = {
+			completions = { blink = { enabled = true } },
 			heading = {
 				render_modes = true,
 				border = true,
@@ -61,12 +60,6 @@ return {
 				skip_heading = true,
 			},
 		},
-	},
-	{
-		"kevinhwang91/nvim-ufo",
-		event = "BufReadPost",
-		dependencies = { "kevinhwang91/promise-async" },
-		opts = {},
 	},
 	{
 		"malbertzard/inline-fold.nvim",

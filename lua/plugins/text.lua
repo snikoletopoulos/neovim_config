@@ -1,5 +1,6 @@
 ---@type LazySpec
 return {
+
 	{
 		"axelvc/template-string.nvim",
 		ft = require("utils.constants").filetype.javascript,
@@ -33,9 +34,6 @@ return {
 	},
 	{
 		"folke/todo-comments.nvim",
-		keys = {
-			{ "<leader>ft", "<CMD>TodoTelescope<CR>", desc = "Find todos" },
-		},
 		opts = {
 			highlight = { pattern = [[.*<(KEYWORDS)\s*]] },
 			search = { pattern = [[\b(KEYWORDS)\b]] },
