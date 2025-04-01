@@ -23,4 +23,17 @@ return {
 		dir = "/Applications/Ghostty.app/Contents/Resources/vim/vimfiles/",
 		lazy = false,
 	},
+	{
+		"codethread/qmk.nvim",
+		opts = {
+			name = "corne",
+			variant = "zmk",
+			layout = {
+				"x x x x x x _ x x x x x x",
+				"x x x x x x _ x x x x x x",
+				"x x x x x x _ x x x x x x",
+				"_ _ _ x x x _ x x x _ _ _",
+			},
+		},
+	},
 }

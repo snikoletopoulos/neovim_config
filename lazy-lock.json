@@ -91,6 +91,7 @@
   "package-info.nvim": { "branch": "master", "commit": "3e8914a77668c780fc5ef8b0fbcf3747dfcf6ec5" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "projectmgr.nvim": { "branch": "main", "commit": "2d29b21b5afefa7a1690854c56db9b43195d9a10" },
+  "qmk.nvim": { "branch": "main", "commit": "ad51cb15e607da0983fcf9882d38a2aafac32149" },
   "refactoring.nvim": { "branch": "master", "commit": "36bd14ddd7ebf0546c15e6088e8bc93f8a98787d" },
   "render-markdown.nvim": { "branch": "main", "commit": "92256e02db70c474f97fc461b6b6bc4aff7a499a" },
   "resession.nvim": { "branch": "master", "commit": "cc819b0489938d03e4f3532a583354f0287c015b" },
