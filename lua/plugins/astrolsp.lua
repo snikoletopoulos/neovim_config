@@ -120,9 +120,14 @@ return {
 		autocmds = { eslint_fix_on_save = false },
 		mappings = {
 			n = {
-				["<Leader>uY"] = false,
-				["<Leader>lG"] = false,
-				["<Leader>lR"] = false,
+				["<Leader>uY"] = false, -- toggle LSP symantic highlighting
+				["<Leader>lG"] = false, -- search workspace symbols
+				["<Leader>lR"] = false, -- search references
+				["<Leader>uf"] = false, -- toggle buffer autoformatting
+				["<Leader>uF"] = false, -- toggle global autoformatting
+				["<Leader>uh"] = false, -- toggle buffer inlay hints
+				["<Leader>uH"] = false, -- toggle global inlay hints
+				["<Leader>u?"] = false, -- toggle automatic signature help
 				-- TODO: not working
 				["gra"] = false, -- gr code actions
 				-- TODO: not working
@@ -132,7 +137,9 @@ return {
 				-- TODO: not working
 				["grr"] = false, -- gr search references
 			},
-			v = { ["<leader>uY"] = false },
+			v = {
+				["<leader>uY"] = false, -- toggle LSP symantic highlighting
+			},
 		},
 	},
 }
