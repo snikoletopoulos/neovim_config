@@ -61,7 +61,7 @@ return {
 					scrolloff = 1,
 					max_height = 20,
 					border = "solid",
-					scrollbar = false, -- TODO: exclude filetypes from nvim-scrollbar
+					scrollbar = true,
 					draw = {
 						padding = 2,
 						gap = 5,

@@ -6,6 +6,9 @@ return {
 			excluded_filetypes = {
 				"prompt",
 				"neo-tree",
+				"blink-cmp-menu",
+				"blink-cmp-documentation",
+				"blink-cmp-signature",
 			},
 		},
 	},
