@@ -9,7 +9,6 @@ local DisableKeymaps = {
 		{ mode = "n", lhs = "<Leader>uu" }, -- undotree.vim
 		{ mode = "n", lhs = "<Leader>ft" }, -- todo-comments.nvim
 		{ mode = "n", lhs = "<Leader>fT" }, -- todo-comments.nvim
-		{ mode = "n", lhs = "<Leader>uh" }, -- harpoon
 		{ mode = "n", lhs = "<Leader>ud" }, -- neo-tree-diagnostics.nvim
 		{ mode = "n", lhs = "<Leader>fm" }, -- find man
 		{ mode = "n", lhs = "<Leader>u>" }, -- toggle fold columns
