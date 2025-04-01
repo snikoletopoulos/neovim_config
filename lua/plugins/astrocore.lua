@@ -28,11 +28,6 @@ return {
 				clipboard = "",
 				scrolloff = 5,
 				swapfile = false,
-				-- foldmethod = "expr",
-				-- foldexpr = "nvim_treesitter#foldexpr()",
-				-- foldlevel = 99,
-				-- foldlevelstart = 99,
-				-- conceallevel = 2,
 			},
 			g = {
 				loaded_perl_provider = 0,
