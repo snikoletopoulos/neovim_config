@@ -6,6 +6,7 @@ return {
 		{ "<leader>fS", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
 		{ "<leader>ua", function() Snacks.dashboard.open() end, desc = "Toggle home screen" },
 		{ "<leader>gL", function() Snacks.git.blame_line() end, desc = "View full Git blame" },
+		{ "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "View full Git blame" },
 	},
 	opts = {
 		bigfile = { enabled = true },

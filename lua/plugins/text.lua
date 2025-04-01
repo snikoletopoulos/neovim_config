@@ -34,9 +34,6 @@ return {
 	},
 	{
 		"folke/todo-comments.nvim",
-		keys = {
-			{ "<leader>ft", "<CMD>TodoTelescope<CR>", desc = "Find todos" },
-		},
 		opts = {
 			highlight = { pattern = [[.*<(KEYWORDS)\s*]] },
 			search = { pattern = [[\b(KEYWORDS)\b]] },
