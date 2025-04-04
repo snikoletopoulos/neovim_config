@@ -53,8 +53,6 @@ return {
 	{ import = "astrocommunity.recipes.picker-lsp-mappings" },
 	-- { import = "astrocommunity.recipes.vscode-icons" },
 
-	{ import = "astrocommunity.register.nvim-neoclip-lua" }, -- Yank manager
-
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
 
 	{ import = "astrocommunity.search.sad-nvim" },

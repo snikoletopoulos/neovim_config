@@ -122,4 +122,17 @@ return {
 			},
 		},
 	},
+	{
+		"gbprod/yanky.nvim",
+		dependencies = { "folke/snacks.nvim" },
+		keys = {
+			{
+				"<leader>fy",
+				function() Snacks.picker.yanky() end,
+				mode = { "n", "x" },
+				desc = "Open Yank History",
+			},
+		},
+		opts = {},
+	},
 }
