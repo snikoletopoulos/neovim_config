@@ -19,7 +19,9 @@ return {
 			filter = function(client)
 				if vim.bo.filetype == "rust" then return client.name == "rust-analyzer" end
 				if vim.bo.filetype == "toml" then return client.name == "taplo" end
-				if vim.bo.filetype == "go" then return client.name == "gopls" end
+				if vim.bo.filetype == "go" then
+					return client.name == "gopls" or client.name == "null-ls"
+				end
 				return client.name == "null-ls"
 			end,
 		},
