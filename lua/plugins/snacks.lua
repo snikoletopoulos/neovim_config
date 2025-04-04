@@ -75,17 +75,17 @@ return {
 					padding = 1,
 				},
 				{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
-				{
-					pane = 2,
-					icon = " ",
-					desc = "Browse Repo",
-					padding = 1,
-					key = "b",
-					action = function() Snacks.gitbrowse() end,
-				},
 				function()
 					local in_git = Snacks.git.get_root() ~= nil
 					local cmds = {
+						{
+							pane = 2,
+							icon = " ",
+							desc = "Browse Repo",
+							padding = 1,
+							key = "b",
+							action = function() Snacks.gitbrowse() end,
+						},
 						{
 							title = "Notifications",
 							cmd = "gh notify -s -a -n5",
