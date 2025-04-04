@@ -50,10 +50,6 @@ return {
 						},
 					},
 				},
-				presets = {
-					bottom_search = false,
-					command_palette = true,
-				},
 			}
 		end,
 	},
