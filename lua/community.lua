@@ -56,7 +56,6 @@ return {
 
 	{ import = "astrocommunity.search.sad-nvim" },
 
-	{ import = "astrocommunity.utility.hover-nvim" },
 	{ import = "astrocommunity.utility.nvim-toggler" }, -- Toggle words
 	{ import = "astrocommunity.utility.noice-nvim" },
 }
