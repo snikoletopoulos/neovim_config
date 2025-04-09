@@ -79,10 +79,8 @@ return {
 					local in_git = Snacks.git.get_root() ~= nil
 					local cmds = {
 						{
-							pane = 2,
 							icon = " ",
 							desc = "Browse Repo",
-							padding = 1,
 							key = "b",
 							action = function() Snacks.gitbrowse() end,
 						},
@@ -117,19 +115,17 @@ return {
 							height = 10,
 						},
 					}
-					return vim.tbl_map(
-						function(cmd)
-							return vim.tbl_extend("force", {
-								pane = 2,
-								section = "terminal",
-								enabled = in_git,
-								padding = 1,
-								ttl = 5 * 60,
-								indent = 3,
-							}, cmd)
-						end,
-						cmds
-					)
+					return vim.tbl_map(function(cmd)
+						local has_cmd = not not cmd.cmd
+						return vim.tbl_extend("force", {
+							pane = 2,
+							section = has_cmd and "terminal" or nil,
+							enabled = in_git,
+							padding = 1,
+							ttl = has_cmd and 5 * 60 or nil,
+							indent = has_cmd and 3 or nil,
+						}, cmd)
+					end, cmds)
 				end,
 				{ section = "startup" },
 			},
