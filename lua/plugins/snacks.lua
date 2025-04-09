@@ -147,6 +147,18 @@ return {
 				frecency = true,
 			},
 			previewers = { git = { native = true } },
+			win = {
+				input = {
+					keys = {
+						["<C-x>"] = { "edit_split", mode = { "i", "n" } },
+					},
+				},
+				list = {
+					keys = {
+						["<C-x>"] = "edit_split",
+					},
+				},
+			},
 		},
 	},
 	init = function()
