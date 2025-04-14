@@ -113,6 +113,7 @@ return {
 	{
 		"gbprod/yanky.nvim",
 		dependencies = { "folke/snacks.nvim" },
+		event = "VeryLazy",
 		keys = {
 			{
 				"<leader>fy",
