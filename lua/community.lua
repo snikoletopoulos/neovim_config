@@ -25,6 +25,8 @@ return {
 	{ import = "astrocommunity.motion.mini-move" }, -- Move lines with <M>
 	{ import = "astrocommunity.motion.mini-ai" }, -- visual mode textobject selection for i/a
 
+	{ import = "astrocommunity.neovim-lua-development.helpview-nvim" },
+
 	{ import = "astrocommunity.pack.astro" },
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.cpp" },
