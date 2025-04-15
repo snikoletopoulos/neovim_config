@@ -22,6 +22,8 @@ function EditingKeymaps:configure(maps)
 		end,
 		desc = "Close buffer",
 	})
+	maps:add("n", "<Leader>xn", { "<CMD>cnext<CR>", desc = "Next Quickfix" })
+	maps:add("n", "<Leader>xp", { "<CMD>cprevious<CR>", desc = "Previous Quickfix" })
 end
 
 return EditingKeymaps
