@@ -60,7 +60,7 @@ return {
 				menu = {
 					scrolloff = 1,
 					max_height = 20,
-					border = "solid",
+					border = "padded",
 					scrollbar = true,
 					draw = {
 						padding = 2,
