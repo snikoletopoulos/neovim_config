@@ -76,14 +76,15 @@ return {
 						commands,
 						{ prompt = "Select category:", format_item = function(item) return item.name end },
 						function(category)
+							if not category then return end
 							vim.ui.select(
 								category.commands,
 								{ prompt = "Select command:", format_item = function(item) return item[1] end },
 
 								function(command)
-									if type(command[2]) == "function" then
+									if command and type(command[2]) == "function" then
 										command[2]()
-									elseif type(command[2]) == "string" then
+									elseif command and type(command[2]) == "string" then
 										vim.cmd(command[2])
 									end
 								end
