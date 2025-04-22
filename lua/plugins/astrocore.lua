@@ -8,12 +8,12 @@ return {
 			autopairs = true,
 			cmp = true,
 			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-			highlighturl = false, -- TODO: fix underline for tmux
+			highlighturl = true,
 			notifications = true,
 		},
 		diagnostics = {
 			virtual_text = true,
-			underline = false, -- TODO: fix underline for tmux
+			underline = true,
 			severity_sort = true,
 			signs = true,
 		},
