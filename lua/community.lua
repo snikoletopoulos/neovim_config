@@ -46,6 +46,7 @@ return {
 	{ import = "astrocommunity.pack.sql" },
 	{ import = "astrocommunity.pack.tailwindcss" },
 	{ import = "astrocommunity.pack.toml" },
+	{ import = "astrocommunity.pack.templ" },
 	{ import = "astrocommunity.pack.typescript" },
 	{ import = "astrocommunity.pack.yaml" },
 
