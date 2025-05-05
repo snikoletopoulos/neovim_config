@@ -42,6 +42,8 @@ return {
 
 			harpoon:setup(opts)
 			harpoon:extend(extensions.builtins.navigate_with_number())
+			harpoon:extend(extensions.builtins.highlight_current_file())
+
 			-- Add keymaps for harpoon window
 			harpoon:extend({
 				UI_CREATE = function(cx)
