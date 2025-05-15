@@ -8,6 +8,8 @@ return {
 		{ "<leader>gL", function() Snacks.git.blame_line() end, desc = "View full Git blame" },
 		{ "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "Find todo comments" },
 	},
+	---@module "snacks"
+	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
 		dashboard = {
