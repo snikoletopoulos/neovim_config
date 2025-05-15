@@ -7,8 +7,7 @@ return {
 				-- language servers
 				"gradle-language-server",
 				"graphql-language-service-cli",
-				-- TODO: wait for mason 1.11.0 release
-				-- "nginx-language-server",
+				"nginx-language-server",
 				"rust-analyzer",
 
 				-- none-ls
