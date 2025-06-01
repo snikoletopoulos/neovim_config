@@ -78,7 +78,10 @@ return {
 					window = { border = "solid" },
 				},
 				trigger = {
-					-- show_on_trigger_character = true,
+					show_on_trigger_character = true,
+					show_on_accept_on_trigger_character = true,
+					show_on_insert_on_trigger_character = true,
+					show_in_snippet = false,
 				},
 			},
 			cmdline = {
