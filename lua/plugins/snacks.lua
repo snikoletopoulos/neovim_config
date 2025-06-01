@@ -139,6 +139,14 @@ return {
 			right = { "git", "fold" },
 			folds = { open = true },
 		},
+		input = {
+			win = {
+				relative = "cursor",
+				title_pos = "left",
+				row = -3,
+				col = -5,
+			},
+		},
 		picker = {
 			matcher = {
 				cwd_bonus = true,
