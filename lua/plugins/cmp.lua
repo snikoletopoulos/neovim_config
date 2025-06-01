@@ -67,7 +67,6 @@ return {
 					scrollbar = true,
 					draw = {
 						padding = 2,
-						gap = 5,
 						columns = {
 							{ "kind_icon", "label", "label_description", gap = 1 },
 							{ "kind", "source_name", gap = 1 },
