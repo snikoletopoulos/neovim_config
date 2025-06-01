@@ -56,6 +56,7 @@ return {
 	{ import = "astrocommunity.recipes.disable-tabline" },
 	{ import = "astrocommunity.recipes.heirline-vscode-winbar" },
 	{ import = "astrocommunity.recipes.picker-lsp-mappings" },
+	{ import = "astrocommunity.recipes.vscode" },
 
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
 
