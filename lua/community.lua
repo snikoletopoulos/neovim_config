@@ -8,6 +8,7 @@ return {
 	-- { import = "astrocommunity.completion.supermaven-nvim" },
 
 	{ import = "astrocommunity.debugging.nvim-chainsaw" }, -- Logging
+	{ import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
 
 	{ import = "astrocommunity.docker.lazydocker" },
 
