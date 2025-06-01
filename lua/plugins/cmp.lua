@@ -23,6 +23,8 @@ return {
 			{ "Saghen/blink.compat", version = "*", opts = {} },
 			{ "hrsh7th/cmp-nvim-lua" },
 		},
+		---@module 'blink.cmp'
+		---@type blink.cmp.Config
 		opts = {
 			keymap = {
 				preset = "enter",
@@ -57,6 +59,7 @@ return {
 			},
 			completion = {
 				accept = { auto_brackets = { enabled = true } },
+				keyword = { range = "full" },
 				menu = {
 					scrolloff = 1,
 					max_height = 20,
