@@ -21,6 +21,19 @@ return {
 				{ "<M-d>", function() harpoon:list():select(3) end, desc = "Goto 3 of mark" },
 				{ "<M-f>", function() harpoon:list():select(4) end, desc = "Goto 4 of mark" },
 				{
+					"<leader>hd",
+					function()
+						local harpoon_list = harpoon:list().items
+						for index, item in pairs(harpoon_list) do
+							if string.find(vim.api.nvim_buf_get_name(0), item.value) then
+								table.remove(harpoon_list, index)
+								break
+							end
+						end
+					end,
+					desc = "Remove current buffer from Harpoon",
+				},
+				{
 					"<leader>fh",
 					function()
 						Snacks.input({ prompt = "Harpoon mark index: " }, function(input)
