@@ -33,6 +33,7 @@ return {
 		dependencies = { "folke/snacks.nvim" },
 		opts = function(_, opts)
 			return require("astrocore").extend_tbl(opts, {
+				notify = { enabled = false },
 				lsp = {
 					signature = { enabled = true },
 					hover = { enabled = false },
