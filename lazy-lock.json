@@ -94,7 +94,6 @@
   "onedarkpro.nvim": { "branch": "main", "commit": "5ffd45b3602bc1ed75f0b2be6c5c1f6ba5c6b796" },
   "package-info.nvim": { "branch": "master", "commit": "4f1b8287dde221153ec9f2acd46e8237d2d0881e" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-  "projectmgr.nvim": { "branch": "main", "commit": "2d29b21b5afefa7a1690854c56db9b43195d9a10" },
   "qmk.nvim": { "branch": "main", "commit": "348ab2cd4f319f7c9881ca8b1bc0241e9b4d6619" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "55ad4fb76ab68460f700599b7449385f0c4e858e" },
   "refactoring.nvim": { "branch": "master", "commit": "9cd0186ffe76fe6abc64c0aafb775c8f776ab5ee" },
