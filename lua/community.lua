@@ -41,6 +41,7 @@ return {
 	{ import = "astrocommunity.pack.kotlin" },
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.pack.markdown" },
+	{ import = "astrocommunity.pack.nginx" },
 	{ import = "astrocommunity.pack.prisma" },
 	{ import = "astrocommunity.pack.python" },
 	{ import = "astrocommunity.pack.ruby" },

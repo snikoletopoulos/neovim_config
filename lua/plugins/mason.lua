@@ -7,7 +7,6 @@ return {
 				-- language servers
 				"gradle-language-server",
 				"graphql-language-service-cli",
-				"nginx-language-server",
 				"rust-analyzer",
 
 				-- none-ls
