@@ -58,12 +58,6 @@ return {
 			},
 		},
 	},
-	-- TODO
-	-- {
-	-- 	"chipsenkbeil/distant.nvim",
-	-- 	branch = "v0.3",
-	-- 	config = function() require("distant"):setup({}) end,
-	-- },
 	{
 		"lewis6991/gitsigns.nvim",
 		opts = function(_, opts)
