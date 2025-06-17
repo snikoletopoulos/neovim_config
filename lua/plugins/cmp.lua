@@ -31,7 +31,7 @@ return {
 				["<C-e>"] = { "fallback" },
 				["<C-space>"] = { "show", "hide" },
 			},
-			signature = { enabled = true },
+			signature = { enabled = false },
 			sources = {
 				default = { "lsp", "path", "snippets", "npm", "buffer" },
 				per_filetype = {
