@@ -34,7 +34,7 @@ return {
 		opts = function(_, opts)
 			return require("astrocore").extend_tbl(opts, {
 				lsp = {
-					signature = { enabled = false },
+					signature = { enabled = true },
 					hover = { enabled = false },
 					override = {
 						["vim.lsp.util.convert_input_to_markdown_lines"] = true,

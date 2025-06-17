@@ -11,7 +11,7 @@ return {
 			codelens = true,
 			inlay_hints = true,
 			semantic_tokens = true,
-			signature_help = true,
+			signature_help = false,
 		},
 		formatting = {
 			format_on_save = { enabled = false },
