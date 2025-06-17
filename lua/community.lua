@@ -3,7 +3,6 @@ return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.color.tint-nvim" }, -- Dim inactive windows
 
-	-- { import = "astrocommunity.completion.avante-nvim" },
 	{ import = "astrocommunity.completion.copilot-lua" },
 	-- { import = "astrocommunity.completion.supermaven-nvim" },
 
