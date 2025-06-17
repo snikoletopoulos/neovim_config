@@ -3,6 +3,7 @@ return {
 	{
 		"petertriho/nvim-scrollbar",
 		opts = {
+			excluded_buftypes = { "nofile" },
 			excluded_filetypes = {
 				"prompt",
 				"neo-tree",
@@ -63,6 +64,17 @@ return {
 				render_modes = true,
 				per_level = 2,
 				skip_heading = true,
+			},
+			overrides = {
+				buftype = {
+					nofile = {
+						code = {
+							left_pad = 0,
+							language_icon = false,
+							language_name = false,
+						},
+					},
+				},
 			},
 		},
 	},
