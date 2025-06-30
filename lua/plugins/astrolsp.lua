@@ -17,12 +17,22 @@ return {
 			format_on_save = { enabled = false },
 			timeout_ms = 1000,
 			filter = function(client)
-				if vim.bo.filetype == "rust" then return client.name == "rust-analyzer" end
-				if vim.bo.filetype == "toml" then return client.name == "taplo" end
-				if vim.bo.filetype == "go" then
-					return client.name == "gopls" or client.name == "null-ls"
+				local formatters_per_filetype = {
+					sh = "bashls",
+					zsh = "bashls",
+					toml = "taplo",
+					go = { "gopls", "null-ls" },
+				}
+
+				local formatter = formatters_per_filetype[vim.bo.filetype]
+				if formatter then
+					if type(formatter) == "string" then return client.name == formatter end
+					for _, client_name in ipairs(formatter) do
+						if client.name == client_name then return true end
+					end
+					return false
 				end
-				return client.name == "null-ls"
+				return true
 			end,
 		},
 		---@diagnostic disable: missing-fields
