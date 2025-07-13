@@ -12,6 +12,23 @@ return {
 				return true
 			end,
 		},
+		config = function(_, opts)
+			require("auto-save").setup(opts)
+
+			local group = vim.api.nvim_create_augroup("autosave", {})
+
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "AutoSaveEnable",
+				group = group,
+				callback = function() vim.notify("AutoSave enabled", vim.log.levels.INFO) end,
+			})
+
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "AutoSaveDisable",
+				group = group,
+				callback = function() vim.notify("AutoSave disabled", vim.log.levels.INFO) end,
+			})
+		end,
 	},
 	{
 		"chrisgrieser/nvim-spider",
