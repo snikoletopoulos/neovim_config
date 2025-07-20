@@ -20,8 +20,9 @@ return {
 	},
 	{
 		"ghostty",
-		dir = "/Applications/Ghostty.app/Contents/Resources/vim/vimfiles/",
+		dir = vim.fs.joinpath(vim.env.GHOSTTY_RESOURCES_DIR, "..", "nvim", "site"),
 		lazy = false,
+		cond = vim.env.GHOSTTY_RESOURCES_DIR ~= nil,
 	},
 	{
 		"codethread/qmk.nvim",
