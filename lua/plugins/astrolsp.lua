@@ -24,6 +24,10 @@ return {
 					go = { "gopls", "null-ls" },
 				}
 
+				for _, filetype in pairs(require("utils.constants").filetype.javascript) do
+					formatters_per_filetype[filetype] = { "eslint", "null-ls" }
+				end
+
 				local formatter = formatters_per_filetype[vim.bo.filetype]
 				if formatter then
 					if type(formatter) == "string" then return client.name == formatter end
