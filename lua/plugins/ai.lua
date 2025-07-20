@@ -57,39 +57,4 @@ return {
 			mappings = { reset = { normal = "<C-r>", insert = "<C-r>" } },
 		},
 	},
-	{
-		"jackMort/ChatGPT.nvim",
-		enabled = vim.env.CHAT_GPT_API_KEY,
-		opts = { api_key_cmd = "echo " .. (vim.env.CHAT_GPT_API_KEY or "") },
-	},
-	-- {
-	-- 	"yetone/avante.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"echasnovski/mini.icons",
-	-- 		"zbirenbaum/copilot.lua",
-	-- 		{
-	-- 			"HakonHarnes/img-clip.nvim",
-	-- 			event = "VeryLazy",
-	-- 			opts = {
-	-- 				default = {
-	-- 					embed_image_as_base64 = false,
-	-- 					prompt_for_file_name = false,
-	-- 					drag_and_drop = { insert_mode = true },
-	-- 					use_absolute_path = true,
-	-- 				},
-	-- 			},
-	-- 		},
-	-- 		{
-	-- 			"MeanderingProgrammer/render-markdown.nvim",
-	-- 			opts = { file_types = { "markdown", "Avante" } },
-	-- 			ft = { "markdown", "Avante" },
-	-- 		},
-	-- 	},
-	-- 	opts = {
-	-- 		provider = "claude",
-	-- 		auto_suggestions_provider = "copilot",
-	-- 		openai = { api_key_name = "CHAT_GPT_API_KEY" },
-	-- 	},
-	-- },
 }
