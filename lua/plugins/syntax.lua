@@ -57,4 +57,46 @@ return {
 			return opts
 		end,
 	},
+	{
+		"luckasRanarison/tailwind-tools.nvim",
+		name = "tailwind-tools",
+		build = ":UpdateRemotePlugins",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"neovim/nvim-lspconfig",
+		},
+		keys = {
+			{
+				"<leader>ut",
+				function()
+					vim.notify(
+						require("tailwind-tools.state").conceal.enabled and "classes unfolded"
+							or "classes folded",
+						nil,
+						{
+							title = "tailwind-tools",
+						}
+					)
+					require("tailwind-tools.conceal").toggle()
+				end,
+				desc = "Toggle tailwind classes",
+			},
+		},
+		---@module "tailwind-tools"
+		---@type fun(plugin: any, opts: TailwindTools.Option): TailwindTools.Option
+		opts = function(_, opts)
+			local paterns = {}
+			for _, language in pairs(require("utils.constants").filetype.javascript) do
+				paterns[language] = {
+					"clsx%(([^)]+)%)",
+					"cn%(([^)]+)%)",
+				}
+			end
+
+			return require("astrocore").extend_tbl(opts, {
+				keymaps = { smart_increment = { enabled = true } },
+				extension = { patterns = paterns },
+			})
+		end,
+	},
 }
