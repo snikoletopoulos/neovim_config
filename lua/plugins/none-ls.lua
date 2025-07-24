@@ -70,7 +70,11 @@ return {
 			none_ls.builtins.formatting.npm_groovy_lint, -- Formatter for Groovy/Gradle
 			none_ls.builtins.formatting.prettierd.with({
 				env = {
-					PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/config_files/.prettierrc.json",
+					PRETTIERD_DEFAULT_CONFIG = vim.fs.joinpath(
+						vim.fn.stdpath("config"),
+						"config_files",
+						"prettier.config.js"
+					),
 				},
 			}),
 			none_ls.builtins.formatting.prisma_format,
