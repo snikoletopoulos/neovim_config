@@ -16,10 +16,10 @@ return {
 				{ "<leader>ha", function() harpoon:list():add() end, desc = "Add file to Harpoon" },
 				{ "<C-p>", function() harpoon:list():prev() end, desc = "Previous Harpoon file" },
 				{ "<C-n>", function() harpoon:list():next() end, desc = "Next Harpoon file" },
-				{ "<M-a>", function() harpoon:list():select(1) end, desc = "Goto 1 of mark" },
-				{ "<M-s>", function() harpoon:list():select(2) end, desc = "Goto 2 of mark" },
-				{ "<M-d>", function() harpoon:list():select(3) end, desc = "Goto 3 of mark" },
-				{ "<M-f>", function() harpoon:list():select(4) end, desc = "Goto 4 of mark" },
+				{ "<M-z>", function() harpoon:list():select(1) end, desc = "Goto 1 of mark" },
+				{ "<M-x>", function() harpoon:list():select(2) end, desc = "Goto 2 of mark" },
+				{ "<M-c>", function() harpoon:list():select(3) end, desc = "Goto 3 of mark" },
+				{ "<M-v>", function() harpoon:list():select(4) end, desc = "Goto 4 of mark" },
 				{
 					"<leader>hd",
 					function()
