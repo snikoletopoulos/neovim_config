@@ -33,7 +33,10 @@ return {
 				extra_args = function()
 					local has_project_config = utils.root_has_file({ ".selene.toml", "selene.toml" })
 					if has_project_config then return nil end
-					return { "--config", vim.fn.stdpath("config") .. "/config_files/.selene.toml" }
+					return {
+						"--config",
+						vim.fs.joinath(vim.fn.stdpath("config"), "config_files", ".selene.toml"),
+					}
 				end,
 			}), -- Linter for Lua
 			none_ls.builtins.diagnostics.sqlfluff.with({
@@ -49,13 +52,17 @@ return {
 					if has_project_config then return args end
 					return vim.list_extend(args, {
 						"--config",
-						vim.fn.stdpath("config") .. "/config_files/.sqlfluff",
+						vim.fs.joinpath(vim.fn.stdpath("config"), "config_files", ".sqlfluff"),
 					})
 				end,
 			}),
 			none_ls.builtins.diagnostics.yamllint.with({
 				env = {
-					YAMLLINT_CONFIG_FILE = vim.fn.stdpath("config") .. "/config_files/.yamllint.yaml",
+					YAMLLINT_CONFIG_FILE = vim.fs.joinpath(
+						vim.fn.stdpath("config"),
+						"config_files",
+						".yamllint.yaml"
+					),
 				},
 			}),
 			none_ls.builtins.diagnostics.zsh,
@@ -92,13 +99,13 @@ return {
 						".stylelintrc.yml",
 						".stylelintrc.yaml",
 					}) or require("utils.helpers"):check_json_key_exists(
-						vim.fn.getcwd() .. "/package.json",
+						vim.fs.joinpath(vim.fn.getcwd(), "package.json"),
 						"stylelint"
 					)
 					if has_project_config then return nil end
 					return {
 						"--config",
-						vim.fn.stdpath("config") .. "/config_files/.stylelintrc.json",
+						vim.fs.joinpath(vim.fn.stdpath("config"), "config_files", ".stylelintrc.json"),
 					}
 				end,
 			}),
@@ -115,7 +122,7 @@ return {
 					if has_project_config then return nil end
 					return {
 						"--config-path",
-						vim.fn.stdpath("config") .. "/config_files/.stylua.toml",
+						vim.fs.joinpath(vim.fn.stdpath("config"), "config_files", ".stylua.toml"),
 					}
 				end,
 			}),
