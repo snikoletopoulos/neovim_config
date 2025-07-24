@@ -12,7 +12,6 @@ return {
 	{
 		"Saghen/blink.cmp",
 		dependencies = {
-			{ "Kaiser-Yang/blink-cmp-avante" },
 			{ "disrupted/blink-cmp-conventional-commits" },
 			{ "Kaiser-Yang/blink-cmp-git", dependencies = { "nvim-lua/plenary.nvim" } },
 			{
@@ -39,16 +38,12 @@ return {
 				},
 				providers = {
 					git = {
-						module = "blink-cmp-git",
 						name = "Git",
+						module = "blink-cmp-git",
 					},
 					conventional_commits = {
 						name = "Conventional Commits",
 						module = "blink-cmp-conventional-commits",
-					},
-					avante = {
-						module = "blink-cmp-avante",
-						name = "Avante",
 					},
 					npm = {
 						name = "npm",
