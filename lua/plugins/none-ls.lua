@@ -39,6 +39,29 @@ return {
 					}
 				end,
 			}), -- Linter for Lua
+			none_ls.builtins.diagnostics.stylelint.with({
+				extra_args = function()
+					local has_project_config = utils.root_has_file({
+						".stylelintrc.js",
+						"stylelint.config.js",
+						".stylelintrc.mjs",
+						"stylelint.config.mjs",
+						".stylelintrc.cjs",
+						"stylelint.config.cjs",
+						".stylelintrc.json",
+						".stylelintrc.yml",
+						".stylelintrc.yaml",
+					}) or require("utils.helpers"):check_json_key_exists(
+						vim.fs.joinpath(vim.fn.getcwd(), "package.json"),
+						"stylelint"
+					)
+					if has_project_config then return nil end
+					return {
+						"--config",
+						vim.fs.joinpath(vim.fn.stdpath("config"), "config_files", ".stylelintrc.json"),
+					}
+				end,
+			}),
 			none_ls.builtins.diagnostics.sqlfluff.with({
 				extra_args = function()
 					local args = { "--dialect", "postgres" }
@@ -86,29 +109,6 @@ return {
 			}),
 			none_ls.builtins.formatting.prisma_format,
 			none_ls.builtins.formatting.shfmt.with({ extra_filetypes = { "zsh" } }), -- Formatter for Bash
-			none_ls.builtins.diagnostics.stylelint.with({
-				extra_args = function()
-					local has_project_config = utils.root_has_file({
-						".stylelintrc.js",
-						"stylelint.config.js",
-						".stylelintrc.mjs",
-						"stylelint.config.mjs",
-						".stylelintrc.cjs",
-						"stylelint.config.cjs",
-						".stylelintrc.json",
-						".stylelintrc.yml",
-						".stylelintrc.yaml",
-					}) or require("utils.helpers"):check_json_key_exists(
-						vim.fs.joinpath(vim.fn.getcwd(), "package.json"),
-						"stylelint"
-					)
-					if has_project_config then return nil end
-					return {
-						"--config",
-						vim.fs.joinpath(vim.fn.stdpath("config"), "config_files", ".stylelintrc.json"),
-					}
-				end,
-			}),
 			none_ls.builtins.formatting.sqlfluff.with({
 				extra_args = { "--dialect", "postgres" },
 			}),
