@@ -22,6 +22,7 @@ return {
 					zsh = "bashls",
 					toml = "taplo",
 					go = { "gopls", "null-ls" },
+					cs = "csharp_ls",
 				}
 
 				for _, filetype in pairs(require("utils.constants").filetype.javascript) do
