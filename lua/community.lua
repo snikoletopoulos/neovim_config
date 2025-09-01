@@ -55,6 +55,7 @@ return {
 
 	{ import = "astrocommunity.quickfix.nvim-bqf" }, -- Quick fix list preview
 
+	{ import = "astrocommunity.recipes.ai" },
 	{ import = "astrocommunity.recipes.disable-tabline" },
 	{ import = "astrocommunity.recipes.heirline-vscode-winbar" },
 	{ import = "astrocommunity.recipes.picker-lsp-mappings" },
