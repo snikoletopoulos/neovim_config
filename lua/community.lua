@@ -29,6 +29,7 @@ return {
 
 	{ import = "astrocommunity.pack.astro" },
 	{ import = "astrocommunity.pack.bash" },
+	{ import = "astrocommunity.pack.cs" },
 	{ import = "astrocommunity.pack.cpp" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.eslint" },
