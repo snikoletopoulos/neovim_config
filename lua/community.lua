@@ -52,6 +52,7 @@ return {
 	{ import = "astrocommunity.pack.toml" },
 	{ import = "astrocommunity.pack.templ" },
 	{ import = "astrocommunity.pack.typescript" },
+	{ import = "astrocommunity.pack.xml" },
 	{ import = "astrocommunity.pack.yaml" },
 
 	{ import = "astrocommunity.quickfix.nvim-bqf" }, -- Quick fix list preview
