@@ -155,12 +155,19 @@ return {
 			win = {
 				input = {
 					keys = {
+						["<C-w>"] = { "cycle_win", mode = { "i", "n" } },
 						["<C-x>"] = { "edit_split", mode = { "i", "n" } },
 					},
 				},
 				list = {
 					keys = {
+						["<C-w>"] = "cycle_win",
 						["<C-x>"] = "edit_split",
+					},
+				},
+				preview = {
+					keys = {
+						["<C-w>"] = "cycle_win",
 					},
 				},
 			},
