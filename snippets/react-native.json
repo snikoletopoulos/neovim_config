@@ -5,7 +5,7 @@
       "import { View } from 'react-native'",
       "",
       "export const ${1:$TM_FILENAME_BASE} = () => {",
-      "  return <View>${2}</View>",
+      "  return <View>$2</View>",
       "}"
     ],
     "description": "react native component template"
@@ -16,7 +16,7 @@
       "import { View } from 'react-native'",
       "",
       "const ${1:$TM_FILENAME_BASE} = () => {",
-      "  return <View>${2}</View>",
+      "  return <View>$2</View>",
       "}",
       "",
       "export default $1"
@@ -29,7 +29,7 @@
       "import { View } from 'react-native'",
       "",
       "export const ${1:$TM_FILENAME_BASE} = ({}: {}) => {",
-      "  return <View>${2}</View>",
+      "  return <View>$2</View>",
       "}"
     ],
     "description": "typescript react native component template"
@@ -40,7 +40,7 @@
       "import { View } from 'react-native'",
       "",
       "const ${1:$TM_FILENAME_BASE} = ({}: {}) => {",
-      "  return <View>${2}</View>",
+      "  return <View>$2</View>",
       "}",
       "",
       "export default $1"
@@ -54,9 +54,9 @@
       "  container: {",
       "    flex: 1,",
       "  },",
+      "  $1",
       "});"
     ],
     "description": "react native style sheet"
   }
-
 }
