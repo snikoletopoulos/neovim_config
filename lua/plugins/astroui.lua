@@ -13,6 +13,7 @@ return {
 				DiagnosticUnderlineInfo = { undercurl = true, sp = "#61afef" },
 				DiagnosticUnderlineWarn = { undercurl = true, sp = "#e5c07b" },
 				CursorLine = { bg = cursor_line_bg },
+				Visual = { bg = require("utils.helpers"):blend("#cba6f7", "#000000", 0.4) },
 				PmenuSel = { bg = cursor_line_bg, bold = true },
 			},
 			onedark_vivid = {
