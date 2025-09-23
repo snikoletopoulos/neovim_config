@@ -1,3 +1,5 @@
+local cursor_line_bg = require("utils.helpers"):blend("#cba6f7", "#000000", 0.28)
+
 ---@type LazySpec
 return {
 	"AstroNvim/astroui",
@@ -10,6 +12,8 @@ return {
 				DiagnosticUnderlineHint = { undercurl = true, sp = "#2bbac5" },
 				DiagnosticUnderlineInfo = { undercurl = true, sp = "#61afef" },
 				DiagnosticUnderlineWarn = { undercurl = true, sp = "#e5c07b" },
+				CursorLine = { bg = cursor_line_bg },
+				PmenuSel = { bg = cursor_line_bg, bold = true },
 			},
 			onedark_vivid = {
 				LspInlayHint = { fg = "#555566", bg = "#333344" },

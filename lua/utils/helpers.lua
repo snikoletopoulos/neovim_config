@@ -3,6 +3,8 @@
 ---@field remove_list_value fun(self: Helpers, list: table, value: any): any|nil
 ---@field check_json_key_exists fun(self: Helpers, filename: string, key: string): boolean
 ---@field get_highlight fun(self: Helpers, name: string): { foreground: string?, background: string?, special: string?}?
+---@field hex_to_rgb fun(self: Helpers, hex_str: string): string[]
+---@field blend fun(self: Helpers, fg: string, bg: string, alpha: number): string
 local Helpers = {}
 
 function Helpers:index_of(array, value)
@@ -38,6 +40,30 @@ function Helpers:get_highlight(name)
 		if hl[key] then hl[key] = string.format("#%06x", hl[key]) end
 	end
 	return hl
+end
+
+function Helpers:hex_to_rgb(hex_str)
+	local hex = "[abcdef0-9][abcdef0-9]"
+	local pat = "^#(" .. hex .. ")(" .. hex .. ")(" .. hex .. ")$"
+	hex_str = string.lower(hex_str)
+
+	assert(string.find(hex_str, pat) ~= nil, "hex_to_rgb: invalid hex_str: " .. tostring(hex_str))
+
+	local red, green, blue = string.match(hex_str, pat)
+	return { tonumber(red, 16), tonumber(green, 16), tonumber(blue, 16) }
+end
+
+---@param alpha number number between 0 and 1. 0 results in bg, 1 results in fg
+function Helpers:blend(fg_hex, bg_hex, alpha)
+	local bg = self:hex_to_rgb(bg_hex)
+	local fg = self:hex_to_rgb(fg_hex)
+
+	local blendChannel = function(i)
+		local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
+		return math.floor(math.min(math.max(0, ret), 255) + 0.5)
+	end
+
+	return string.format("#%02X%02X%02X", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
 return Helpers
