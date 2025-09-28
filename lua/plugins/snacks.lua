@@ -37,9 +37,7 @@ return {
 						icon = " ",
 						key = "g",
 						desc = "Lazygit",
-						action = function()
-							require("astrocore").toggle_term_cmd({ cmd = "lazygit ", direction = "float" })
-						end,
+						action = function() Snacks.lazygit() end,
 					},
 					{ icon = " ", key = "p", desc = "Select project", action = "<CMD>ProjectMgr<CR>" },
 					{
