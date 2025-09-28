@@ -1,4 +1,5 @@
-local cursor_line_bg = require("utils.helpers"):blend("#cba6f7", "#000000", 0.28)
+local colors = require("catppuccin.palettes").get_palette("mocha")
+local cursor_line_bg = require("utils.helpers"):blend(colors.mauve, "#000000", 0.28)
 
 ---@type LazySpec
 return {
@@ -13,8 +14,9 @@ return {
 				DiagnosticUnderlineInfo = { undercurl = true, sp = "#61afef" },
 				DiagnosticUnderlineWarn = { undercurl = true, sp = "#e5c07b" },
 				CursorLine = { bg = cursor_line_bg },
-				Visual = { bg = require("utils.helpers"):blend("#cba6f7", "#000000", 0.4) },
+				Visual = { bg = require("utils.helpers"):blend(colors.mauve, "#000000", 0.4) },
 				PmenuSel = { bg = cursor_line_bg, bold = true },
+				Title = { fg = colors.mauve },
 			},
 			onedark_vivid = {
 				LspInlayHint = { fg = "#555566", bg = "#333344" },

@@ -2,7 +2,9 @@
 return {
 	{
 		"folke/tokyonight.nvim",
+		---@module "tokyonight"
 		---@type tokyonight.Config
+		---@diagnostic disable-next-line: missing-fields
 		opts = {
 			styles = {
 				types = { bold = true },
@@ -66,5 +68,13 @@ return {
 				transparency = true,
 			},
 		},
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		---@module "catppuccin"
+		---@type CatppuccinOptions
+		---@diagnostic disable: missing-fields
+		opts = { flavour = "mocha" },
 	},
 }
