@@ -32,32 +32,37 @@ return {
 		"folke/noice.nvim",
 		dependencies = { "folke/snacks.nvim" },
 		opts = function(_, opts)
-			return require("astrocore").extend_tbl(opts, {
-				notify = { enabled = false },
-				lsp = {
-					signature = { enabled = true },
-					hover = { enabled = false },
-					override = {
-						["vim.lsp.util.convert_input_to_markdown_lines"] = false,
-						["vim.lsp.util.stylize_markdown"] = false,
-						["cmp.entry.get_documentation"] = false,
-					},
-				},
-				views = {
-					cmdline_popup = {
-						border = Snacks.util.is_transparent() and {} or {
-							style = "none",
-							padding = { 1, 2 },
+			return require("astrocore").extend_tbl(
+				opts,
+				---@module "noice"
+				---@type NoiceConfig
+				{
+					notify = { enabled = false },
+					lsp = {
+						signature = { enabled = true },
+						hover = { enabled = false },
+						override = {
+							["vim.lsp.util.convert_input_to_markdown_lines"] = false,
+							["vim.lsp.util.stylize_markdown"] = false,
+							["cmp.entry.get_documentation"] = false,
 						},
 					},
-				},
-				---@type NoicePresets
-				presets = {
-					bottom_search = false,
-					command_palette = false,
-					inc_rename = false,
-				},
-			})
+					views = {
+						cmdline_popup = {
+							border = Snacks.util.is_transparent() and {} or {
+								style = "none",
+								padding = { 1, 2 },
+							},
+						},
+					},
+					---@type NoicePresets
+					presets = {
+						bottom_search = false,
+						command_palette = false,
+						inc_rename = false,
+					},
+				}
+			)
 		end,
 	},
 	{
