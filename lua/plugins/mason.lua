@@ -13,6 +13,7 @@ return {
 				"checkmake",
 				"clang-format",
 				"cspell",
+				"golines",
 				"markdownlint",
 				"mypy",
 				"npm-groovy-lint",

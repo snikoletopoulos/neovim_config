@@ -93,6 +93,9 @@ return {
 			-- Formatting
 			none_ls.builtins.formatting.black, -- Formatter for Python
 			none_ls.builtins.formatting.clang_format,
+			none_ls.builtins.formatting.golines.with({
+				extra_args = { "-t", "2", "-m", "80" },
+			}),
 			none_ls.builtins.formatting.isort, -- Sort Python imports
 			none_ls.builtins.formatting.ktlint, -- Formatter for Kotlin
 			none_ls.builtins.formatting.markdownlint,
