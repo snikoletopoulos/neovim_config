@@ -86,7 +86,7 @@ return {
 				},
 				handlers = {
 					---@diagnostic disable-next-line: redundant-parameter
-					["textDocument/publishDiagnostics"] = function(_, result, ctx, config)
+					["textDocument/publishDiagnostics"] = function(_, result, ctx)
 						if result.diagnostics == nil then return end
 
 						-- ignore some tsserver diagnostics
@@ -106,7 +106,7 @@ return {
 							end
 						end
 
-						vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+						vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx)
 					end,
 				},
 				on_attach = function(client, bufnr)
