@@ -52,7 +52,7 @@ return {
 						".stylelintrc.yml",
 						".stylelintrc.yaml",
 					}) or require("utils.helpers"):check_json_key_exists(
-						vim.fs.joinpath(vim.fn.getcwd(), "package.json"),
+						vim.fs.joinpath(vim.uv.cwd(), "package.json"),
 						"stylelint"
 					)
 					if has_project_config then return nil end

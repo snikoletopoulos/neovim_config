@@ -7,8 +7,8 @@ return {
 		},
 		opts = {
 			condition = function(buffer)
-				local filetype = vim.fn.getbufvar(buffer, "&filetype")
-				if vim.list_contains({ "harpoon" }, filetype) then return false end
+				local ok, filetype = pcall(vim.api.nvim_get_option_value, "filetype", { buf = buffer })
+				if ok and vim.list_contains({ "harpoon" }, filetype) then return false end
 				return true
 			end,
 		},

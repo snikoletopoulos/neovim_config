@@ -95,7 +95,7 @@ return {
 							title = "Open Issues",
 							cmd = " if gh issue list -L 3; then gh issue list -L 3; fi",
 							key = "i",
-							action = function() vim.fn.jobstart("gh issue list --web", { detach = true }) end,
+							action = function() vim.system({ "gh", "issue", "list", "--web" }, { detach = true }) end,
 							icon = " ",
 							height = 7,
 						},
@@ -104,7 +104,7 @@ return {
 							title = "Open PRs",
 							cmd = "gh pr list -L 3",
 							key = "P",
-							action = function() vim.fn.jobstart("gh pr list --web", { detach = true }) end,
+							action = function() vim.system({ "gh", "pr", "list", "--web" }, { detach = true }) end,
 							height = 7,
 						},
 						{

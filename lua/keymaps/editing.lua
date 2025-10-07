@@ -14,11 +14,10 @@ function EditingKeymaps:configure(maps)
 	maps:add("n", "<Leader>D", { '"_d', desc = "Cut" })
 	maps:add("n", "<leader>C", {
 		function()
-			local bufs = vim.fn.getbufinfo({ buflisted = true })
-			require("astrocore.buffer").close(0)
-			if require("astrocore").is_available("alpha-nvim") and not bufs[2] then
-				require("alpha").start(true)
-			end
+			local bufs = vim.fn.getbufinfo({ buflisted = 1 })
+			local bufnr = vim.api.nvim_get_current_buf()
+			Snacks.bufdelete({ buf = bufnr })
+			if not bufs[2] then Snacks.dashboard.open() end
 		end,
 		desc = "Close buffer",
 	})
