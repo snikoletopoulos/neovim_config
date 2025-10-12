@@ -17,6 +17,11 @@ return {
 				Visual = { bg = require("utils.helpers"):blend(colors.mauve, "#000000", 0.4) },
 				PmenuSel = { bg = cursor_line_bg, bold = true },
 				Title = { fg = colors.mauve },
+				BlinkCmpMenuBorder = {
+					bg = colors.base,
+					fg = require("utils.helpers"):blend(colors.mauve, "#000000", 0.7),
+				},
+				BlinkCmpMenu = { bg = colors.base },
 			},
 			onedark_vivid = {
 				LspInlayHint = { fg = "#555566", bg = "#333344" },

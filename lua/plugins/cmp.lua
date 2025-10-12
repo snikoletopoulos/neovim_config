@@ -58,10 +58,11 @@ return {
 				menu = {
 					scrolloff = 1,
 					max_height = 20,
-					border = "padded",
+					border = "rounded",
 					scrollbar = true,
+					winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder",
 					draw = {
-						padding = 2,
+						padding = 1,
 						columns = {
 							{ "kind_icon", "label", "label_description", gap = 1 },
 							{ "kind", "source_name", gap = 1 },
@@ -70,7 +71,10 @@ return {
 				},
 				documentation = {
 					auto_show = true,
-					window = { border = "solid" },
+					window = {
+						border = "rounded",
+						winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder",
+					},
 				},
 				trigger = {
 					show_on_trigger_character = true,
