@@ -28,4 +28,8 @@ return {
 			auto_update = true,
 		},
 	},
+	{
+		"jay-babu/mason-null-ls.nvim",
+		opts = { handlers = { function() end } },
+	},
 }
