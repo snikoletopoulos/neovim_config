@@ -55,6 +55,7 @@ return {
 			completion = {
 				accept = { auto_brackets = { enabled = true } },
 				keyword = { range = "full" },
+				list = { selection = { preselect = true } },
 				menu = {
 					scrolloff = 1,
 					max_height = 20,
@@ -77,10 +78,10 @@ return {
 					},
 				},
 				trigger = {
+					show_on_keyword = true,
 					show_on_trigger_character = true,
 					show_on_accept_on_trigger_character = true,
 					show_on_insert_on_trigger_character = true,
-					show_in_snippet = false,
 				},
 			},
 			cmdline = {
