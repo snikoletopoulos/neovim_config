@@ -20,6 +20,7 @@ return {
 					toml = "taplo",
 					go = { "gopls", "null-ls" },
 					cs = "csharp_ls",
+					json = "null-ls",
 				}
 
 				for _, filetype in pairs(require("utils.constants").filetype.javascript) do
