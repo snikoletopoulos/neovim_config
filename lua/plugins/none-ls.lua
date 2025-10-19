@@ -94,6 +94,7 @@ return {
 			none_ls.builtins.formatting.black, -- Formatter for Python
 			none_ls.builtins.formatting.clang_format,
 			none_ls.builtins.formatting.golines.with({
+				runtime_condition = function() return vim.g.enable_golines end,
 				extra_args = { "-t", "2", "-m", "80" },
 			}),
 			none_ls.builtins.formatting.isort, -- Sort Python imports

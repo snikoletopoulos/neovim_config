@@ -23,6 +23,17 @@ function EditingKeymaps:configure(maps)
 	})
 	maps:add("n", "<Leader>xn", { "<CMD>cnext<CR>", desc = "Next Quickfix" })
 	maps:add("n", "<Leader>xp", { "<CMD>cprevious<CR>", desc = "Previous Quickfix" })
+	maps:add("n", "<Leader>ltl", {
+		function()
+			vim.g.enable_golines = not vim.g.enable_golines
+			vim.notify(
+				"goliens " .. (vim.g.enable_golines and "enabled" or "disabled"),
+				vim.log.levels.INFO,
+				{ title = "LSP toggle" }
+			)
+		end,
+		desc = "Toggle golines",
+	})
 end
 
 return EditingKeymaps

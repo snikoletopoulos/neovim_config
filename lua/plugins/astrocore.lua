@@ -31,6 +31,7 @@ return {
 			},
 			g = {
 				loaded_perl_provider = 0,
+				enable_golines = true,
 			},
 		},
 		commands = {
