@@ -24,7 +24,6 @@ return {
 				BlinkCmpMenu = { bg = colors.base },
 			},
 			onedark_vivid = {
-				LspInlayHint = { fg = "#555566", bg = "#333344" },
 				["@markup.list.checked"] = { fg = "#d55fde", bg = "NONE" },
 			},
 		},
