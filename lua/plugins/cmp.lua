@@ -55,7 +55,6 @@ return {
 			completion = {
 				accept = { auto_brackets = { enabled = true } },
 				keyword = { range = "full" },
-				list = { selection = { preselect = true } },
 				menu = {
 					scrolloff = 1,
 					max_height = 20,
