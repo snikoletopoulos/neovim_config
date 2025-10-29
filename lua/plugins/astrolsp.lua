@@ -21,6 +21,7 @@ return {
 					go = { "gopls", "null-ls" },
 					cs = "csharp_ls",
 					json = "null-ls",
+					jsonc = "null-ls",
 				}
 
 				for _, filetype in pairs(require("utils.constants").filetype.javascript) do
