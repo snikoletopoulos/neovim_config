@@ -8,7 +8,6 @@ require("keymaps.ui"):configure(maps)
 require("which-key").add({
 	{ "<leader>h", group = "󱡅 Harpoon", mode = "n" },
 	{ "<leader>c", group = " Log", mode = "n" },
-	{ "<leader>cc", group = "󰭹 Copilot Chat", mode = { "n", "v" } },
 })
 
 return maps
