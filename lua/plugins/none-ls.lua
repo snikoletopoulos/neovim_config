@@ -12,6 +12,7 @@ return {
 		opts.sources = require("astrocore").extend_tbl(opts.sources, {
 			-- Code Actions
 			require("cspell").code_actions,
+			require("none-ls.code_actions.eslint_d"),
 			none_ls.builtins.code_actions.refactoring.with({
 				extra_filetypes = require("utils.constants").filetype.typescript,
 			}),
@@ -22,6 +23,7 @@ return {
 				disabled_filetypes = { "dotenv" },
 			}),
 			none_ls.builtins.diagnostics.dotenv_linter.with({ filetype = { "dotenv" } }),
+			require("none-ls.diagnostics.eslint_d"),
 			none_ls.builtins.diagnostics.hadolint, -- Linter for Docker
 			none_ls.builtins.diagnostics.ktlint, -- Linter for Kotlin
 			none_ls.builtins.diagnostics.hadolint, -- Linter for docker
@@ -93,6 +95,7 @@ return {
 			-- Formatting
 			none_ls.builtins.formatting.black, -- Formatter for Python
 			none_ls.builtins.formatting.clang_format,
+			require("none-ls.formatting.eslint_d"),
 			none_ls.builtins.formatting.golines.with({
 				runtime_condition = function() return vim.g.enable_golines end,
 				extra_args = { "-t", "2", "-m", "80" },
